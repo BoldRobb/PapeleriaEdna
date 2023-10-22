@@ -2039,19 +2039,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rober\\.nuget\\packages\\": {}
+    "C:\\Users\\jazie\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Presentacion\\Presentacion.csproj",
+      "projectUniqueName": "E:\\Descargas\\Papeleria\\Presentacion\\Presentacion.csproj",
       "projectName": "Presentacion",
-      "projectPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Presentacion\\Presentacion.csproj",
-      "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Presentacion\\obj\\",
+      "projectPath": "E:\\Descargas\\Papeleria\\Presentacion\\Presentacion.csproj",
+      "packagesPath": "C:\\Users\\jazie\\.nuget\\packages\\",
+      "outputPath": "E:\\Descargas\\Papeleria\\Presentacion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jazie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2065,8 +2065,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Negocio\\Negocio.csproj": {
-              "projectPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Negocio\\Negocio.csproj"
+            "E:\\Descargas\\Papeleria\\Negocio\\Negocio.csproj": {
+              "projectPath": "E:\\Descargas\\Papeleria\\Negocio\\Negocio.csproj"
             }
           }
         }
@@ -2099,7 +2099,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
