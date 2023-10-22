@@ -2021,19 +2021,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jazie\\.nuget\\packages\\": {}
+    "C:\\Users\\robertoo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Descargas\\Papeleria\\Negocio\\Negocio.csproj",
+      "projectUniqueName": "C:\\Users\\robertoo\\Source\\Repos\\PapeleriaEdna\\Negocio\\Negocio.csproj",
       "projectName": "Negocio",
-      "projectPath": "E:\\Descargas\\Papeleria\\Negocio\\Negocio.csproj",
-      "packagesPath": "C:\\Users\\jazie\\.nuget\\packages\\",
-      "outputPath": "E:\\Descargas\\Papeleria\\Negocio\\obj\\",
+      "projectPath": "C:\\Users\\robertoo\\Source\\Repos\\PapeleriaEdna\\Negocio\\Negocio.csproj",
+      "packagesPath": "C:\\Users\\robertoo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\robertoo\\Source\\Repos\\PapeleriaEdna\\Negocio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jazie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\robertoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2047,8 +2047,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Descargas\\Papeleria\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "E:\\Descargas\\Papeleria\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\robertoo\\Source\\Repos\\PapeleriaEdna\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\robertoo\\Source\\Repos\\PapeleriaEdna\\DataAccess\\DataAccess.csproj"
             }
           }
         }

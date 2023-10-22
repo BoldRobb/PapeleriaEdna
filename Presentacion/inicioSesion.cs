@@ -127,9 +127,11 @@ namespace Presentacion
         }
         private void Logout(object sender, FormClosedEventArgs e)
         {
-            txtpass.Text = "Password";
+            txtpass.Text = "Contraseña";
+            txtpass.ForeColor = Color.Silver;
             txtpass.UseSystemPasswordChar = false;
-            txtuser.Text = "Username";
+            txtuser.Text = "Usuario";
+            txtuser.ForeColor = Color.Silver;
             labelmsgerror.Visible = false;
             this.Show();
         }

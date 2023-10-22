@@ -27,4 +27,12 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Formularios\Empleados\" />
+    <Folder Include="Formularios\Inventario\" />
+    <Folder Include="Formularios\Egresos\" />
+    <Folder Include="Formularios\Ventas\" />
+    <Folder Include="Formularios\Proveedores\" />
+  </ItemGroup>
+
 </Project>

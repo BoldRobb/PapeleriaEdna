@@ -37,13 +37,19 @@
             buttonProveedores = new Button();
             buttonInventario = new Button();
             buttonClientes = new Button();
-            panel1 = new Panel();
+            panelLogo = new Panel();
+            labelInfo = new Label();
+            panelTitle = new Panel();
+            labelTitle = new Label();
+            panelChilds = new Panel();
             panelMenu.SuspendLayout();
+            panelLogo.SuspendLayout();
+            panelTitle.SuspendLayout();
             SuspendLayout();
             // 
             // panelMenu
             // 
-            panelMenu.BackColor = Color.FromArgb(41, 32, 74);
+            panelMenu.BackColor = Color.FromArgb(46, 71, 86);
             panelMenu.Controls.Add(buttonLogout);
             panelMenu.Controls.Add(buttonEmpleados);
             panelMenu.Controls.Add(buttonEgresos);
@@ -51,7 +57,7 @@
             panelMenu.Controls.Add(buttonProveedores);
             panelMenu.Controls.Add(buttonInventario);
             panelMenu.Controls.Add(buttonClientes);
-            panelMenu.Controls.Add(panel1);
+            panelMenu.Controls.Add(panelLogo);
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Name = "panelMenu";
@@ -153,7 +159,7 @@
             buttonInventario.FlatAppearance.BorderSize = 0;
             buttonInventario.FlatStyle = FlatStyle.Flat;
             buttonInventario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonInventario.ForeColor = Color.WhiteSmoke;
+            buttonInventario.ForeColor = Color.MistyRose;
             buttonInventario.Image = (Image)resources.GetObject("buttonInventario.Image");
             buttonInventario.ImageAlign = ContentAlignment.MiddleLeft;
             buttonInventario.Location = new Point(0, 122);
@@ -184,14 +190,56 @@
             buttonClientes.UseVisualStyleBackColor = true;
             buttonClientes.Click += buttonClientes_Click;
             // 
-            // panel1
+            // panelLogo
             // 
-            panel1.BackColor = Color.FromArgb(36, 32, 51);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(215, 75);
-            panel1.TabIndex = 0;
+            panelLogo.BackColor = Color.FromArgb(22, 38, 46);
+            panelLogo.Controls.Add(labelInfo);
+            panelLogo.Dock = DockStyle.Top;
+            panelLogo.Location = new Point(0, 0);
+            panelLogo.Name = "panelLogo";
+            panelLogo.Size = new Size(215, 75);
+            panelLogo.TabIndex = 0;
+            // 
+            // labelInfo
+            // 
+            labelInfo.AutoSize = true;
+            labelInfo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelInfo.ForeColor = Color.MistyRose;
+            labelInfo.Location = new Point(53, 27);
+            labelInfo.Name = "labelInfo";
+            labelInfo.Size = new Size(89, 20);
+            labelInfo.TabIndex = 0;
+            labelInfo.Text = "Informacion";
+            // 
+            // panelTitle
+            // 
+            panelTitle.BackColor = Color.FromArgb(60, 122, 137);
+            panelTitle.Controls.Add(labelTitle);
+            panelTitle.Dock = DockStyle.Top;
+            panelTitle.Location = new Point(215, 0);
+            panelTitle.Name = "panelTitle";
+            panelTitle.Size = new Size(585, 72);
+            panelTitle.TabIndex = 1;
+            // 
+            // labelTitle
+            // 
+            labelTitle.Anchor = AnchorStyles.None;
+            labelTitle.AutoSize = true;
+            labelTitle.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTitle.ForeColor = Color.MistyRose;
+            labelTitle.Location = new Point(249, 19);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(123, 30);
+            labelTitle.TabIndex = 0;
+            labelTitle.Text = "Bienvenido";
+            // 
+            // panelChilds
+            // 
+            panelChilds.Dock = DockStyle.Fill;
+            panelChilds.Location = new Point(215, 72);
+            panelChilds.Name = "panelChilds";
+            panelChilds.Size = new Size(585, 371);
+            panelChilds.TabIndex = 2;
             // 
             // FormBase
             // 
@@ -199,18 +247,25 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             ClientSize = new Size(800, 443);
+            Controls.Add(panelChilds);
+            Controls.Add(panelTitle);
             Controls.Add(panelMenu);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "FormBase";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormBase";
             panelMenu.ResumeLayout(false);
+            panelLogo.ResumeLayout(false);
+            panelLogo.PerformLayout();
+            panelTitle.ResumeLayout(false);
+            panelTitle.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panelMenu;
-        private Panel panel1;
+        private Panel panelLogo;
         private Button buttonClientes;
         private Button buttonProveedores;
         private Button buttonInventario;
@@ -218,5 +273,9 @@
         private Button buttonVentas;
         private Button buttonEmpleados;
         private Button buttonLogout;
+        private Panel panelTitle;
+        private Label labelTitle;
+        private Label labelInfo;
+        private Panel panelChilds;
     }
 }

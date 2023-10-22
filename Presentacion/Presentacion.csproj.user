@@ -4,6 +4,9 @@
     <Compile Update="FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\Clientes\FormClientesBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="inicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
