@@ -2039,19 +2039,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jazie\\.nuget\\packages\\": {}
+    "C:\\Users\\ko739\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Descargas\\Papeleria\\Presentacion\\Presentacion.csproj",
+      "projectUniqueName": "C:\\SoftwarePapeleria\\PapeleriaEdna\\Presentacion\\Presentacion.csproj",
       "projectName": "Presentacion",
-      "projectPath": "E:\\Descargas\\Papeleria\\Presentacion\\Presentacion.csproj",
-      "packagesPath": "C:\\Users\\jazie\\.nuget\\packages\\",
-      "outputPath": "E:\\Descargas\\Papeleria\\Presentacion\\obj\\",
+      "projectPath": "C:\\SoftwarePapeleria\\PapeleriaEdna\\Presentacion\\Presentacion.csproj",
+      "packagesPath": "C:\\Users\\ko739\\.nuget\\packages\\",
+      "outputPath": "C:\\SoftwarePapeleria\\PapeleriaEdna\\Presentacion\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\jazie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ko739\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2059,14 +2064,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "E:\\Descargas\\Papeleria\\Negocio\\Negocio.csproj": {
-              "projectPath": "E:\\Descargas\\Papeleria\\Negocio\\Negocio.csproj"
+            "C:\\SoftwarePapeleria\\PapeleriaEdna\\Negocio\\Negocio.csproj": {
+              "projectPath": "C:\\SoftwarePapeleria\\PapeleriaEdna\\Negocio\\Negocio.csproj"
             }
           }
         }
@@ -2099,7 +2105,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
