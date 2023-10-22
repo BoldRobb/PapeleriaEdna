@@ -48,7 +48,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(41, 32, 74);
+            panel1.BackColor = Color.FromArgb(46, 71, 86);
             panel1.Controls.Add(labelmsgerror);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(txtpass);
@@ -59,7 +59,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(438, 393);
+            panel1.Size = new Size(437, 393);
             panel1.TabIndex = 0;
             // 
             // labelmsgerror
@@ -75,7 +75,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(32, 15, 92);
+            panel2.BackColor = Color.FromArgb(60, 122, 137);
             panel2.Controls.Add(btnMinimizar);
             panel2.Controls.Add(btnCerrar);
             panel2.Location = new Point(0, 0);
@@ -184,6 +184,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "inicioSesion";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Inicio de sesion";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

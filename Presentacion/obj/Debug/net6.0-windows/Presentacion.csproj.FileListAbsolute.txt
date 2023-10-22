@@ -94,3 +94,4 @@ C:\Users\robertoo\Source\Repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windo
 C:\Users\robertoo\Source\Repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.pdb
 C:\Users\robertoo\Source\Repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.genruntimeconfig.cache
 C:\Users\robertoo\Source\Repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\ref\Presentacion.dll
+C:\Users\robertoo\Source\Repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Clientes.FormClientesBase.resources
