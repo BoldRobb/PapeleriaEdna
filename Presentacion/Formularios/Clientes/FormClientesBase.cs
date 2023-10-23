@@ -14,7 +14,25 @@ namespace Presentacion.Formularios.Clientes
     {
         public FormClientesBase()
         {
+
             InitializeComponent();
+        }
+
+        private void FormClientesBase_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+        }
+        private void LoadTheme()
+        {
+            panel1.BackColor = ThemeColor.SecondaryColor;
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormClienteNuevo formClienteNuevo = new FormClienteNuevo();
+            formClienteNuevo.ShowDialog();
         }
     }
 }

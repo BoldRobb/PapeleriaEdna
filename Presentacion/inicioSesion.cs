@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Negocio;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using Common;
 
 namespace Presentacion
 {
@@ -36,7 +37,7 @@ namespace Presentacion
                     if (validLogin == true)
                     {
                         FormBase mainMenu = new FormBase();
-                        MessageBox.Show("Bienvenido");
+                        MessageBox.Show("Bienvenido " + UserCache.FirstName + ", " + UserCache.LastName);
                         mainMenu.Show();
                         mainMenu.FormClosed += Logout;
                         this.Hide();
@@ -69,15 +70,7 @@ namespace Presentacion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void txtUser_Enter(object sender, EventArgs e)
         {
@@ -134,6 +127,15 @@ namespace Presentacion
             txtuser.ForeColor = Color.Silver;
             labelmsgerror.Visible = false;
             this.Show();
+        }
+
+        private void buttonMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        private void buttonCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

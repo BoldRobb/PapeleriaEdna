@@ -711,6 +711,16 @@
             "rid": "win"
           }
         }
+      },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
       }
     }
   },
@@ -1995,27 +2005,33 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Common >= 1.0.0",
       "Microsoft.Data.SqlClient >= 5.1.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\robertoo\\.nuget\\packages\\": {}
+    "C:\\Users\\rober\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\robertoo\\Source\\Repos\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\robertoo\\Source\\Repos\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\robertoo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\robertoo\\Source\\Repos\\PapeleriaEdna\\DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\robertoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2028,7 +2044,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -2062,7 +2082,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

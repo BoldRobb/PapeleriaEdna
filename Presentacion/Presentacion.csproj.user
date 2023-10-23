@@ -4,7 +4,13 @@
     <Compile Update="FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\Clientes\FormClienteNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Formularios\Clientes\FormClientesBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Egresos\FormEgresosBase.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="inicioSesion.cs">

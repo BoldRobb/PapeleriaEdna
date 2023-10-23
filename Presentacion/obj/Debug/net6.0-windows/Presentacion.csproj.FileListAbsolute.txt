@@ -95,3 +95,12 @@ C:\Users\robertoo\Source\Repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windo
 C:\Users\robertoo\Source\Repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.genruntimeconfig.cache
 C:\Users\robertoo\Source\Repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\ref\Presentacion.dll
 C:\Users\robertoo\Source\Repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Clientes.FormClientesBase.resources
+C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Clientes.FormClientesBase.resources
+C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Egresos.FormEgresosBase.resources
+C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Empleados.FormEmpleadosBase.resources
+C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Inventario.FormInventarioBase.resources
+C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Proveedores.FormProveedoresBase.resources
+C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Ventas.FormVentasBase.resources
+C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Clientes.FormClienteNuevo.resources
+C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\bin\Debug\net6.0-windows\Common.dll
+C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\bin\Debug\net6.0-windows\Common.pdb

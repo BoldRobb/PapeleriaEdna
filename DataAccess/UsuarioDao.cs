@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Common;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -25,6 +26,16 @@ namespace DataAccess
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
+                        while (reader.Read())
+                        {
+                            UserCache.IdUser = reader.GetInt32(0);
+                            UserCache.LoginName = reader.GetString(1);
+                            UserCache.Password = reader.GetString(2);
+                            UserCache.FirstName = reader.GetString(3);
+                            UserCache.LastName = reader.GetString(4);
+                            UserCache.Position = reader.GetString(5);
+                            UserCache.Email = reader.GetString(6);
+                        }
                         return true;
                     }
                     else

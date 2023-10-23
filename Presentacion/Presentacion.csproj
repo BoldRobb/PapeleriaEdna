@@ -9,10 +9,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\Negocio\Negocio.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Formularios\Empleados\FormEmpleadosBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Inventario\FormInventarioBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Proveedores\FormProveedoresBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Ventas\FormVentasBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -25,14 +38,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Formularios\Empleados\" />
-    <Folder Include="Formularios\Inventario\" />
-    <Folder Include="Formularios\Egresos\" />
-    <Folder Include="Formularios\Ventas\" />
-    <Folder Include="Formularios\Proveedores\" />
   </ItemGroup>
 
 </Project>

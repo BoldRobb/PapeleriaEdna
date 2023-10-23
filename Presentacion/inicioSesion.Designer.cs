@@ -32,8 +32,8 @@
             panel1 = new Panel();
             labelmsgerror = new Label();
             panel2 = new Panel();
-            btnMinimizar = new PictureBox();
-            btnCerrar = new PictureBox();
+            buttonCerrar = new Button();
+            buttonMinimizar = new Button();
             txtpass = new TextBox();
             txtuser = new TextBox();
             label3 = new Label();
@@ -42,8 +42,6 @@
             label1 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -76,35 +74,37 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(60, 122, 137);
-            panel2.Controls.Add(btnMinimizar);
-            panel2.Controls.Add(btnCerrar);
+            panel2.Controls.Add(buttonCerrar);
+            panel2.Controls.Add(buttonMinimizar);
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(438, 25);
             panel2.TabIndex = 6;
             panel2.MouseDown += panel2_MouseDown;
             // 
-            // btnMinimizar
+            // buttonCerrar
             // 
-            btnMinimizar.Image = (Image)resources.GetObject("btnMinimizar.Image");
-            btnMinimizar.InitialImage = null;
-            btnMinimizar.Location = new Point(389, 2);
-            btnMinimizar.Name = "btnMinimizar";
-            btnMinimizar.Size = new Size(20, 20);
-            btnMinimizar.TabIndex = 5;
-            btnMinimizar.TabStop = false;
-            btnMinimizar.Click += btnMinimizar_Click;
+            buttonCerrar.FlatAppearance.BorderSize = 0;
+            buttonCerrar.FlatStyle = FlatStyle.Flat;
+            buttonCerrar.Image = (Image)resources.GetObject("buttonCerrar.Image");
+            buttonCerrar.Location = new Point(413, 1);
+            buttonCerrar.Name = "buttonCerrar";
+            buttonCerrar.Size = new Size(21, 21);
+            buttonCerrar.TabIndex = 8;
+            buttonCerrar.UseVisualStyleBackColor = true;
+            buttonCerrar.Click += buttonCerrar_Click;
             // 
-            // btnCerrar
+            // buttonMinimizar
             // 
-            btnCerrar.Image = (Image)resources.GetObject("btnCerrar.Image");
-            btnCerrar.InitialImage = null;
-            btnCerrar.Location = new Point(415, 2);
-            btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(20, 20);
-            btnCerrar.TabIndex = 5;
-            btnCerrar.TabStop = false;
-            btnCerrar.Click += btnCerrar_Click;
+            buttonMinimizar.FlatAppearance.BorderSize = 0;
+            buttonMinimizar.FlatStyle = FlatStyle.Flat;
+            buttonMinimizar.Image = (Image)resources.GetObject("buttonMinimizar.Image");
+            buttonMinimizar.Location = new Point(386, 1);
+            buttonMinimizar.Name = "buttonMinimizar";
+            buttonMinimizar.Size = new Size(21, 21);
+            buttonMinimizar.TabIndex = 8;
+            buttonMinimizar.UseVisualStyleBackColor = true;
+            buttonMinimizar.Click += buttonMinimizar_Click;
             // 
             // txtpass
             // 
@@ -189,8 +189,6 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)btnMinimizar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
             ResumeLayout(false);
         }
 
@@ -203,9 +201,9 @@
         private Label label2;
         private Button buttonIniciar;
         private Label label1;
-        private PictureBox btnCerrar;
         private Panel panel2;
-        private PictureBox btnMinimizar;
         private Label labelmsgerror;
+        private Button buttonMinimizar;
+        private Button buttonCerrar;
     }
 }

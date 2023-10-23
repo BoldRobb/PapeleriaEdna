@@ -38,10 +38,16 @@
             buttonInventario = new Button();
             buttonClientes = new Button();
             panelLogo = new Panel();
-            labelInfo = new Label();
+            labelUser = new Label();
             panelTitle = new Panel();
+            buttonCerrar = new Button();
+            buttonTamaño = new Button();
+            buttonCloseChild = new Button();
+            buttonMinimizar = new Button();
             labelTitle = new Label();
             panelChilds = new Panel();
+            labelPosition = new Label();
+            labelMail = new Label();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             panelTitle.SuspendLayout();
@@ -66,13 +72,14 @@
             // 
             // buttonLogout
             // 
+            buttonLogout.Dock = DockStyle.Bottom;
             buttonLogout.FlatAppearance.BorderSize = 0;
             buttonLogout.FlatStyle = FlatStyle.Flat;
             buttonLogout.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonLogout.ForeColor = Color.MistyRose;
             buttonLogout.Image = (Image)resources.GetObject("buttonLogout.Image");
             buttonLogout.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonLogout.Location = new Point(0, 395);
+            buttonLogout.Location = new Point(0, 398);
             buttonLogout.Name = "buttonLogout";
             buttonLogout.Size = new Size(215, 45);
             buttonLogout.TabIndex = 1;
@@ -193,33 +200,91 @@
             // panelLogo
             // 
             panelLogo.BackColor = Color.FromArgb(22, 38, 46);
-            panelLogo.Controls.Add(labelInfo);
+            panelLogo.Controls.Add(labelMail);
+            panelLogo.Controls.Add(labelPosition);
+            panelLogo.Controls.Add(labelUser);
             panelLogo.Dock = DockStyle.Top;
             panelLogo.Location = new Point(0, 0);
             panelLogo.Name = "panelLogo";
-            panelLogo.Size = new Size(215, 75);
+            panelLogo.Size = new Size(215, 72);
             panelLogo.TabIndex = 0;
             // 
-            // labelInfo
+            // labelUser
             // 
-            labelInfo.AutoSize = true;
-            labelInfo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelInfo.ForeColor = Color.MistyRose;
-            labelInfo.Location = new Point(53, 27);
-            labelInfo.Name = "labelInfo";
-            labelInfo.Size = new Size(89, 20);
-            labelInfo.TabIndex = 0;
-            labelInfo.Text = "Informacion";
+            labelUser.AutoSize = true;
+            labelUser.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelUser.ForeColor = Color.MistyRose;
+            labelUser.Location = new Point(3, 9);
+            labelUser.Name = "labelUser";
+            labelUser.Size = new Size(89, 20);
+            labelUser.TabIndex = 0;
+            labelUser.Text = "Informacion";
             // 
             // panelTitle
             // 
             panelTitle.BackColor = Color.FromArgb(60, 122, 137);
+            panelTitle.Controls.Add(buttonCerrar);
+            panelTitle.Controls.Add(buttonTamaño);
+            panelTitle.Controls.Add(buttonCloseChild);
+            panelTitle.Controls.Add(buttonMinimizar);
             panelTitle.Controls.Add(labelTitle);
             panelTitle.Dock = DockStyle.Top;
             panelTitle.Location = new Point(215, 0);
             panelTitle.Name = "panelTitle";
             panelTitle.Size = new Size(585, 72);
             panelTitle.TabIndex = 1;
+            panelTitle.MouseDown += panelTitle_MouseDown;
+            // 
+            // buttonCerrar
+            // 
+            buttonCerrar.Anchor = AnchorStyles.Right;
+            buttonCerrar.FlatAppearance.BorderSize = 0;
+            buttonCerrar.FlatStyle = FlatStyle.Flat;
+            buttonCerrar.Image = (Image)resources.GetObject("buttonCerrar.Image");
+            buttonCerrar.Location = new Point(561, 3);
+            buttonCerrar.Name = "buttonCerrar";
+            buttonCerrar.Size = new Size(21, 21);
+            buttonCerrar.TabIndex = 9;
+            buttonCerrar.UseVisualStyleBackColor = true;
+            buttonCerrar.Click += buttonCerrar_Click_1;
+            // 
+            // buttonTamaño
+            // 
+            buttonTamaño.Anchor = AnchorStyles.Right;
+            buttonTamaño.FlatAppearance.BorderSize = 0;
+            buttonTamaño.FlatStyle = FlatStyle.Flat;
+            buttonTamaño.Image = (Image)resources.GetObject("buttonTamaño.Image");
+            buttonTamaño.Location = new Point(534, 3);
+            buttonTamaño.Name = "buttonTamaño";
+            buttonTamaño.Size = new Size(21, 21);
+            buttonTamaño.TabIndex = 10;
+            buttonTamaño.UseVisualStyleBackColor = true;
+            buttonTamaño.Click += buttonTamaño_Click_1;
+            // 
+            // buttonCloseChild
+            // 
+            buttonCloseChild.FlatAppearance.BorderSize = 0;
+            buttonCloseChild.FlatStyle = FlatStyle.Flat;
+            buttonCloseChild.Image = (Image)resources.GetObject("buttonCloseChild.Image");
+            buttonCloseChild.Location = new Point(6, 18);
+            buttonCloseChild.Name = "buttonCloseChild";
+            buttonCloseChild.Size = new Size(46, 41);
+            buttonCloseChild.TabIndex = 10;
+            buttonCloseChild.UseVisualStyleBackColor = true;
+            buttonCloseChild.Click += buttonCloseChild_Click;
+            // 
+            // buttonMinimizar
+            // 
+            buttonMinimizar.Anchor = AnchorStyles.Right;
+            buttonMinimizar.FlatAppearance.BorderSize = 0;
+            buttonMinimizar.FlatStyle = FlatStyle.Flat;
+            buttonMinimizar.Image = (Image)resources.GetObject("buttonMinimizar.Image");
+            buttonMinimizar.Location = new Point(507, 3);
+            buttonMinimizar.Name = "buttonMinimizar";
+            buttonMinimizar.Size = new Size(21, 21);
+            buttonMinimizar.TabIndex = 10;
+            buttonMinimizar.UseVisualStyleBackColor = true;
+            buttonMinimizar.Click += buttonMinimizar_Click_1;
             // 
             // labelTitle
             // 
@@ -241,6 +306,28 @@
             panelChilds.Size = new Size(585, 371);
             panelChilds.TabIndex = 2;
             // 
+            // labelPosition
+            // 
+            labelPosition.AutoSize = true;
+            labelPosition.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelPosition.ForeColor = Color.MistyRose;
+            labelPosition.Location = new Point(3, 29);
+            labelPosition.Name = "labelPosition";
+            labelPosition.Size = new Size(89, 20);
+            labelPosition.TabIndex = 0;
+            labelPosition.Text = "Informacion";
+            // 
+            // labelMail
+            // 
+            labelMail.AutoSize = true;
+            labelMail.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelMail.ForeColor = Color.MistyRose;
+            labelMail.Location = new Point(3, 48);
+            labelMail.Name = "labelMail";
+            labelMail.Size = new Size(89, 20);
+            labelMail.TabIndex = 0;
+            labelMail.Text = "Informacion";
+            // 
             // FormBase
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -250,10 +337,11 @@
             Controls.Add(panelChilds);
             Controls.Add(panelTitle);
             Controls.Add(panelMenu);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormBase";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormBase";
+            Load += FormBase_Load;
             panelMenu.ResumeLayout(false);
             panelLogo.ResumeLayout(false);
             panelLogo.PerformLayout();
@@ -261,6 +349,8 @@
             panelTitle.PerformLayout();
             ResumeLayout(false);
         }
+
+
 
         #endregion
 
@@ -275,7 +365,13 @@
         private Button buttonLogout;
         private Panel panelTitle;
         private Label labelTitle;
-        private Label labelInfo;
+        private Label labelUser;
         private Panel panelChilds;
+        private Button buttonCerrar;
+        private Button buttonTamaño;
+        private Button buttonMinimizar;
+        private Button buttonCloseChild;
+        private Label labelMail;
+        private Label labelPosition;
     }
 }

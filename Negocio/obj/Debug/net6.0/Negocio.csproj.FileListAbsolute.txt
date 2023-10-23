@@ -28,3 +28,5 @@ C:\Users\robertoo\Source\Repos\PapeleriaEdna\Negocio\obj\Debug\net6.0\Negocio.dl
 C:\Users\robertoo\Source\Repos\PapeleriaEdna\Negocio\obj\Debug\net6.0\refint\Negocio.dll
 C:\Users\robertoo\Source\Repos\PapeleriaEdna\Negocio\obj\Debug\net6.0\Negocio.pdb
 C:\Users\robertoo\Source\Repos\PapeleriaEdna\Negocio\obj\Debug\net6.0\ref\Negocio.dll
+C:\Users\rober\source\repos\PapeleriaEdna\Negocio\bin\Debug\net6.0\Common.dll
+C:\Users\rober\source\repos\PapeleriaEdna\Negocio\bin\Debug\net6.0\Common.pdb
