@@ -56,11 +56,12 @@ namespace Presentacion
         }
         private void ActivateButton(object btnsender)
         {
-            DisableButton();
+
             if (btnsender != null)
             {
                 if (currentButton != (Button)btnsender)
                 {
+                    DisableButton();
                     Color color = SelectThemeColor();
                     currentButton = (Button)btnsender;
                     currentButton.BackColor = color;

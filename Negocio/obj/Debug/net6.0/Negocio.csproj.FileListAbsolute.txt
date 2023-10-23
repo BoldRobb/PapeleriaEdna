@@ -30,3 +30,5 @@ C:\Users\robertoo\Source\Repos\PapeleriaEdna\Negocio\obj\Debug\net6.0\Negocio.pd
 C:\Users\robertoo\Source\Repos\PapeleriaEdna\Negocio\obj\Debug\net6.0\ref\Negocio.dll
 C:\Users\rober\source\repos\PapeleriaEdna\Negocio\bin\Debug\net6.0\Common.dll
 C:\Users\rober\source\repos\PapeleriaEdna\Negocio\bin\Debug\net6.0\Common.pdb
+C:\Users\robertoo\source\repos\PapeleriaEdna\Negocio\bin\Debug\net6.0\Common.dll
+C:\Users\robertoo\source\repos\PapeleriaEdna\Negocio\bin\Debug\net6.0\Common.pdb

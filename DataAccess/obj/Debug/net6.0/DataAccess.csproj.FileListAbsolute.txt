@@ -25,3 +25,6 @@ C:\Users\robertoo\Source\Repos\PapeleriaEdna\DataAccess\obj\Debug\net6.0\ref\Dat
 C:\Users\rober\source\repos\PapeleriaEdna\DataAccess\bin\Debug\net6.0\Common.dll
 C:\Users\rober\source\repos\PapeleriaEdna\DataAccess\bin\Debug\net6.0\Common.pdb
 C:\Users\rober\source\repos\PapeleriaEdna\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
+C:\Users\robertoo\source\repos\PapeleriaEdna\DataAccess\bin\Debug\net6.0\Common.dll
+C:\Users\robertoo\source\repos\PapeleriaEdna\DataAccess\bin\Debug\net6.0\Common.pdb
+C:\Users\robertoo\source\repos\PapeleriaEdna\DataAccess\obj\Debug\net6.0\DataAccess.csproj.CopyComplete
