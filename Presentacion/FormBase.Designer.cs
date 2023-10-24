@@ -49,10 +49,13 @@
             buttonMinimizar = new Button();
             labelTitle = new Label();
             panelChilds = new Panel();
+            pictureBoxLogo = new PictureBox();
             panelMenu.SuspendLayout();
             panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelTitle.SuspendLayout();
+            panelChilds.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
             SuspendLayout();
             // 
             // panelMenu
@@ -334,11 +337,23 @@
             // 
             // panelChilds
             // 
+            panelChilds.BackColor = Color.FromArgb(233, 234, 239);
+            panelChilds.Controls.Add(pictureBoxLogo);
             panelChilds.Dock = DockStyle.Fill;
             panelChilds.Location = new Point(215, 72);
             panelChilds.Name = "panelChilds";
             panelChilds.Size = new Size(676, 431);
             panelChilds.TabIndex = 2;
+            // 
+            // pictureBoxLogo
+            // 
+            pictureBoxLogo.Anchor = AnchorStyles.None;
+            pictureBoxLogo.Image = (Image)resources.GetObject("pictureBoxLogo.Image");
+            pictureBoxLogo.Location = new Point(113, 140);
+            pictureBoxLogo.Name = "pictureBoxLogo";
+            pictureBoxLogo.Size = new Size(450, 152);
+            pictureBoxLogo.TabIndex = 0;
+            pictureBoxLogo.TabStop = false;
             // 
             // FormBase
             // 
@@ -360,6 +375,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelTitle.ResumeLayout(false);
             panelTitle.PerformLayout();
+            panelChilds.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
             ResumeLayout(false);
         }
 
@@ -387,5 +404,6 @@
         private Label labelMail;
         private Label labelPosition;
         private PictureBox pictureBox1;
+        private PictureBox pictureBoxLogo;
     }
 }
