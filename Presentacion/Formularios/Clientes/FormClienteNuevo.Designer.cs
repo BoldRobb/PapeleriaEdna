@@ -28,66 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClienteNuevo));
             panel1 = new Panel();
+            buttonCerrar = new Button();
+            label3 = new Label();
             label1 = new Label();
-            textBoxNombre = new TextBox();
-            label2 = new Label();
-            textBoxApellido = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(textBoxApellido);
-            panel1.Controls.Add(textBoxNombre);
-            panel1.Controls.Add(label2);
+            panel1.BackColor = SystemColors.ActiveBorder;
             panel1.Controls.Add(label1);
+            panel1.Controls.Add(buttonCerrar);
+            panel1.Controls.Add(label3);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 450);
+            panel1.Size = new Size(1049, 616);
             panel1.TabIndex = 0;
+            // 
+            // buttonCerrar
+            // 
+            buttonCerrar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            buttonCerrar.FlatAppearance.BorderSize = 0;
+            buttonCerrar.FlatStyle = FlatStyle.Flat;
+            buttonCerrar.Image = (Image)resources.GetObject("buttonCerrar.Image");
+            buttonCerrar.Location = new Point(974, 12);
+            buttonCerrar.Name = "buttonCerrar";
+            buttonCerrar.Size = new Size(63, 60);
+            buttonCerrar.TabIndex = 10;
+            buttonCerrar.UseVisualStyleBackColor = true;
+            buttonCerrar.Click += buttonCerrar_Click;
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.None;
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.Control;
+            label3.Location = new Point(12, 12);
+            label3.Name = "label3";
+            label3.Size = new Size(365, 36);
+            label3.TabIndex = 2;
+            label3.Text = "Agregar un cliente nuevo";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(71, 76);
+            label1.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(21, 79);
             label1.Name = "label1";
-            label1.Size = new Size(56, 15);
-            label1.TabIndex = 0;
+            label1.Size = new Size(59, 15);
+            label1.TabIndex = 11;
             label1.Text = "Nombres";
-            // 
-            // textBoxNombre
-            // 
-            textBoxNombre.Location = new Point(71, 94);
-            textBoxNombre.Name = "textBoxNombre";
-            textBoxNombre.Size = new Size(100, 23);
-            textBoxNombre.TabIndex = 1;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(199, 76);
-            label2.Name = "label2";
-            label2.Size = new Size(56, 15);
-            label2.TabIndex = 0;
-            label2.Text = "Apellidos";
-            // 
-            // textBoxApellido
-            // 
-            textBoxApellido.Location = new Point(199, 94);
-            textBoxApellido.Name = "textBoxApellido";
-            textBoxApellido.Size = new Size(100, 23);
-            textBoxApellido.TabIndex = 1;
             // 
             // FormClienteNuevo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1049, 616);
             Controls.Add(panel1);
             Name = "FormClienteNuevo";
             Text = "Agregar Cliente";
+            Load += FormClienteNuevo_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -96,9 +100,8 @@
         #endregion
 
         private Panel panel1;
-        private TextBox textBoxApellido;
-        private TextBox textBoxNombre;
-        private Label label2;
+        private Label label3;
+        private Button buttonCerrar;
         private Label label1;
     }
 }

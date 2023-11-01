@@ -12,12 +12,31 @@ namespace Presentacion.Formularios.Clientes
 {
     public partial class FormClientesBase : Form
     {
+        private Form activeForm;
         public FormClientesBase()
         {
 
             InitializeComponent();
         }
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
 
+
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(childForm);
+            this.panel1.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            this.Text = childForm.Text;
+
+        }
         private void FormClientesBase_Load(object sender, EventArgs e)
         {
             LoadTheme();
@@ -31,8 +50,16 @@ namespace Presentacion.Formularios.Clientes
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormClienteNuevo formClienteNuevo = new FormClienteNuevo();
-            formClienteNuevo.ShowDialog();
+            OpenChildForm(new Formularios.Clientes.FormClienteNuevo(), sender);
+
+
+        }
+
+        private void buttonCerrarChild_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+
         }
     }
 }

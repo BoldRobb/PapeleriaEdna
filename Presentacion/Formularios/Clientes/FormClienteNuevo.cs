@@ -16,5 +16,20 @@ namespace Presentacion.Formularios.Clientes
         {
             InitializeComponent();
         }
+        private void LoadTheme()
+        {
+            panel1.BackColor = ThemeColor.SecondaryColor;
+
+
+        }
+        private void buttonCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormClienteNuevo_Load(object sender, EventArgs e)
+        {
+            LoadTheme();
+        }
     }
 }

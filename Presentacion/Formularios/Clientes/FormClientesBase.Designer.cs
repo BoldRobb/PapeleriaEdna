@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            button10 = new Button();
+            button6 = new Button();
             button9 = new Button();
             button3 = new Button();
             button8 = new Button();
@@ -37,8 +39,6 @@
             button7 = new Button();
             button4 = new Button();
             button1 = new Button();
-            button6 = new Button();
-            button10 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,9 +61,43 @@
             panel1.Size = new Size(1049, 616);
             panel1.TabIndex = 0;
             // 
+            // button10
+            // 
+            button10.Anchor = AnchorStyles.None;
+            button10.FlatAppearance.BorderColor = Color.White;
+            button10.FlatAppearance.BorderSize = 0;
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button10.ForeColor = SystemColors.Window;
+            button10.ImageAlign = ContentAlignment.TopCenter;
+            button10.Location = new Point(0, 504);
+            button10.Name = "button10";
+            button10.Size = new Size(1049, 72);
+            button10.TabIndex = 2;
+            button10.Text = "Ver clientes deudores";
+            button10.TextAlign = ContentAlignment.BottomCenter;
+            button10.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            button6.Anchor = AnchorStyles.None;
+            button6.FlatAppearance.BorderColor = Color.White;
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button6.ForeColor = SystemColors.Window;
+            button6.ImageAlign = ContentAlignment.TopCenter;
+            button6.Location = new Point(0, 432);
+            button6.Name = "button6";
+            button6.Size = new Size(1049, 72);
+            button6.TabIndex = 1;
+            button6.Text = "Modificar cliente deudor";
+            button6.TextAlign = ContentAlignment.BottomCenter;
+            button6.UseVisualStyleBackColor = true;
+            // 
             // button9
             // 
-            button9.Dock = DockStyle.Top;
+            button9.Anchor = AnchorStyles.None;
             button9.FlatAppearance.BorderColor = Color.White;
             button9.FlatAppearance.BorderSize = 0;
             button9.FlatStyle = FlatStyle.Flat;
@@ -80,7 +114,7 @@
             // 
             // button3
             // 
-            button3.Dock = DockStyle.Top;
+            button3.Anchor = AnchorStyles.None;
             button3.FlatAppearance.BorderColor = Color.White;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
@@ -97,7 +131,7 @@
             // 
             // button8
             // 
-            button8.Dock = DockStyle.Top;
+            button8.Anchor = AnchorStyles.None;
             button8.FlatAppearance.BorderColor = Color.White;
             button8.FlatAppearance.BorderSize = 0;
             button8.FlatStyle = FlatStyle.Flat;
@@ -131,7 +165,7 @@
             // 
             // button2
             // 
-            button2.Dock = DockStyle.Top;
+            button2.Anchor = AnchorStyles.None;
             button2.FlatAppearance.BorderColor = Color.White;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
@@ -148,7 +182,7 @@
             // 
             // button7
             // 
-            button7.Dock = DockStyle.Top;
+            button7.Anchor = AnchorStyles.None;
             button7.FlatAppearance.BorderColor = Color.White;
             button7.FlatAppearance.BorderSize = 0;
             button7.FlatStyle = FlatStyle.Flat;
@@ -182,7 +216,7 @@
             // 
             // button1
             // 
-            button1.Dock = DockStyle.Top;
+            button1.Anchor = AnchorStyles.None;
             button1.FlatAppearance.BorderColor = Color.White;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
@@ -197,40 +231,6 @@
             button1.TextAlign = ContentAlignment.BottomCenter;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
-            // 
-            // button6
-            // 
-            button6.Dock = DockStyle.Top;
-            button6.FlatAppearance.BorderColor = Color.White;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.ForeColor = SystemColors.Window;
-            button6.ImageAlign = ContentAlignment.TopCenter;
-            button6.Location = new Point(0, 432);
-            button6.Name = "button6";
-            button6.Size = new Size(1049, 72);
-            button6.TabIndex = 1;
-            button6.Text = "Modificar cliente deudor";
-            button6.TextAlign = ContentAlignment.BottomCenter;
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            button10.Dock = DockStyle.Top;
-            button10.FlatAppearance.BorderColor = Color.White;
-            button10.FlatAppearance.BorderSize = 0;
-            button10.FlatStyle = FlatStyle.Flat;
-            button10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button10.ForeColor = SystemColors.Window;
-            button10.ImageAlign = ContentAlignment.TopCenter;
-            button10.Location = new Point(0, 504);
-            button10.Name = "button10";
-            button10.Size = new Size(1049, 72);
-            button10.TabIndex = 2;
-            button10.Text = "Ver clientes deudores";
-            button10.TextAlign = ContentAlignment.BottomCenter;
-            button10.UseVisualStyleBackColor = true;
             // 
             // FormClientesBase
             // 
