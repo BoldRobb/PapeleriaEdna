@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\robertoo\\.nuget\\packages\\": {}
+    "C:\\Users\\rober\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj",
+      "projectUniqueName": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj",
       "projectName": "Common",
-      "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj",
-      "packagesPath": "C:\\Users\\robertoo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\Common\\obj\\",
+      "projectPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj",
+      "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\robertoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,30 @@ namespace Presentacion.Formularios.Clientes
 {
     public partial class FormClienteNuevo : Form
     {
+        ConexionBD conexion = new ConexionBD();
+        SqlConnection connection = new SqlConnection();
+
         public FormClienteNuevo()
         {
+            connection = conexion.GetConnection();
+            connection.Open();
             InitializeComponent();
+        }
+
+
+
+        private void buttonVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void buttonAgregar_Click(object sender, EventArgs e)
+        {
+            SqlCommand aggCmd = new SqlCommand("insert into Clientes values (@Nombre, @Apellido)", connection);
+
+            aggCmd.Parameters.AddWithValue("@Nombre", textBoxNombre.Text);
+            aggCmd.Parameters.AddWithValue("@Apellido", textBoxApellido.Text);
+
+            aggCmd.ExecuteNonQuery();
         }
     }
 }
