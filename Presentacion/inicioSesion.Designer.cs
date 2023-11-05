@@ -156,7 +156,7 @@
             buttonIniciar.FlatStyle = FlatStyle.Flat;
             buttonIniciar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonIniciar.ForeColor = Color.MistyRose;
-            buttonIniciar.Location = new Point(120, 296);
+            buttonIniciar.Location = new Point(110, 298);
             buttonIniciar.Name = "buttonIniciar";
             buttonIniciar.Size = new Size(215, 56);
             buttonIniciar.TabIndex = 2;

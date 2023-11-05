@@ -10,6 +10,27 @@
     <Compile Update="Formularios\Clientes\FormClientesBase.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\Clientes\FormDeudorNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Clientes\FormEliminarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Clientes\FormEliminarDeudor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Clientes\FormModificarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Clientes\FormModificarDeudor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Clientes\FormVerClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Clientes\FormVerDeudores.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Formularios\Egresos\FormEgresosBase.cs">
       <SubType>Form</SubType>
     </Compile>
