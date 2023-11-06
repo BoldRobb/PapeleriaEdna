@@ -34,6 +34,9 @@
     <Compile Update="Formularios\Egresos\FormEgresosBase.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\Inventario\AgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="inicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -26,5 +26,11 @@ namespace Presentacion.Formularios.Inventario
 
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AgregarProducto agregarProducto = new AgregarProducto();
+            agregarProducto.Show();
+        }
     }
 }

@@ -23,8 +23,13 @@ namespace Presentacion.Formularios.Clientes
             dataGridView1.DefaultCellStyle.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
             dataGridView1.DefaultCellStyle.SelectionBackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
             dataGridView1.DefaultCellStyle.SelectionForeColor = Color.White;
-            dataGridView1.RowHeadersDefaultCellStyle.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.1);
-            dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.1);
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.2);
+            dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.25);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridView1.RowsDefaultCellStyle.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.1);
+            dataGridView1.RowsDefaultCellStyle.SelectionBackColor = ThemeColor.ChangeColorBrightness(ThemeColor.PrimaryColor, -0.15);
+            dataGridView1.MinimumSize = new Size(1025, 508);
+            dataGridView1.AutoSize = false;
         }
 
         private void FormVerClientes_Load(object sender, EventArgs e)
@@ -39,6 +44,11 @@ namespace Presentacion.Formularios.Clientes
             connection.Close();
             dataGridView1.DataSource = ds;
             dataGridView1.DataMember = "result";
+        }
+
+        private void buttonVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
