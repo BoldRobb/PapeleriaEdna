@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Presentacion",
+    "\\Presentacion\\Formularios",
+    "\\Presentacion\\Formularios\\Inventario"
   ],
-  "SelectedNode": "\\PapeleriaEdna.sln",
+  "SelectedNode": "\\Presentacion\\Formularios\\Inventario\\EliminarCategoria.cs",
   "PreviewInSolutionExplorer": false
 }

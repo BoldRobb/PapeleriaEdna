@@ -56,17 +56,19 @@
             panel1.Controls.Add(buttonIniciar);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(437, 393);
+            panel1.Size = new Size(499, 524);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // labelmsgerror
             // 
             labelmsgerror.AutoSize = true;
             labelmsgerror.ForeColor = SystemColors.ButtonFace;
-            labelmsgerror.Location = new Point(133, 252);
+            labelmsgerror.Location = new Point(152, 336);
             labelmsgerror.Name = "labelmsgerror";
-            labelmsgerror.Size = new Size(81, 15);
+            labelmsgerror.Size = new Size(103, 20);
             labelmsgerror.TabIndex = 7;
             labelmsgerror.Text = "Error Message";
             labelmsgerror.Visible = false;
@@ -77,8 +79,9 @@
             panel2.Controls.Add(buttonCerrar);
             panel2.Controls.Add(buttonMinimizar);
             panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(438, 25);
+            panel2.Size = new Size(501, 33);
             panel2.TabIndex = 6;
             panel2.MouseDown += panel2_MouseDown;
             // 
@@ -87,9 +90,10 @@
             buttonCerrar.FlatAppearance.BorderSize = 0;
             buttonCerrar.FlatStyle = FlatStyle.Flat;
             buttonCerrar.Image = (Image)resources.GetObject("buttonCerrar.Image");
-            buttonCerrar.Location = new Point(413, 1);
+            buttonCerrar.Location = new Point(472, 1);
+            buttonCerrar.Margin = new Padding(3, 4, 3, 4);
             buttonCerrar.Name = "buttonCerrar";
-            buttonCerrar.Size = new Size(21, 21);
+            buttonCerrar.Size = new Size(24, 28);
             buttonCerrar.TabIndex = 8;
             buttonCerrar.UseVisualStyleBackColor = true;
             buttonCerrar.Click += buttonCerrar_Click;
@@ -99,9 +103,10 @@
             buttonMinimizar.FlatAppearance.BorderSize = 0;
             buttonMinimizar.FlatStyle = FlatStyle.Flat;
             buttonMinimizar.Image = (Image)resources.GetObject("buttonMinimizar.Image");
-            buttonMinimizar.Location = new Point(386, 1);
+            buttonMinimizar.Location = new Point(441, 1);
+            buttonMinimizar.Margin = new Padding(3, 4, 3, 4);
             buttonMinimizar.Name = "buttonMinimizar";
-            buttonMinimizar.Size = new Size(21, 21);
+            buttonMinimizar.Size = new Size(24, 28);
             buttonMinimizar.TabIndex = 8;
             buttonMinimizar.UseVisualStyleBackColor = true;
             buttonMinimizar.Click += buttonMinimizar_Click;
@@ -110,9 +115,10 @@
             // 
             txtpass.ForeColor = Color.Silver;
             txtpass.ImeMode = ImeMode.Disable;
-            txtpass.Location = new Point(133, 209);
+            txtpass.Location = new Point(152, 279);
+            txtpass.Margin = new Padding(3, 4, 3, 4);
             txtpass.Name = "txtpass";
-            txtpass.Size = new Size(164, 23);
+            txtpass.Size = new Size(187, 27);
             txtpass.TabIndex = 4;
             txtpass.Text = "Contraseña";
             txtpass.Enter += txtPass_Enter;
@@ -121,9 +127,10 @@
             // txtuser
             // 
             txtuser.ForeColor = Color.Silver;
-            txtuser.Location = new Point(133, 130);
+            txtuser.Location = new Point(152, 173);
+            txtuser.Margin = new Padding(3, 4, 3, 4);
             txtuser.Name = "txtuser";
-            txtuser.Size = new Size(164, 23);
+            txtuser.Size = new Size(187, 27);
             txtuser.TabIndex = 4;
             txtuser.Text = "Usuario";
             txtuser.Enter += txtUser_Enter;
@@ -134,9 +141,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(133, 173);
+            label3.Location = new Point(152, 231);
             label3.Name = "label3";
-            label3.Size = new Size(118, 30);
+            label3.Size = new Size(151, 37);
             label3.TabIndex = 3;
             label3.Text = "Contraseña";
             // 
@@ -145,9 +152,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.Control;
-            label2.Location = new Point(133, 94);
+            label2.Location = new Point(152, 125);
             label2.Name = "label2";
-            label2.Size = new Size(83, 30);
+            label2.Size = new Size(108, 37);
             label2.TabIndex = 3;
             label2.Text = "Usuario";
             // 
@@ -156,9 +163,10 @@
             buttonIniciar.FlatStyle = FlatStyle.Flat;
             buttonIniciar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             buttonIniciar.ForeColor = Color.MistyRose;
-            buttonIniciar.Location = new Point(120, 296);
+            buttonIniciar.Location = new Point(137, 395);
+            buttonIniciar.Margin = new Padding(3, 4, 3, 4);
             buttonIniciar.Name = "buttonIniciar";
-            buttonIniciar.Size = new Size(215, 56);
+            buttonIniciar.Size = new Size(246, 75);
             buttonIniciar.TabIndex = 2;
             buttonIniciar.Text = "Iniciar sesión";
             buttonIniciar.UseVisualStyleBackColor = true;
@@ -169,20 +177,20 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(120, 46);
+            label1.Location = new Point(137, 61);
             label1.Name = "label1";
-            label1.Size = new Size(199, 37);
+            label1.Size = new Size(249, 46);
             label1.TabIndex = 1;
             label1.Text = "Inicio de sesión";
             // 
             // inicioSesion
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(437, 392);
+            ClientSize = new Size(499, 523);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2);
+            Margin = new Padding(2, 3, 2, 3);
             Name = "inicioSesion";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Inicio de sesion";

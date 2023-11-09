@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presentacion", "Presentacion\Presentacion.csproj", "{2547A0EE-EE2B-4D37-A492-65BBBA60C329}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{7B6B01C7-4988-4E01-BC5D-BD63D472EB26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{7B6B01C7-4988-4E01-BC5D-BD63D472EB26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgregarProducto", "Presentacion\Formularios\Inventario\AgregarProducto\AgregarProducto.csproj", "{E04AD88F-1FB4-4CF0-810F-8ABF88E0AD15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EliminarCategoria", "EliminarCategoria\EliminarCategoria.csproj", "{B15C6557-74C2-4784-BF85-2B9C44AB95E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{7B6B01C7-4988-4E01-BC5D-BD63D472EB26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B6B01C7-4988-4E01-BC5D-BD63D472EB26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B6B01C7-4988-4E01-BC5D-BD63D472EB26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E04AD88F-1FB4-4CF0-810F-8ABF88E0AD15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E04AD88F-1FB4-4CF0-810F-8ABF88E0AD15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E04AD88F-1FB4-4CF0-810F-8ABF88E0AD15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E04AD88F-1FB4-4CF0-810F-8ABF88E0AD15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B15C6557-74C2-4784-BF85-2B9C44AB95E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B15C6557-74C2-4784-BF85-2B9C44AB95E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B15C6557-74C2-4784-BF85-2B9C44AB95E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B15C6557-74C2-4784-BF85-2B9C44AB95E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

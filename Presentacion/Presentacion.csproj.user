@@ -13,6 +13,30 @@
     <Compile Update="Formularios\Egresos\FormEgresosBase.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\Inventario\AgregarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Inventario\AgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Inventario\EliminarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Inventario\EliminarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Inventario\ModificarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Inventario\ModificarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Inventario\ProductosAgotados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Inventario\ProductosExistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="inicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>

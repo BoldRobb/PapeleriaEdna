@@ -188,6 +188,11 @@ namespace Presentacion
             currentButton = null;
             buttonCloseChild.Visible = false;
         }
+
+        private void panelTitle_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }

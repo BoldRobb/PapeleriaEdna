@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rYExZ3Y12MrTe/DuhC4EF57CP1fhwadprti510PL+yB1DWKJs/LL9wcALNncW4Z4VkRQ0Jf6nVfKlZZszDppWg==",
+  "dgSpecHash": "lea9f0PesIAsAdeRPYwjgyd/4EXb7C8cN3X3EZzSh8IUPUyfHwQMQBQiA87fowaPZmQz2nVpwzX4hqTp900c1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj",
+  "projectFilePath": "C:\\Papeleria\\Common\\Common.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -26,5 +26,46 @@ namespace Presentacion.Formularios.Inventario
 
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EliminarCategoria eliminatecategory = new EliminarCategoria();
+            eliminatecategory.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ModificarCategoria modifyCategory = new ModificarCategoria();
+            modifyCategory.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AgregarCategoria addCategory = new AgregarCategoria();
+            addCategory.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AgregarProducto addProduct = new AgregarProducto();
+            addProduct.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            ModificarProducto modifyProduct = new ModificarProducto();
+            modifyProduct.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            ProductosExistencia seeProductsE = new ProductosExistencia();
+            seeProductsE.Show();
+        }
     }
 }

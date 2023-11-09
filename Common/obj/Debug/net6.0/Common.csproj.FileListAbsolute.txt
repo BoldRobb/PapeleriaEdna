@@ -20,3 +20,14 @@ C:\Users\robertoo\source\repos\PapeleriaEdna\Common\obj\Debug\net6.0\Common.dll
 C:\Users\robertoo\source\repos\PapeleriaEdna\Common\obj\Debug\net6.0\refint\Common.dll
 C:\Users\robertoo\source\repos\PapeleriaEdna\Common\obj\Debug\net6.0\Common.pdb
 C:\Users\robertoo\source\repos\PapeleriaEdna\Common\obj\Debug\net6.0\ref\Common.dll
+C:\Papeleria\Common\bin\Debug\net6.0\Common.deps.json
+C:\Papeleria\Common\bin\Debug\net6.0\Common.dll
+C:\Papeleria\Common\bin\Debug\net6.0\Common.pdb
+C:\Papeleria\Common\obj\Debug\net6.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Papeleria\Common\obj\Debug\net6.0\Common.AssemblyInfoInputs.cache
+C:\Papeleria\Common\obj\Debug\net6.0\Common.AssemblyInfo.cs
+C:\Papeleria\Common\obj\Debug\net6.0\Common.csproj.CoreCompileInputs.cache
+C:\Papeleria\Common\obj\Debug\net6.0\Common.dll
+C:\Papeleria\Common\obj\Debug\net6.0\refint\Common.dll
+C:\Papeleria\Common\obj\Debug\net6.0\Common.pdb
+C:\Papeleria\Common\obj\Debug\net6.0\ref\Common.dll

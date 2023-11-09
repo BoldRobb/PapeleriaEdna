@@ -7,7 +7,7 @@ namespace DataAccess
         private readonly string connectionString;
         public SqlConnectionDB()
         {
-            connectionString = "Server=DESKTOP-D6EMB4F\\SQLEXPRESS;DataBase= Papeleria; integrated security= true;Encrypt=False";
+            connectionString = "Server=KevinMN27\\SQLEXPRESS;DataBase= Papeleria; integrated security= true;Encrypt=False";
         }
         protected SqlConnection GetConnection()
         {
