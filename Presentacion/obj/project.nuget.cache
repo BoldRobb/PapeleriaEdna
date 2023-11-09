@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "0loAzD2zJBSQKfFAhNdL5KnfpYevj8DyCYc1dr7mEfpi+7OjWjH9/1SEAzn3Awys0IuXg5lJ/P3adfRbUjah+A==",
   "success": true,
   "projectFilePath": "C:\\Papeleria\\Presentacion\\Presentacion.csproj",
+=======
+  "dgSpecHash": "75D2wHIFqtWBvzw8aANL3KAc7PDOm17Rk+6iUL0HjqmIsfYiiUYISOQWewhn+/HKRCPxZR628Xm1GVjRykOgUw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Presentacion\\Presentacion.csproj",
+>>>>>>> origin
   "expectedPackageFiles": [
     "C:\\Users\\ko739\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\ko739\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

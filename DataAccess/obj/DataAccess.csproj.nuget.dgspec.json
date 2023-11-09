@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Papeleria\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Papeleria\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\ko739\\.nuget\\packages\\",
         "outputPath": "C:\\Papeleria\\Common\\obj\\",
+=======
+    "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj",
+        "projectName": "Common",
+        "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\robertoo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\obj\\",
+>>>>>>> origin
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -63,6 +77,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Papeleria\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -71,6 +86,16 @@
         "projectPath": "C:\\Papeleria\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\ko739\\.nuget\\packages\\",
         "outputPath": "C:\\Papeleria\\DataAccess\\obj\\",
+=======
+    "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
+        "projectName": "DataAccess",
+        "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\robertoo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\obj\\",
+>>>>>>> origin
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -91,8 +116,13 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Papeleria\\Common\\Common.csproj": {
                 "projectPath": "C:\\Papeleria\\Common\\Common.csproj"
+=======
+              "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj"
+>>>>>>> origin
               }
             }
           }

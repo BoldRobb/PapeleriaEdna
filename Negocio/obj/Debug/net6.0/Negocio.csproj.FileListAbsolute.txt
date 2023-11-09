@@ -32,6 +32,7 @@ C:\Users\rober\source\repos\PapeleriaEdna\Negocio\bin\Debug\net6.0\Common.dll
 C:\Users\rober\source\repos\PapeleriaEdna\Negocio\bin\Debug\net6.0\Common.pdb
 C:\Users\robertoo\source\repos\PapeleriaEdna\Negocio\bin\Debug\net6.0\Common.dll
 C:\Users\robertoo\source\repos\PapeleriaEdna\Negocio\bin\Debug\net6.0\Common.pdb
+<<<<<<< HEAD
 C:\Papeleria\Negocio\bin\Debug\net6.0\Negocio.deps.json
 C:\Papeleria\Negocio\bin\Debug\net6.0\Negocio.dll
 C:\Papeleria\Negocio\bin\Debug\net6.0\Negocio.pdb
@@ -49,3 +50,22 @@ C:\Papeleria\Negocio\obj\Debug\net6.0\Negocio.dll
 C:\Papeleria\Negocio\obj\Debug\net6.0\refint\Negocio.dll
 C:\Papeleria\Negocio\obj\Debug\net6.0\Negocio.pdb
 C:\Papeleria\Negocio\obj\Debug\net6.0\ref\Negocio.dll
+=======
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\bin\Debug\net6.0\Negocio.deps.json
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\bin\Debug\net6.0\Negocio.dll
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\bin\Debug\net6.0\Negocio.pdb
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\bin\Debug\net6.0\Common.dll
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\bin\Debug\net6.0\DataAccess.dll
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\bin\Debug\net6.0\Common.pdb
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\bin\Debug\net6.0\DataAccess.pdb
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\obj\Debug\net6.0\Negocio.csproj.AssemblyReference.cache
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\obj\Debug\net6.0\Negocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\obj\Debug\net6.0\Negocio.AssemblyInfoInputs.cache
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\obj\Debug\net6.0\Negocio.AssemblyInfo.cs
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\obj\Debug\net6.0\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\obj\Debug\net6.0\Negocio.csproj.CopyComplete
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\obj\Debug\net6.0\Negocio.dll
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\obj\Debug\net6.0\refint\Negocio.dll
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\obj\Debug\net6.0\Negocio.pdb
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Negocio\obj\Debug\net6.0\ref\Negocio.dll
+>>>>>>> origin

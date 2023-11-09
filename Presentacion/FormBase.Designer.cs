@@ -73,7 +73,11 @@
             panelMenu.Location = new Point(0, 0);
             panelMenu.Margin = new Padding(3, 4, 3, 4);
             panelMenu.Name = "panelMenu";
+<<<<<<< HEAD
             panelMenu.Size = new Size(246, 671);
+=======
+            panelMenu.Size = new Size(215, 720);
+>>>>>>> origin
             panelMenu.TabIndex = 0;
             // 
             // buttonLogout
@@ -85,8 +89,12 @@
             buttonLogout.ForeColor = Color.WhiteSmoke;
             buttonLogout.Image = (Image)resources.GetObject("buttonLogout.Image");
             buttonLogout.ImageAlign = ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             buttonLogout.Location = new Point(0, 604);
             buttonLogout.Margin = new Padding(3, 4, 3, 4);
+=======
+            buttonLogout.Location = new Point(0, 670);
+>>>>>>> origin
             buttonLogout.Name = "buttonLogout";
             buttonLogout.Size = new Size(246, 67);
             buttonLogout.TabIndex = 1;
@@ -104,10 +112,16 @@
             buttonEmpleados.ForeColor = Color.WhiteSmoke;
             buttonEmpleados.Image = (Image)resources.GetObject("buttonEmpleados.Image");
             buttonEmpleados.ImageAlign = ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             buttonEmpleados.Location = new Point(0, 512);
             buttonEmpleados.Margin = new Padding(3, 4, 3, 4);
             buttonEmpleados.Name = "buttonEmpleados";
             buttonEmpleados.Size = new Size(246, 60);
+=======
+            buttonEmpleados.Location = new Point(0, 484);
+            buttonEmpleados.Name = "buttonEmpleados";
+            buttonEmpleados.Size = new Size(215, 65);
+>>>>>>> origin
             buttonEmpleados.TabIndex = 1;
             buttonEmpleados.Text = "  Empleados";
             buttonEmpleados.TextAlign = ContentAlignment.MiddleLeft;
@@ -123,10 +137,16 @@
             buttonEgresos.ForeColor = Color.WhiteSmoke;
             buttonEgresos.Image = (Image)resources.GetObject("buttonEgresos.Image");
             buttonEgresos.ImageAlign = ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             buttonEgresos.Location = new Point(0, 444);
             buttonEgresos.Margin = new Padding(3, 4, 3, 4);
             buttonEgresos.Name = "buttonEgresos";
             buttonEgresos.Size = new Size(246, 60);
+=======
+            buttonEgresos.Location = new Point(0, 413);
+            buttonEgresos.Name = "buttonEgresos";
+            buttonEgresos.Size = new Size(215, 65);
+>>>>>>> origin
             buttonEgresos.TabIndex = 1;
             buttonEgresos.Text = "  Egresos";
             buttonEgresos.TextAlign = ContentAlignment.MiddleLeft;
@@ -142,10 +162,16 @@
             buttonVentas.ForeColor = Color.WhiteSmoke;
             buttonVentas.Image = (Image)resources.GetObject("buttonVentas.Image");
             buttonVentas.ImageAlign = ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             buttonVentas.Location = new Point(0, 376);
             buttonVentas.Margin = new Padding(3, 4, 3, 4);
             buttonVentas.Name = "buttonVentas";
             buttonVentas.Size = new Size(246, 60);
+=======
+            buttonVentas.Location = new Point(0, 342);
+            buttonVentas.Name = "buttonVentas";
+            buttonVentas.Size = new Size(215, 65);
+>>>>>>> origin
             buttonVentas.TabIndex = 1;
             buttonVentas.Text = "  Ventas";
             buttonVentas.TextAlign = ContentAlignment.MiddleLeft;
@@ -161,10 +187,16 @@
             buttonProveedores.ForeColor = Color.WhiteSmoke;
             buttonProveedores.Image = (Image)resources.GetObject("buttonProveedores.Image");
             buttonProveedores.ImageAlign = ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             buttonProveedores.Location = new Point(0, 308);
             buttonProveedores.Margin = new Padding(3, 4, 3, 4);
             buttonProveedores.Name = "buttonProveedores";
             buttonProveedores.Size = new Size(246, 60);
+=======
+            buttonProveedores.Location = new Point(0, 271);
+            buttonProveedores.Name = "buttonProveedores";
+            buttonProveedores.Size = new Size(215, 65);
+>>>>>>> origin
             buttonProveedores.TabIndex = 1;
             buttonProveedores.Text = "  Proveedores";
             buttonProveedores.TextAlign = ContentAlignment.MiddleLeft;
@@ -180,10 +212,16 @@
             buttonInventario.ForeColor = Color.WhiteSmoke;
             buttonInventario.Image = (Image)resources.GetObject("buttonInventario.Image");
             buttonInventario.ImageAlign = ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             buttonInventario.Location = new Point(0, 240);
             buttonInventario.Margin = new Padding(3, 4, 3, 4);
             buttonInventario.Name = "buttonInventario";
             buttonInventario.Size = new Size(246, 60);
+=======
+            buttonInventario.Location = new Point(0, 200);
+            buttonInventario.Name = "buttonInventario";
+            buttonInventario.Size = new Size(215, 65);
+>>>>>>> origin
             buttonInventario.TabIndex = 1;
             buttonInventario.Text = "  Inventario";
             buttonInventario.TextAlign = ContentAlignment.MiddleLeft;
@@ -202,7 +240,11 @@
             buttonClientes.Location = new Point(0, 172);
             buttonClientes.Margin = new Padding(3, 4, 3, 4);
             buttonClientes.Name = "buttonClientes";
+<<<<<<< HEAD
             buttonClientes.Size = new Size(246, 60);
+=======
+            buttonClientes.Size = new Size(215, 65);
+>>>>>>> origin
             buttonClientes.TabIndex = 1;
             buttonClientes.Text = "  Clientes";
             buttonClientes.TextAlign = ContentAlignment.MiddleLeft;
@@ -279,7 +321,11 @@
             panelTitle.Location = new Point(246, 0);
             panelTitle.Margin = new Padding(3, 4, 3, 4);
             panelTitle.Name = "panelTitle";
+<<<<<<< HEAD
             panelTitle.Size = new Size(772, 96);
+=======
+            panelTitle.Size = new Size(1065, 72);
+>>>>>>> origin
             panelTitle.TabIndex = 1;
             panelTitle.Paint += panelTitle_Paint;
             panelTitle.MouseDown += panelTitle_MouseDown;
@@ -290,8 +336,12 @@
             buttonCerrar.FlatAppearance.BorderSize = 0;
             buttonCerrar.FlatStyle = FlatStyle.Flat;
             buttonCerrar.Image = (Image)resources.GetObject("buttonCerrar.Image");
+<<<<<<< HEAD
             buttonCerrar.Location = new Point(744, 4);
             buttonCerrar.Margin = new Padding(3, 4, 3, 4);
+=======
+            buttonCerrar.Location = new Point(1041, 3);
+>>>>>>> origin
             buttonCerrar.Name = "buttonCerrar";
             buttonCerrar.Size = new Size(24, 28);
             buttonCerrar.TabIndex = 9;
@@ -304,8 +354,12 @@
             buttonTamaño.FlatAppearance.BorderSize = 0;
             buttonTamaño.FlatStyle = FlatStyle.Flat;
             buttonTamaño.Image = (Image)resources.GetObject("buttonTamaño.Image");
+<<<<<<< HEAD
             buttonTamaño.Location = new Point(703, 4);
             buttonTamaño.Margin = new Padding(3, 4, 3, 4);
+=======
+            buttonTamaño.Location = new Point(1005, 3);
+>>>>>>> origin
             buttonTamaño.Name = "buttonTamaño";
             buttonTamaño.Size = new Size(24, 28);
             buttonTamaño.TabIndex = 10;
@@ -331,8 +385,12 @@
             buttonMinimizar.FlatAppearance.BorderSize = 0;
             buttonMinimizar.FlatStyle = FlatStyle.Flat;
             buttonMinimizar.Image = (Image)resources.GetObject("buttonMinimizar.Image");
+<<<<<<< HEAD
             buttonMinimizar.Location = new Point(662, 4);
             buttonMinimizar.Margin = new Padding(3, 4, 3, 4);
+=======
+            buttonMinimizar.Location = new Point(969, 3);
+>>>>>>> origin
             buttonMinimizar.Name = "buttonMinimizar";
             buttonMinimizar.Size = new Size(24, 28);
             buttonMinimizar.TabIndex = 10;
@@ -345,7 +403,11 @@
             labelTitle.AutoSize = true;
             labelTitle.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelTitle.ForeColor = Color.WhiteSmoke;
+<<<<<<< HEAD
             labelTitle.Location = new Point(337, 25);
+=======
+            labelTitle.Location = new Point(489, 19);
+>>>>>>> origin
             labelTitle.Name = "labelTitle";
             labelTitle.Size = new Size(161, 37);
             labelTitle.TabIndex = 0;
@@ -359,15 +421,23 @@
             panelChilds.Location = new Point(246, 96);
             panelChilds.Margin = new Padding(3, 4, 3, 4);
             panelChilds.Name = "panelChilds";
+<<<<<<< HEAD
             panelChilds.Size = new Size(772, 575);
+=======
+            panelChilds.Size = new Size(1065, 648);
+>>>>>>> origin
             panelChilds.TabIndex = 2;
             // 
             // pictureBoxLogo
             // 
             pictureBoxLogo.Anchor = AnchorStyles.None;
             pictureBoxLogo.Image = (Image)resources.GetObject("pictureBoxLogo.Image");
+<<<<<<< HEAD
             pictureBoxLogo.Location = new Point(129, 187);
             pictureBoxLogo.Margin = new Padding(3, 4, 3, 4);
+=======
+            pictureBoxLogo.Location = new Point(307, 249);
+>>>>>>> origin
             pictureBoxLogo.Name = "pictureBoxLogo";
             pictureBoxLogo.Size = new Size(514, 203);
             pictureBoxLogo.TabIndex = 0;
@@ -378,7 +448,11 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
+<<<<<<< HEAD
             ClientSize = new Size(1018, 671);
+=======
+            ClientSize = new Size(1280, 720);
+>>>>>>> origin
             Controls.Add(panelChilds);
             Controls.Add(panelTitle);
             Controls.Add(panelMenu);

@@ -9,6 +9,7 @@
       "Presentacion/1.0.0": {
         "dependencies": {
           "Common": "1.0.0",
+          "DataAccess": "1.0.0",
           "Negocio": "1.0.0"
         },
         "runtime": {

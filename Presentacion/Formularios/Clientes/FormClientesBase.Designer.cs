@@ -29,103 +29,127 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button9 = new Button();
-            button6 = new Button();
-            button3 = new Button();
-            button8 = new Button();
+            buttonVerDeud = new Button();
+            buttonModDeud = new Button();
+            buttonDelDeud = new Button();
+            buttonAggDeud = new Button();
+            buttonVerClie = new Button();
             button5 = new Button();
-            button2 = new Button();
-            button7 = new Button();
+            buttonModClie = new Button();
+            buttonDelClie = new Button();
             button4 = new Button();
-            button1 = new Button();
+            buttonAggCli = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.AppWorkspace;
-            panel1.Controls.Add(button9);
-            panel1.Controls.Add(button6);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button8);
+            panel1.Controls.Add(buttonVerDeud);
+            panel1.Controls.Add(buttonModDeud);
+            panel1.Controls.Add(buttonDelDeud);
+            panel1.Controls.Add(buttonAggDeud);
+            panel1.Controls.Add(buttonVerClie);
             panel1.Controls.Add(button5);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button7);
+            panel1.Controls.Add(buttonModClie);
+            panel1.Controls.Add(buttonDelClie);
             panel1.Controls.Add(button4);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(buttonAggCli);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(535, 330);
+            panel1.Size = new Size(1049, 616);
             panel1.TabIndex = 0;
             // 
-            // button9
+            // buttonVerDeud
             // 
-            button9.Anchor = AnchorStyles.None;
-            button9.FlatAppearance.BorderColor = Color.White;
-            button9.FlatAppearance.BorderSize = 0;
-            button9.FlatStyle = FlatStyle.Flat;
-            button9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button9.ForeColor = SystemColors.Window;
-            button9.ImageAlign = ContentAlignment.TopCenter;
-            button9.Location = new Point(342, 178);
-            button9.Name = "button9";
-            button9.Size = new Size(96, 72);
-            button9.TabIndex = 0;
-            button9.Text = "Accion6";
-            button9.TextAlign = ContentAlignment.BottomCenter;
-            button9.UseVisualStyleBackColor = true;
+            buttonVerDeud.Anchor = AnchorStyles.None;
+            buttonVerDeud.FlatAppearance.BorderColor = Color.White;
+            buttonVerDeud.FlatAppearance.BorderSize = 0;
+            buttonVerDeud.FlatStyle = FlatStyle.Flat;
+            buttonVerDeud.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonVerDeud.ForeColor = SystemColors.Window;
+            buttonVerDeud.ImageAlign = ContentAlignment.TopCenter;
+            buttonVerDeud.Location = new Point(0, 504);
+            buttonVerDeud.Name = "buttonVerDeud";
+            buttonVerDeud.Size = new Size(1049, 72);
+            buttonVerDeud.TabIndex = 0;
+            buttonVerDeud.Text = "Ver clientes deudores";
+            buttonVerDeud.TextAlign = ContentAlignment.BottomCenter;
+            buttonVerDeud.UseVisualStyleBackColor = true;
+            buttonVerDeud.Click += buttonVerDeud_Click;
             // 
-            // button6
+            // buttonModDeud
             // 
-            button6.Anchor = AnchorStyles.None;
-            button6.FlatAppearance.BorderColor = Color.White;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.ForeColor = SystemColors.Window;
-            button6.ImageAlign = ContentAlignment.TopCenter;
-            button6.Location = new Point(342, 163);
-            button6.Name = "button6";
-            button6.Size = new Size(96, 72);
-            button6.TabIndex = 0;
-            button6.Text = "Accion1";
-            button6.TextAlign = ContentAlignment.BottomCenter;
-            button6.UseVisualStyleBackColor = true;
+            buttonModDeud.Anchor = AnchorStyles.None;
+            buttonModDeud.FlatAppearance.BorderColor = Color.White;
+            buttonModDeud.FlatAppearance.BorderSize = 0;
+            buttonModDeud.FlatStyle = FlatStyle.Flat;
+            buttonModDeud.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonModDeud.ForeColor = SystemColors.Window;
+            buttonModDeud.ImageAlign = ContentAlignment.TopCenter;
+            buttonModDeud.Location = new Point(0, 432);
+            buttonModDeud.Name = "buttonModDeud";
+            buttonModDeud.Size = new Size(1049, 72);
+            buttonModDeud.TabIndex = 0;
+            buttonModDeud.Text = "Modificar cliente deudor";
+            buttonModDeud.TextAlign = ContentAlignment.BottomCenter;
+            buttonModDeud.UseVisualStyleBackColor = true;
+            buttonModDeud.Click += buttonModDeud_Click;
             // 
-            // button3
+            // buttonDelDeud
             // 
-            button3.Anchor = AnchorStyles.None;
-            button3.FlatAppearance.BorderColor = Color.White;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = SystemColors.Window;
-            button3.ImageAlign = ContentAlignment.TopCenter;
-            button3.Location = new Point(342, 59);
-            button3.Name = "button3";
-            button3.Size = new Size(96, 72);
-            button3.TabIndex = 0;
-            button3.Text = "Accion3";
-            button3.TextAlign = ContentAlignment.BottomCenter;
-            button3.UseVisualStyleBackColor = true;
+            buttonDelDeud.Anchor = AnchorStyles.None;
+            buttonDelDeud.FlatAppearance.BorderColor = Color.White;
+            buttonDelDeud.FlatAppearance.BorderSize = 0;
+            buttonDelDeud.FlatStyle = FlatStyle.Flat;
+            buttonDelDeud.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonDelDeud.ForeColor = SystemColors.Window;
+            buttonDelDeud.ImageAlign = ContentAlignment.TopCenter;
+            buttonDelDeud.Location = new Point(0, 360);
+            buttonDelDeud.Name = "buttonDelDeud";
+            buttonDelDeud.Size = new Size(1049, 72);
+            buttonDelDeud.TabIndex = 0;
+            buttonDelDeud.Text = "Eliminar cliente duedor";
+            buttonDelDeud.TextAlign = ContentAlignment.BottomCenter;
+            buttonDelDeud.UseVisualStyleBackColor = true;
+            buttonDelDeud.Click += buttonDelDeud_Click;
             // 
-            // button8
+            // buttonAggDeud
             // 
-            button8.Anchor = AnchorStyles.None;
-            button8.FlatAppearance.BorderColor = Color.White;
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button8.ForeColor = SystemColors.Window;
-            button8.ImageAlign = ContentAlignment.TopCenter;
-            button8.Location = new Point(210, 178);
-            button8.Name = "button8";
-            button8.Size = new Size(96, 72);
-            button8.TabIndex = 0;
-            button8.Text = "Accion5";
-            button8.TextAlign = ContentAlignment.BottomCenter;
-            button8.UseVisualStyleBackColor = true;
+            buttonAggDeud.Anchor = AnchorStyles.None;
+            buttonAggDeud.FlatAppearance.BorderColor = Color.White;
+            buttonAggDeud.FlatAppearance.BorderSize = 0;
+            buttonAggDeud.FlatStyle = FlatStyle.Flat;
+            buttonAggDeud.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonAggDeud.ForeColor = SystemColors.Window;
+            buttonAggDeud.ImageAlign = ContentAlignment.TopCenter;
+            buttonAggDeud.Location = new Point(0, 288);
+            buttonAggDeud.Name = "buttonAggDeud";
+            buttonAggDeud.Size = new Size(1049, 72);
+            buttonAggDeud.TabIndex = 0;
+            buttonAggDeud.Text = "Agregar cliente deudor";
+            buttonAggDeud.TextAlign = ContentAlignment.BottomCenter;
+            buttonAggDeud.UseVisualStyleBackColor = true;
+            buttonAggDeud.Click += buttonAggDeud_Click;
+            // 
+            // buttonVerClie
+            // 
+            buttonVerClie.Anchor = AnchorStyles.None;
+            buttonVerClie.FlatAppearance.BorderColor = Color.White;
+            buttonVerClie.FlatAppearance.BorderSize = 0;
+            buttonVerClie.FlatStyle = FlatStyle.Flat;
+            buttonVerClie.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonVerClie.ForeColor = SystemColors.Window;
+            buttonVerClie.ImageAlign = ContentAlignment.TopCenter;
+            buttonVerClie.Location = new Point(0, 216);
+            buttonVerClie.Name = "buttonVerClie";
+            buttonVerClie.Size = new Size(1049, 72);
+            buttonVerClie.TabIndex = 0;
+            buttonVerClie.Text = "Ver clientes";
+            buttonVerClie.TextAlign = ContentAlignment.BottomCenter;
+            buttonVerClie.UseVisualStyleBackColor = true;
+            buttonVerClie.Click += buttonVerClie_Click;
             // 
             // button5
             // 
@@ -136,7 +160,7 @@
             button5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = SystemColors.Window;
             button5.ImageAlign = ContentAlignment.TopCenter;
-            button5.Location = new Point(210, 163);
+            button5.Location = new Point(467, 306);
             button5.Name = "button5";
             button5.Size = new Size(96, 72);
             button5.TabIndex = 0;
@@ -144,39 +168,41 @@
             button5.TextAlign = ContentAlignment.BottomCenter;
             button5.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // buttonModClie
             // 
-            button2.Anchor = AnchorStyles.None;
-            button2.FlatAppearance.BorderColor = Color.White;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.Window;
-            button2.ImageAlign = ContentAlignment.TopCenter;
-            button2.Location = new Point(210, 59);
-            button2.Name = "button2";
-            button2.Size = new Size(96, 72);
-            button2.TabIndex = 0;
-            button2.Text = "Accion2";
-            button2.TextAlign = ContentAlignment.BottomCenter;
-            button2.UseVisualStyleBackColor = true;
+            buttonModClie.Anchor = AnchorStyles.None;
+            buttonModClie.FlatAppearance.BorderColor = Color.White;
+            buttonModClie.FlatAppearance.BorderSize = 0;
+            buttonModClie.FlatStyle = FlatStyle.Flat;
+            buttonModClie.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonModClie.ForeColor = SystemColors.Window;
+            buttonModClie.ImageAlign = ContentAlignment.TopCenter;
+            buttonModClie.Location = new Point(0, 144);
+            buttonModClie.Name = "buttonModClie";
+            buttonModClie.Size = new Size(1049, 72);
+            buttonModClie.TabIndex = 0;
+            buttonModClie.Text = "Modificar Cliente";
+            buttonModClie.TextAlign = ContentAlignment.BottomCenter;
+            buttonModClie.UseVisualStyleBackColor = true;
+            buttonModClie.Click += buttonModClie_Click;
             // 
-            // button7
+            // buttonDelClie
             // 
-            button7.Anchor = AnchorStyles.None;
-            button7.FlatAppearance.BorderColor = Color.White;
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button7.ForeColor = SystemColors.Window;
-            button7.ImageAlign = ContentAlignment.TopCenter;
-            button7.Location = new Point(74, 178);
-            button7.Name = "button7";
-            button7.Size = new Size(96, 72);
-            button7.TabIndex = 0;
-            button7.Text = "Accion4";
-            button7.TextAlign = ContentAlignment.BottomCenter;
-            button7.UseVisualStyleBackColor = true;
+            buttonDelClie.Anchor = AnchorStyles.None;
+            buttonDelClie.FlatAppearance.BorderColor = Color.White;
+            buttonDelClie.FlatAppearance.BorderSize = 0;
+            buttonDelClie.FlatStyle = FlatStyle.Flat;
+            buttonDelClie.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonDelClie.ForeColor = SystemColors.Window;
+            buttonDelClie.ImageAlign = ContentAlignment.TopCenter;
+            buttonDelClie.Location = new Point(0, 72);
+            buttonDelClie.Name = "buttonDelClie";
+            buttonDelClie.Size = new Size(1049, 72);
+            buttonDelClie.TabIndex = 0;
+            buttonDelClie.Text = "Eliminar cliente";
+            buttonDelClie.TextAlign = ContentAlignment.BottomCenter;
+            buttonDelClie.UseVisualStyleBackColor = true;
+            buttonDelClie.Click += buttonDelClie_Click;
             // 
             // button4
             // 
@@ -187,7 +213,7 @@
             button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = SystemColors.Window;
             button4.ImageAlign = ContentAlignment.TopCenter;
-            button4.Location = new Point(74, 163);
+            button4.Location = new Point(331, 306);
             button4.Name = "button4";
             button4.Size = new Size(96, 72);
             button4.TabIndex = 0;
@@ -195,29 +221,29 @@
             button4.TextAlign = ContentAlignment.BottomCenter;
             button4.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // buttonAggCli
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.FlatAppearance.BorderColor = Color.White;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.Window;
-            button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(74, 59);
-            button1.Name = "button1";
-            button1.Size = new Size(96, 72);
-            button1.TabIndex = 0;
-            button1.Text = "Accion1";
-            button1.TextAlign = ContentAlignment.BottomCenter;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            buttonAggCli.Anchor = AnchorStyles.None;
+            buttonAggCli.FlatAppearance.BorderColor = Color.White;
+            buttonAggCli.FlatAppearance.BorderSize = 0;
+            buttonAggCli.FlatStyle = FlatStyle.Flat;
+            buttonAggCli.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonAggCli.ForeColor = SystemColors.Window;
+            buttonAggCli.ImageAlign = ContentAlignment.TopCenter;
+            buttonAggCli.Location = new Point(0, 0);
+            buttonAggCli.Name = "buttonAggCli";
+            buttonAggCli.Size = new Size(1049, 72);
+            buttonAggCli.TabIndex = 0;
+            buttonAggCli.Text = "Agregar Cliente";
+            buttonAggCli.TextAlign = ContentAlignment.BottomCenter;
+            buttonAggCli.UseVisualStyleBackColor = true;
+            buttonAggCli.Click += buttonAggCli_Click;
             // 
             // FormClientesBase
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(535, 330);
+            ClientSize = new Size(1049, 616);
             Controls.Add(panel1);
             Name = "FormClientesBase";
             Text = "Clientes";
@@ -229,14 +255,15 @@
         #endregion
 
         private Panel panel1;
-        private Button button1;
-        private Button button9;
-        private Button button6;
-        private Button button3;
-        private Button button8;
+        private Button buttonAggCli;
+        private Button buttonModDeud;
+        private Button buttonAggDeud;
+        private Button buttonVerClie;
         private Button button5;
-        private Button button2;
-        private Button button7;
+        private Button buttonModClie;
+        private Button buttonDelClie;
         private Button button4;
+        private Button buttonVerDeud;
+        private Button buttonDelDeud;
     }
 }

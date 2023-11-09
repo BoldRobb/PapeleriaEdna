@@ -9,7 +9,7 @@ namespace DataAccess
         {
             connectionString = "Server=KevinMN27\\SQLEXPRESS;DataBase= Papeleria; integrated security= true;Encrypt=False";
         }
-        protected SqlConnection GetConnection()
+        public SqlConnection GetConnection()
         {
             return new SqlConnection(connectionString);
         }

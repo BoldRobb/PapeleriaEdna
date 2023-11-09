@@ -2053,6 +2053,7 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "Common >= 1.0.0",
+      "DataAccess >= 1.0.0",
       "Negocio >= 1.0.0"
     ]
   },
@@ -2063,11 +2064,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Papeleria\\Presentacion\\Presentacion.csproj",
       "projectName": "Presentacion",
       "projectPath": "C:\\Papeleria\\Presentacion\\Presentacion.csproj",
       "packagesPath": "C:\\Users\\ko739\\.nuget\\packages\\",
       "outputPath": "C:\\Papeleria\\Presentacion\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Presentacion\\Presentacion.csproj",
+      "projectName": "Presentacion",
+      "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Presentacion\\Presentacion.csproj",
+      "packagesPath": "C:\\Users\\robertoo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Presentacion\\obj\\",
+>>>>>>> origin
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2088,11 +2097,22 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Papeleria\\Common\\Common.csproj": {
               "projectPath": "C:\\Papeleria\\Common\\Common.csproj"
             },
             "C:\\Papeleria\\Negocio\\Negocio.csproj": {
               "projectPath": "C:\\Papeleria\\Negocio\\Negocio.csproj"
+=======
+            "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj"
+            },
+            "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj"
+            },
+            "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Negocio\\Negocio.csproj": {
+              "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Negocio\\Negocio.csproj"
+>>>>>>> origin
             }
           }
         }
