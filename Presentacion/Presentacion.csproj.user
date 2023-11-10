@@ -34,6 +34,18 @@
     <Compile Update="Formularios\Egresos\FormEgresosBase.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\Empleados\FormAñadirEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Proveedores\FormConsultarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Proveedores\FormEliminarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Proveedores\FormRegistrarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="inicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -12,6 +12,7 @@ namespace Presentacion.Formularios.Empleados
 {
     public partial class FormEmpleadosBase : Form
     {
+        private Form activeForm;
         public FormEmpleadosBase()
         {
             InitializeComponent();
@@ -26,5 +27,27 @@ namespace Presentacion.Formularios.Empleados
 
 
         }
+
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(childForm);
+            this.panel1.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+
+        }
+
+
+
     }
 }

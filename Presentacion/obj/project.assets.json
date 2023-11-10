@@ -2058,19 +2058,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\robertoo\\.nuget\\packages\\": {}
+    "C:\\Users\\jazie\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Presentacion\\Presentacion.csproj",
+      "projectUniqueName": "E:\\PapeleriaEdna\\Presentacion\\Presentacion.csproj",
       "projectName": "Presentacion",
-      "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Presentacion\\Presentacion.csproj",
-      "packagesPath": "C:\\Users\\robertoo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Presentacion\\obj\\",
+      "projectPath": "E:\\PapeleriaEdna\\Presentacion\\Presentacion.csproj",
+      "packagesPath": "C:\\Users\\jazie\\.nuget\\packages\\",
+      "outputPath": "E:\\PapeleriaEdna\\Presentacion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\robertoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jazie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2084,14 +2084,14 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj": {
-              "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj"
+            "E:\\PapeleriaEdna\\Common\\Common.csproj": {
+              "projectPath": "E:\\PapeleriaEdna\\Common\\Common.csproj"
             },
-            "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj"
+            "E:\\PapeleriaEdna\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "E:\\PapeleriaEdna\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Negocio\\Negocio.csproj": {
-              "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Negocio\\Negocio.csproj"
+            "E:\\PapeleriaEdna\\Negocio\\Negocio.csproj": {
+              "projectPath": "E:\\PapeleriaEdna\\Negocio\\Negocio.csproj"
             }
           }
         }
@@ -2124,7 +2124,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
