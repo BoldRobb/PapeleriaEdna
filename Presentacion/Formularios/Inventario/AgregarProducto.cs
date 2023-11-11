@@ -20,11 +20,11 @@ namespace Presentacion.Formularios.Inventario
         public string productPrice;
         public string productDescription;
         public string selectedCategory;
-        public SqlCommand command;
-        public SqlConnection connection;
-        string connectionString = "Server=DESKTOP-D6EMB4F\\SQLEXPRESS;DataBase=Papeleria; integrated security= true;Encrypt=False";
+        ConexionBD conexion = new ConexionBD();
+        SqlConnection connection = new SqlConnection();
         public AgregarProducto()
         {
+            connection=conexion.GetConnection();
             InitializeComponent();
         }
 
@@ -98,7 +98,7 @@ namespace Presentacion.Formularios.Inventario
 
         private void AgregarProducto_Load(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (connection)
             {
                 connection.Open();
 
@@ -119,7 +119,7 @@ namespace Presentacion.Formularios.Inventario
         {
             string cantidad = "0";
             string productStatus = "N";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (connection = conexion.GetConnection())
             {
                 connection.Open();
 
@@ -133,7 +133,7 @@ namespace Presentacion.Formularios.Inventario
                     command.Parameters.AddWithValue("@Descripcion", productDescription);
                     command.Parameters.AddWithValue("@Estado_Producto", productStatus);
                     command.Parameters.AddWithValue("@Cantidad", cantidad);
-                    
+
 
                     int rowsAffected = command.ExecuteNonQuery();
 
@@ -152,7 +152,7 @@ namespace Presentacion.Formularios.Inventario
         //SALIR
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private int GetCategoryID(string categoryName)
@@ -160,7 +160,7 @@ namespace Presentacion.Formularios.Inventario
             categoryID = 0;
 
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (connection = conexion.GetConnection())
             {
                 connection.Open();
 
@@ -185,7 +185,7 @@ namespace Presentacion.Formularios.Inventario
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
