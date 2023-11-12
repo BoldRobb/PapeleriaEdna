@@ -47,7 +47,29 @@ namespace Presentacion.Formularios.Empleados
 
         }
 
+        private void btnRegProv_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Empleados.FormAñadirEmpleado());
+        }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Empleados.FormModificarEmpleado());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Empleados.FormVerEmpleado());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Empleados.FormEliminarEmpleado());
+        }
     }
 }

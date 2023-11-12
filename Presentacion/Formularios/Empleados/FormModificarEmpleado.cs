@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace Presentacion.Formularios.Empleados
 {
-    public partial class FormAñadirEmpleado : Form
+    public partial class FormModificarEmpleado : Form
     {
 
         ConexionBD conexion = new ConexionBD();
         SqlConnection connection = new SqlConnection();
 
-        public FormAñadirEmpleado()
+        public FormModificarEmpleado()
         {
             connection = conexion.GetConnection();
             connection.Open();
@@ -29,7 +29,7 @@ namespace Presentacion.Formularios.Empleados
             textBoxCorreo.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxDireccion.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxCurp.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            buttonAgregar.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
+            buttonActualizar.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
             buttonVolver.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
         }
     }

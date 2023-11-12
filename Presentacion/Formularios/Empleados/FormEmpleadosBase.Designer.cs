@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            btnRegProv = new Button();
-            button1 = new Button();
-            button2 = new Button();
             button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            btnRegProv = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,57 +48,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1049, 616);
             panel1.TabIndex = 0;
-            // 
-            // btnRegProv
-            // 
-            btnRegProv.Anchor = AnchorStyles.None;
-            btnRegProv.FlatAppearance.BorderColor = Color.White;
-            btnRegProv.FlatAppearance.BorderSize = 0;
-            btnRegProv.FlatStyle = FlatStyle.Flat;
-            btnRegProv.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnRegProv.ForeColor = SystemColors.Window;
-            btnRegProv.ImageAlign = ContentAlignment.TopCenter;
-            btnRegProv.Location = new Point(0, 12);
-            btnRegProv.Name = "btnRegProv";
-            btnRegProv.Size = new Size(1049, 101);
-            btnRegProv.TabIndex = 1;
-            btnRegProv.Text = "Registrar empleado";
-            btnRegProv.TextAlign = ContentAlignment.BottomCenter;
-            btnRegProv.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.None;
-            button1.FlatAppearance.BorderColor = Color.White;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.Window;
-            button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(3, 119);
-            button1.Name = "button1";
-            button1.Size = new Size(1049, 101);
-            button1.TabIndex = 2;
-            button1.Text = "Modificar empleado";
-            button1.TextAlign = ContentAlignment.BottomCenter;
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.None;
-            button2.FlatAppearance.BorderColor = Color.White;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.Window;
-            button2.ImageAlign = ContentAlignment.TopCenter;
-            button2.Location = new Point(0, 258);
-            button2.Name = "button2";
-            button2.Size = new Size(1049, 101);
-            button2.TabIndex = 3;
-            button2.Text = "Ver empledos";
-            button2.TextAlign = ContentAlignment.BottomCenter;
-            button2.UseVisualStyleBackColor = true;
+            panel1.Paint += panel1_Paint;
             // 
             // button3
             // 
@@ -116,6 +66,61 @@
             button3.Text = "Eliminar empleado";
             button3.TextAlign = ContentAlignment.BottomCenter;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.None;
+            button2.FlatAppearance.BorderColor = Color.White;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.Window;
+            button2.ImageAlign = ContentAlignment.TopCenter;
+            button2.Location = new Point(0, 258);
+            button2.Name = "button2";
+            button2.Size = new Size(1049, 101);
+            button2.TabIndex = 3;
+            button2.Text = "Ver empledos";
+            button2.TextAlign = ContentAlignment.BottomCenter;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.None;
+            button1.FlatAppearance.BorderColor = Color.White;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.Window;
+            button1.ImageAlign = ContentAlignment.TopCenter;
+            button1.Location = new Point(3, 119);
+            button1.Name = "button1";
+            button1.Size = new Size(1049, 101);
+            button1.TabIndex = 2;
+            button1.Text = "Modificar empleado";
+            button1.TextAlign = ContentAlignment.BottomCenter;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // btnRegProv
+            // 
+            btnRegProv.Anchor = AnchorStyles.None;
+            btnRegProv.FlatAppearance.BorderColor = Color.White;
+            btnRegProv.FlatAppearance.BorderSize = 0;
+            btnRegProv.FlatStyle = FlatStyle.Flat;
+            btnRegProv.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRegProv.ForeColor = SystemColors.Window;
+            btnRegProv.ImageAlign = ContentAlignment.TopCenter;
+            btnRegProv.Location = new Point(0, 12);
+            btnRegProv.Name = "btnRegProv";
+            btnRegProv.Size = new Size(1049, 101);
+            btnRegProv.TabIndex = 1;
+            btnRegProv.Text = "Registrar empleado";
+            btnRegProv.TextAlign = ContentAlignment.BottomCenter;
+            btnRegProv.UseVisualStyleBackColor = true;
+            btnRegProv.Click += btnRegProv_Click;
             // 
             // FormEmpleadosBase
             // 

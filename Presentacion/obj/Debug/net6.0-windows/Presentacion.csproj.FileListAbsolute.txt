@@ -243,3 +243,7 @@ E:\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\ref\Presentacion.dll
 E:\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Proveedores.FormRegistrarProvedor.resources
 E:\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Proveedores.FormEliminarProveedor.resources
 E:\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Proveedores.FormConsultarProveedor.resources
+E:\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Empleados.FormAñadirEmpleado.resources
+E:\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Empleados.FormModificarEmpleado.resources
+E:\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Empleados.FormVerEmpleado.resources
+E:\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Empleados.FormEliminarEmpleado.resources

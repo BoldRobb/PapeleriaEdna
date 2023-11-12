@@ -37,6 +37,15 @@
     <Compile Update="Formularios\Empleados\FormAñadirEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\Empleados\FormEliminarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Empleados\FormModificarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Empleados\FormVerEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Formularios\Proveedores\FormConsultarProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
