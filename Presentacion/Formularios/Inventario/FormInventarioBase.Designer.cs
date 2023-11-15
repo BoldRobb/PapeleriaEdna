@@ -55,11 +55,9 @@
             panel1.Controls.Add(button1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(611, 440);
+            panel1.Size = new Size(992, 529);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
             // 
             // button9
             // 
@@ -70,10 +68,9 @@
             button9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button9.ForeColor = SystemColors.Window;
             button9.ImageAlign = ContentAlignment.TopCenter;
-            button9.Location = new Point(391, 237);
-            button9.Margin = new Padding(3, 4, 3, 4);
+            button9.Location = new Point(571, 277);
             button9.Name = "button9";
-            button9.Size = new Size(110, 96);
+            button9.Size = new Size(96, 72);
             button9.TabIndex = 0;
             button9.Text = "Accion6";
             button9.TextAlign = ContentAlignment.BottomCenter;
@@ -89,10 +86,9 @@
             button6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = SystemColors.Window;
             button6.ImageAlign = ContentAlignment.TopCenter;
-            button6.Location = new Point(391, 217);
-            button6.Margin = new Padding(3, 4, 3, 4);
+            button6.Location = new Point(571, 262);
             button6.Name = "button6";
-            button6.Size = new Size(110, 96);
+            button6.Size = new Size(96, 72);
             button6.TabIndex = 0;
             button6.Text = "Accion1";
             button6.TextAlign = ContentAlignment.BottomCenter;
@@ -107,10 +103,9 @@
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.Window;
             button3.ImageAlign = ContentAlignment.TopCenter;
-            button3.Location = new Point(391, 79);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(571, 158);
             button3.Name = "button3";
-            button3.Size = new Size(110, 96);
+            button3.Size = new Size(96, 72);
             button3.TabIndex = 0;
             button3.Text = "Accion3";
             button3.TextAlign = ContentAlignment.BottomCenter;
@@ -126,10 +121,9 @@
             button8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button8.ForeColor = SystemColors.Window;
             button8.ImageAlign = ContentAlignment.TopCenter;
-            button8.Location = new Point(240, 237);
-            button8.Margin = new Padding(3, 4, 3, 4);
+            button8.Location = new Point(439, 277);
             button8.Name = "button8";
-            button8.Size = new Size(110, 96);
+            button8.Size = new Size(96, 72);
             button8.TabIndex = 0;
             button8.Text = "Accion5";
             button8.TextAlign = ContentAlignment.BottomCenter;
@@ -145,10 +139,9 @@
             button5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = SystemColors.Window;
             button5.ImageAlign = ContentAlignment.TopCenter;
-            button5.Location = new Point(240, 217);
-            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Location = new Point(439, 262);
             button5.Name = "button5";
-            button5.Size = new Size(110, 96);
+            button5.Size = new Size(96, 72);
             button5.TabIndex = 0;
             button5.Text = "Accion1";
             button5.TextAlign = ContentAlignment.BottomCenter;
@@ -163,10 +156,9 @@
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Window;
             button2.ImageAlign = ContentAlignment.TopCenter;
-            button2.Location = new Point(240, 79);
-            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Location = new Point(439, 158);
             button2.Name = "button2";
-            button2.Size = new Size(110, 96);
+            button2.Size = new Size(96, 72);
             button2.TabIndex = 0;
             button2.Text = "Accion2";
             button2.TextAlign = ContentAlignment.BottomCenter;
@@ -182,10 +174,9 @@
             button7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button7.ForeColor = SystemColors.Window;
             button7.ImageAlign = ContentAlignment.TopCenter;
-            button7.Location = new Point(85, 237);
-            button7.Margin = new Padding(3, 4, 3, 4);
+            button7.Location = new Point(303, 277);
             button7.Name = "button7";
-            button7.Size = new Size(110, 96);
+            button7.Size = new Size(96, 72);
             button7.TabIndex = 0;
             button7.Text = "Accion4";
             button7.TextAlign = ContentAlignment.BottomCenter;
@@ -201,10 +192,9 @@
             button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = SystemColors.Window;
             button4.ImageAlign = ContentAlignment.TopCenter;
-            button4.Location = new Point(85, 217);
-            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Location = new Point(303, 262);
             button4.Name = "button4";
-            button4.Size = new Size(110, 96);
+            button4.Size = new Size(96, 72);
             button4.TabIndex = 0;
             button4.Text = "Accion1";
             button4.TextAlign = ContentAlignment.BottomCenter;
@@ -219,10 +209,9 @@
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Window;
             button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(85, 79);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(303, 158);
             button1.Name = "button1";
-            button1.Size = new Size(110, 96);
+            button1.Size = new Size(96, 72);
             button1.TabIndex = 0;
             button1.Text = "Accion1";
             button1.TextAlign = ContentAlignment.BottomCenter;
@@ -231,11 +220,10 @@
             // 
             // FormInventarioBase
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(611, 440);
+            ClientSize = new Size(992, 529);
             Controls.Add(panel1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "FormInventarioBase";
             Text = "Inventario";
             Load += FormInventarioBase_Load;

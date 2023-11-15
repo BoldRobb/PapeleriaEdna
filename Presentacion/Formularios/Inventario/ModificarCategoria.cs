@@ -32,7 +32,7 @@ namespace Presentacion.Formularios.Inventario
             if (selectedCategory != null)
             {
                 // Realizar una consulta SQL para actualizar la categoría seleccionada
-                using (connection)
+                using (connection= conexion.GetConnection())
                 {
                     connection.Open();
 

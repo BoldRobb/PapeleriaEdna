@@ -55,7 +55,7 @@
             // 
             // button9
             // 
-            button9.Dock = DockStyle.Top;
+            button9.Anchor = AnchorStyles.None;
             button9.FlatAppearance.BorderColor = Color.White;
             button9.FlatAppearance.BorderSize = 0;
             button9.FlatStyle = FlatStyle.Flat;
@@ -72,7 +72,7 @@
             // 
             // button3
             // 
-            button3.Dock = DockStyle.Top;
+            button3.Anchor = AnchorStyles.None;
             button3.FlatAppearance.BorderColor = Color.White;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
@@ -89,7 +89,7 @@
             // 
             // button8
             // 
-            button8.Dock = DockStyle.Top;
+            button8.Anchor = AnchorStyles.None;
             button8.FlatAppearance.BorderColor = Color.White;
             button8.FlatAppearance.BorderSize = 0;
             button8.FlatStyle = FlatStyle.Flat;
@@ -106,7 +106,7 @@
             // 
             // button2
             // 
-            button2.Dock = DockStyle.Top;
+            button2.Anchor = AnchorStyles.None;
             button2.FlatAppearance.BorderColor = Color.White;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
@@ -123,7 +123,7 @@
             // 
             // button7
             // 
-            button7.Dock = DockStyle.Top;
+            button7.Anchor = AnchorStyles.None;
             button7.FlatAppearance.BorderColor = Color.White;
             button7.FlatAppearance.BorderSize = 0;
             button7.FlatStyle = FlatStyle.Flat;
@@ -140,7 +140,7 @@
             // 
             // buttonAddVent
             // 
-            buttonAddVent.Dock = DockStyle.Top;
+            buttonAddVent.Anchor = AnchorStyles.None;
             buttonAddVent.FlatAppearance.BorderColor = Color.White;
             buttonAddVent.FlatAppearance.BorderSize = 0;
             buttonAddVent.FlatStyle = FlatStyle.Flat;

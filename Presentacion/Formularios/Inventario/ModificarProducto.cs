@@ -244,11 +244,11 @@ namespace Presentacion.Formularios.Inventario
         {
             List<string> nombresProductos = new List<string>();
             string query = "SELECT Nombre FROM Productos WHERE ID_Categoria = @ID_Categoria";
-
+            connection = conexion.GetConnection();
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 command.Parameters.AddWithValue("@ID_Categoria", idCategory);
-
+                connection.Open();
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())

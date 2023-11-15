@@ -56,7 +56,7 @@ namespace Presentacion.Formularios.Inventario
 
         private void add_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void return_Click(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace Presentacion.Formularios.Inventario
         private void button1_Click(object sender, EventArgs e)
         {
             this.BackColor = ThemeColor.SecondaryColor;
-            
+
             connection.Open();
             try
             {
