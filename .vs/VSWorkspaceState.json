@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Presentacion",
+    "\\Presentacion\\Formularios"
   ],
-  "SelectedNode": "\\PapeleriaEdna.sln",
+  "SelectedNode": "\\Presentacion\\FormBase.Designer.cs",
   "PreviewInSolutionExplorer": false
 }

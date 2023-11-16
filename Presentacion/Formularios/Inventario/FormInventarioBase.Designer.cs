@@ -56,7 +56,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(535, 330);
+            panel1.Size = new Size(992, 529);
             panel1.TabIndex = 0;
             // 
             // button9
@@ -68,13 +68,14 @@
             button9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button9.ForeColor = SystemColors.Window;
             button9.ImageAlign = ContentAlignment.TopCenter;
-            button9.Location = new Point(342, 178);
+            button9.Location = new Point(571, 277);
             button9.Name = "button9";
             button9.Size = new Size(96, 72);
             button9.TabIndex = 0;
             button9.Text = "Accion6";
             button9.TextAlign = ContentAlignment.BottomCenter;
             button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
             // 
             // button6
             // 
@@ -85,7 +86,7 @@
             button6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = SystemColors.Window;
             button6.ImageAlign = ContentAlignment.TopCenter;
-            button6.Location = new Point(342, 163);
+            button6.Location = new Point(571, 262);
             button6.Name = "button6";
             button6.Size = new Size(96, 72);
             button6.TabIndex = 0;
@@ -102,13 +103,14 @@
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.Window;
             button3.ImageAlign = ContentAlignment.TopCenter;
-            button3.Location = new Point(342, 59);
+            button3.Location = new Point(571, 158);
             button3.Name = "button3";
             button3.Size = new Size(96, 72);
             button3.TabIndex = 0;
             button3.Text = "Accion3";
             button3.TextAlign = ContentAlignment.BottomCenter;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button8
             // 
@@ -119,13 +121,14 @@
             button8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button8.ForeColor = SystemColors.Window;
             button8.ImageAlign = ContentAlignment.TopCenter;
-            button8.Location = new Point(210, 178);
+            button8.Location = new Point(439, 277);
             button8.Name = "button8";
             button8.Size = new Size(96, 72);
             button8.TabIndex = 0;
             button8.Text = "Accion5";
             button8.TextAlign = ContentAlignment.BottomCenter;
             button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
             // 
             // button5
             // 
@@ -136,7 +139,7 @@
             button5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = SystemColors.Window;
             button5.ImageAlign = ContentAlignment.TopCenter;
-            button5.Location = new Point(210, 163);
+            button5.Location = new Point(439, 262);
             button5.Name = "button5";
             button5.Size = new Size(96, 72);
             button5.TabIndex = 0;
@@ -153,13 +156,14 @@
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Window;
             button2.ImageAlign = ContentAlignment.TopCenter;
-            button2.Location = new Point(210, 59);
+            button2.Location = new Point(439, 158);
             button2.Name = "button2";
             button2.Size = new Size(96, 72);
             button2.TabIndex = 0;
             button2.Text = "Accion2";
             button2.TextAlign = ContentAlignment.BottomCenter;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button7
             // 
@@ -170,13 +174,14 @@
             button7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button7.ForeColor = SystemColors.Window;
             button7.ImageAlign = ContentAlignment.TopCenter;
-            button7.Location = new Point(74, 178);
+            button7.Location = new Point(303, 277);
             button7.Name = "button7";
             button7.Size = new Size(96, 72);
             button7.TabIndex = 0;
             button7.Text = "Accion4";
             button7.TextAlign = ContentAlignment.BottomCenter;
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button4
             // 
@@ -187,7 +192,7 @@
             button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = SystemColors.Window;
             button4.ImageAlign = ContentAlignment.TopCenter;
-            button4.Location = new Point(74, 163);
+            button4.Location = new Point(303, 262);
             button4.Name = "button4";
             button4.Size = new Size(96, 72);
             button4.TabIndex = 0;
@@ -204,7 +209,7 @@
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Window;
             button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(74, 59);
+            button1.Location = new Point(303, 158);
             button1.Name = "button1";
             button1.Size = new Size(96, 72);
             button1.TabIndex = 0;
@@ -217,7 +222,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(535, 330);
+            ClientSize = new Size(992, 529);
             Controls.Add(panel1);
             Name = "FormInventarioBase";
             Text = "Inventario";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientesBase));
             panel1 = new Panel();
             buttonVerDeud = new Button();
             buttonModDeud = new Button();
@@ -229,6 +230,7 @@
             buttonAggCli.FlatStyle = FlatStyle.Flat;
             buttonAggCli.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonAggCli.ForeColor = SystemColors.Window;
+            buttonAggCli.Image = (Image)resources.GetObject("buttonAggCli.Image");
             buttonAggCli.ImageAlign = ContentAlignment.TopCenter;
             buttonAggCli.Location = new Point(0, 0);
             buttonAggCli.Name = "buttonAggCli";

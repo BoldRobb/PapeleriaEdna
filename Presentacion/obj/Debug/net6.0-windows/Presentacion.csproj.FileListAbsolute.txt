@@ -177,6 +177,7 @@ C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Presentacion\obj\Debu
 C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Clientes.FormVerClientes.resources
 C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Clientes.FormVerDeudores.resources
 C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Inventario.AgregarProducto.resources
+<<<<<<< HEAD
 C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Clientes.FormDeudorNuevo.resources
 C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Clientes.FormEliminarCliente.resources
 C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Clientes.FormEliminarDeudor.resources
@@ -186,3 +187,13 @@ C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\
 C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Clientes.FormVerDeudores.resources
 C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Inventario.AgregarProducto.resources
 C:\Users\rober\source\repos\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Ventas.FormVentaNueva.resources
+=======
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Inventario.AgregarCategoria.resources
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Inventario.EliminarCategoria.resources
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Inventario.EliminarProducto.resources
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Inventario.ModificarCategoria.resources
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Inventario.ModificarProducto.resources
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Inventario.ProductosAgotados.resources
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Inventario.ProductosExistencia.resources
+C:\Users\robertoo\source\repos\PapeleriaEdna\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Ventas.FormVentaNueva.resources
+>>>>>>> 8d033578ec3bad25fa404d37997316218703345b

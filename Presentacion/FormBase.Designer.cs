@@ -186,6 +186,7 @@
             // 
             // buttonClientes
             // 
+            buttonClientes.AllowDrop = true;
             buttonClientes.FlatAppearance.BorderSize = 0;
             buttonClientes.FlatStyle = FlatStyle.Flat;
             buttonClientes.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -221,6 +222,7 @@
             pictureBox1.Location = new Point(12, 17);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(70, 70);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
