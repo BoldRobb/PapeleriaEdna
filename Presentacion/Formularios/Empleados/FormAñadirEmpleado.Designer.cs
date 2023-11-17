@@ -151,6 +151,8 @@
             textBoxApellido.Size = new Size(705, 29);
             textBoxApellido.TabIndex = 5;
             textBoxApellido.Text = "Apellidos";
+            textBoxApellido.Enter += textBoxApellido_Enter;
+            textBoxApellido.Leave += textBoxApellido_Leave;
             // 
             // Cargo
             // 
@@ -213,7 +215,9 @@
             textBoxNumTel.Name = "textBoxNumTel";
             textBoxNumTel.Size = new Size(705, 29);
             textBoxNumTel.TabIndex = 1;
-            textBoxNumTel.Text = "Numero telefonico";
+            textBoxNumTel.Text = "Telefono";
+            textBoxNumTel.Enter += textBoxNumTel_Enter;
+            textBoxNumTel.Leave += textBoxNumTel_Leave;
             // 
             // textBoxName
             // 
@@ -224,7 +228,9 @@
             textBoxName.Name = "textBoxName";
             textBoxName.Size = new Size(705, 28);
             textBoxName.TabIndex = 1;
-            textBoxName.Text = "Nombres";
+            textBoxName.Text = "Nombre";
+            textBoxName.Enter += textBoxName_Enter;
+            textBoxName.Leave += textBoxName_Leave;
             // 
             // FormAñadirEmpleado
             // 

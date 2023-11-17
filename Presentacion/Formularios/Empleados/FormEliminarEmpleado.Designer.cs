@@ -30,8 +30,12 @@
         {
             panel3 = new Panel();
             label3 = new Label();
-            comboBoxClientes = new ComboBox();
+            comboBoxEmpleados = new ComboBox();
             panel2 = new Panel();
+            textBoxCargo = new TextBox();
+            label11 = new Label();
+            textBoxApellido = new TextBox();
+            label9 = new Label();
             textBoxCURP = new TextBox();
             label6 = new Label();
             textBoxNumTel = new TextBox();
@@ -56,7 +60,7 @@
             // panel3
             // 
             panel3.Controls.Add(label3);
-            panel3.Controls.Add(comboBoxClientes);
+            panel3.Controls.Add(comboBoxEmpleados);
             panel3.Location = new Point(16, 44);
             panel3.Name = "panel3";
             panel3.Size = new Size(970, 106);
@@ -73,19 +77,24 @@
             label3.TabIndex = 0;
             label3.Text = "Nombre";
             // 
-            // comboBoxClientes
+            // comboBoxEmpleados
             // 
-            comboBoxClientes.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxClientes.FlatStyle = FlatStyle.Flat;
-            comboBoxClientes.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxClientes.FormattingEnabled = true;
-            comboBoxClientes.Location = new Point(16, 32);
-            comboBoxClientes.Name = "comboBoxClientes";
-            comboBoxClientes.Size = new Size(412, 38);
-            comboBoxClientes.TabIndex = 0;
+            comboBoxEmpleados.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxEmpleados.FlatStyle = FlatStyle.Flat;
+            comboBoxEmpleados.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxEmpleados.FormattingEnabled = true;
+            comboBoxEmpleados.Location = new Point(16, 32);
+            comboBoxEmpleados.Name = "comboBoxEmpleados";
+            comboBoxEmpleados.Size = new Size(412, 38);
+            comboBoxEmpleados.TabIndex = 0;
+            comboBoxEmpleados.SelectedIndexChanged += comboBoxEmpleados_SelectedIndexChanged;
             // 
             // panel2
             // 
+            panel2.Controls.Add(textBoxCargo);
+            panel2.Controls.Add(label11);
+            panel2.Controls.Add(textBoxApellido);
+            panel2.Controls.Add(label9);
             panel2.Controls.Add(textBoxCURP);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(textBoxNumTel);
@@ -101,6 +110,50 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(969, 386);
             panel2.TabIndex = 14;
+            // 
+            // textBoxCargo
+            // 
+            textBoxCargo.BorderStyle = BorderStyle.None;
+            textBoxCargo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxCargo.ForeColor = Color.White;
+            textBoxCargo.Location = new Point(462, 128);
+            textBoxCargo.Name = "textBoxCargo";
+            textBoxCargo.ReadOnly = true;
+            textBoxCargo.Size = new Size(400, 26);
+            textBoxCargo.TabIndex = 9;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(462, 88);
+            label11.Name = "label11";
+            label11.Size = new Size(52, 21);
+            label11.TabIndex = 8;
+            label11.Text = "Cargo";
+            // 
+            // textBoxApellido
+            // 
+            textBoxApellido.BorderStyle = BorderStyle.None;
+            textBoxApellido.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxApellido.ForeColor = Color.White;
+            textBoxApellido.Location = new Point(462, 41);
+            textBoxApellido.Name = "textBoxApellido";
+            textBoxApellido.ReadOnly = true;
+            textBoxApellido.Size = new Size(400, 26);
+            textBoxApellido.TabIndex = 7;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(462, 17);
+            label9.Name = "label9";
+            label9.Size = new Size(67, 21);
+            label9.TabIndex = 6;
+            label9.Text = "Apellido";
             // 
             // textBoxCURP
             // 
@@ -296,6 +349,7 @@
             Controls.Add(panel1);
             Name = "FormEliminarEmpleado";
             Text = "FormEliminarEmpleado";
+            Load += FormEliminarEmpleados_Load;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel2.ResumeLayout(false);
@@ -308,7 +362,7 @@
         #endregion
         private Panel panel3;
         private Label label3;
-        private ComboBox comboBoxClientes;
+        private ComboBox comboBoxEmpleados;
         private Panel panel2;
         private TextBox textBoxNumTel;
         private Label label5;
@@ -326,5 +380,9 @@
         private Panel panel1;
         private Label label1;
         private Label label8;
+        private TextBox textBoxApellido;
+        private Label label9;
+        private TextBox textBoxCargo;
+        private Label label11;
     }
 }

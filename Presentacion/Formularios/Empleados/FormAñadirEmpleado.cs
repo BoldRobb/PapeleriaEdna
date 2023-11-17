@@ -28,6 +28,7 @@ namespace Presentacion.Formularios.Empleados
             textBoxName.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxNumTel.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxCorreo.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
+            textBoxApellido.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxDireccion.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxCurp.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             buttonAgregar.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
@@ -96,9 +97,9 @@ namespace Presentacion.Formularios.Empleados
                 agg_detallesCmd.Parameters.AddWithValue("@Dirección", textBoxDireccion.Text);
                 agg_detallesCmd.Parameters.AddWithValue("@CURP", textBoxCurp.Text);
                 agg_detallesCmd.Parameters.AddWithValue("@Telefono", textBoxNumTel.Text);
-                
-                
-                
+
+
+
 
                 agg_detallesCmd.ExecuteNonQuery();
                 MessageBox.Show("Cliente agregado correctamente");
@@ -118,6 +119,78 @@ namespace Presentacion.Formularios.Empleados
 
 
 
+        }
+
+        private void textBoxName_Enter(object sender, EventArgs e)
+        {
+            if (textBoxName.Text == "Nombre")
+            {
+                textBoxName.Text = "";
+                textBoxName.ForeColor = Color.Black;
+
+            }
+        }
+
+        private void textBoxName_Leave(object sender, EventArgs e)
+        {
+            if (textBoxName.Text == "")
+            {
+                textBoxName.Text = "Nombre";
+                textBoxName.ForeColor = Color.WhiteSmoke;
+
+            }
+            else
+            {
+                textBoxName.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxApellido_Enter(object sender, EventArgs e)
+        {
+            if (textBoxApellido.Text == "Apellidos")
+            {
+                textBoxApellido.Text = "";
+                textBoxApellido.ForeColor = Color.Black;
+
+            }
+        }
+
+        private void textBoxApellido_Leave(object sender, EventArgs e)
+        {
+            if (textBoxApellido.Text == "")
+            {
+                textBoxApellido.Text = "Apellidos";
+                textBoxApellido.ForeColor = Color.WhiteSmoke;
+
+            }
+            else
+            {
+                textBoxApellido.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxNumTel_Enter(object sender, EventArgs e)
+        {
+            if (textBoxNumTel.Text == "Telefono")
+            {
+                textBoxNumTel.Text = "";
+                textBoxNumTel.ForeColor = Color.Black;
+
+            }
+        }
+
+        private void textBoxNumTel_Leave(object sender, EventArgs e)
+        {
+            if (textBoxNumTel.Text == "")
+            {
+                textBoxNumTel.Text = "Telefono";
+                textBoxNumTel.ForeColor = Color.WhiteSmoke;
+
+            }
+            else
+            {
+                textBoxNumTel.ForeColor = Color.Black;
+            }
         }
     }
 }

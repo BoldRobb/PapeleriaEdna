@@ -256,6 +256,7 @@
             textBoxName.Size = new Size(705, 28);
             textBoxName.TabIndex = 1;
             textBoxName.Text = " Nombre";
+            textBoxName.TextChanged += textBoxName_TextChanged;
             textBoxName.Enter += textBoxName_Enter;
             textBoxName.Leave += textBoxName_Leave;
             // 

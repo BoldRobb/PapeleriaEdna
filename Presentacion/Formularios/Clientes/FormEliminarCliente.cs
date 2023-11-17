@@ -60,6 +60,8 @@ namespace Presentacion.Formularios.Clientes
             return numClientes;
         }
 
+
+
         private List<string> ObtenerNombresClientesDesdeBaseDeDatos(SqlConnection connection, int numClientes)
         {
             List<string> nombresClientes = new List<string>();
@@ -208,5 +210,7 @@ namespace Presentacion.Formularios.Clientes
             LeerInfoClientes();
             MessageBox.Show("Se ha eliminado al cliente correctamente");
         }
+
+        
     }
 }
