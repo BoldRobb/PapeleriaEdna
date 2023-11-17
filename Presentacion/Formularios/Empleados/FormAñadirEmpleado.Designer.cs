@@ -193,7 +193,9 @@
             textBoxCorreo.Name = "textBoxCorreo";
             textBoxCorreo.Size = new Size(705, 29);
             textBoxCorreo.TabIndex = 1;
-            textBoxCorreo.Text = "Correo electronico";
+            textBoxCorreo.Text = "Correo";
+            textBoxCorreo.Enter += textBoxCorreo_Enter;
+            textBoxCorreo.Leave += textBoxCorreo_Leave;
             // 
             // textBoxDireccion
             // 

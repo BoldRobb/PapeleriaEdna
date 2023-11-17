@@ -192,5 +192,31 @@ namespace Presentacion.Formularios.Empleados
                 textBoxNumTel.ForeColor = Color.Black;
             }
         }
+
+        private void textBoxCorreo_Enter(object sender, EventArgs e)
+        {
+            if (textBoxCorreo.Text == "Correo")
+            {
+                textBoxCorreo.Text = "";
+                textBoxCorreo.ForeColor = Color.Black;
+
+            }
+        }
+
+        private void textBoxCorreo_Leave(object sender, EventArgs e)
+        {
+            if (textBoxCorreo.Text == "")
+            {
+                textBoxCorreo.Text = "Correo";
+                textBoxCorreo.ForeColor = Color.WhiteSmoke;
+
+            }
+            else
+            {
+                textBoxCorreo.ForeColor = Color.Black;
+            }
+        }
+
+        
     }
 }
