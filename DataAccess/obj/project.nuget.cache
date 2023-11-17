@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "1x7tQSvURofAgjN45zPOrxHI4svcluGmzrrCkoFW81bVEDro4UX8krUf/LgEMILvcMlW/xi0hDxU7imjuxUMKw==",
   "success": true,
   "projectFilePath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
+=======
+  "dgSpecHash": "MnO/osX/MySR37WYt/O7vBMi4OuHJGy7N9qaK7YNCL/L6lwuPqofERB+rpwviqdV1mNwx5JC69WDyN75PpR5Bw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
+>>>>>>> 8d033578ec3bad25fa404d37997316218703345b
   "expectedPackageFiles": [
     "C:\\Users\\rober\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -47,9 +47,9 @@ namespace Presentacion.Formularios.Clientes
 
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void OpenChildForm(Form childForm)
         {
+<<<<<<< HEAD
             OpenChildForm(new Formularios.Clientes.FormClienteNuevo(), sender);
 
 
@@ -59,7 +59,66 @@ namespace Presentacion.Formularios.Clientes
         {
             if (activeForm != null)
                 activeForm.Close();
+=======
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(childForm);
+            this.panel1.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+>>>>>>> 8d033578ec3bad25fa404d37997316218703345b
 
         }
+
+        private void buttonAggCli_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Clientes.FormClienteNuevo());
+        }
+
+        private void buttonDelClie_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Clientes.FormEliminarCliente());
+        }
+
+        private void buttonModClie_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Clientes.FormModificarCliente());
+        }
+
+        private void buttonVerClie_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Clientes.FormVerClientes());
+        }
+
+        private void buttonAggDeud_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Clientes.FormDeudorNuevo());
+        }
+
+        private void buttonDelDeud_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Clientes.FormEliminarDeudor());
+        }
+
+        private void buttonModDeud_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Clientes.FormModificarDeudor());
+        }
+
+        private void buttonVerDeud_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Clientes.FormVerDeudores());
+        }
+
+
+
     }
 }

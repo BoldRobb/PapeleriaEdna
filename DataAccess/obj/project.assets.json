@@ -2024,11 +2024,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
       "projectPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\DataAccess\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
+      "projectName": "DataAccess",
+      "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\robertoo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\obj\\",
+>>>>>>> 8d033578ec3bad25fa404d37997316218703345b
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2045,8 +2053,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj": {
               "projectPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj"
+=======
+            "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj": {
+              "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj"
+>>>>>>> 8d033578ec3bad25fa404d37997316218703345b
             }
           }
         }

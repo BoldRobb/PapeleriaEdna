@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\obj\\",
+=======
+    "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj",
+        "projectName": "Common",
+        "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\robertoo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\obj\\",
+>>>>>>> 8d033578ec3bad25fa404d37997316218703345b
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",

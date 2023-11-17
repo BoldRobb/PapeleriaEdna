@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "rVPZYAcEZ1YubjEpxCJ3gd5Wdodv8qHc+8KlN9CwKrj7K2QaRSKY1cBcwD1ERZ6gLyz5fnxOAzzJLpHc8RVv5w==",
   "success": true,
   "projectFilePath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Negocio\\Negocio.csproj",
+=======
+  "dgSpecHash": "lbLRWtn5k22e975SUND3d2bav+brut1FLWdl6Jg59TnC6HeNPfKhr2gG4Z0ycHVWI5NEvh81EYV6q317J4pAIg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Negocio\\Negocio.csproj",
+>>>>>>> 8d033578ec3bad25fa404d37997316218703345b
   "expectedPackageFiles": [
     "C:\\Users\\rober\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

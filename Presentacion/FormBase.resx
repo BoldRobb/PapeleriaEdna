@@ -401,7 +401,11 @@
   <data name="pictureBoxLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAcIAAACYCAIAAAD4GH43AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
+<<<<<<< HEAD
         MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxEAAAsRAX9kX5EAAKBmSURBVHhe7Z0HvNTE/va3991s
+=======
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxAAAAsQAa0jvXUAAKBmSURBVHhe7Z0HvNTE/va3991s
+>>>>>>> 8d033578ec3bad25fa404d37997316218703345b
         sv2cQ0dQFERAQBF7L2BXVOzXXrH3fu0Fe6/Ye8MOoqCgoKj0etr23tsp7zMZzN2bPbssB+Xl793l+Sw5
         k8lkMjv55vmlTCT+QPSfLZ8/UkminHXVVVddvdCWw2gVcgmzAsEY/dPrC1OVpuObCtNUmA6G4vhGNppO
         i6Lp+JOWUEm0EOTBdyicoItAWBzyeEOYFsqn0zQPZiEFi0D4k84VKoDvuuqq639HWxdGhWlBSKFQKxfN

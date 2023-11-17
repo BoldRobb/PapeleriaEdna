@@ -12,6 +12,7 @@ namespace Presentacion.Formularios.Ventas
 {
     public partial class FormVentasBase : Form
     {
+        private Form activeForm;
         public FormVentasBase()
         {
             InitializeComponent();
@@ -25,6 +26,29 @@ namespace Presentacion.Formularios.Ventas
             panel1.BackColor = ThemeColor.SecondaryColor;
 
 
+        }
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(childForm);
+            this.panel1.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+
+        }
+
+        private void buttonAddVent_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Ventas.FormVentaNueva());
         }
     }
 }

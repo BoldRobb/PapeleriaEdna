@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Negocio\\Negocio.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\obj\\",
+=======
+    "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Negocio\\Negocio.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj",
+        "projectName": "Common",
+        "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\robertoo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\obj\\",
+>>>>>>> 8d033578ec3bad25fa404d37997316218703345b
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,6 +73,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -67,6 +82,16 @@
         "projectPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\DataAccess\\obj\\",
+=======
+    "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
+        "projectName": "DataAccess",
+        "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\robertoo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\obj\\",
+>>>>>>> 8d033578ec3bad25fa404d37997316218703345b
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,8 +108,13 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj": {
                 "projectPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj"
+=======
+              "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj"
+>>>>>>> 8d033578ec3bad25fa404d37997316218703345b
               }
             }
           }
@@ -124,6 +154,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Negocio\\Negocio.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -132,6 +163,16 @@
         "projectPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Negocio\\Negocio.csproj",
         "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Negocio\\obj\\",
+=======
+    "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Negocio\\Negocio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Negocio\\Negocio.csproj",
+        "projectName": "Negocio",
+        "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Negocio\\Negocio.csproj",
+        "packagesPath": "C:\\Users\\robertoo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Negocio\\obj\\",
+>>>>>>> 8d033578ec3bad25fa404d37997316218703345b
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -148,11 +189,19 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj": {
                 "projectPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\Common\\Common.csproj"
               },
               "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\DataAccess\\DataAccess.csproj": {
                 "projectPath": "C:\\Users\\rober\\source\\repos\\PapeleriaEdna\\DataAccess\\DataAccess.csproj"
+=======
+              "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\Common\\Common.csproj"
+              },
+              "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\robertoo\\source\\repos\\PapeleriaEdna\\PapeleriaEdna\\DataAccess\\DataAccess.csproj"
+>>>>>>> 8d033578ec3bad25fa404d37997316218703345b
               }
             }
           }
