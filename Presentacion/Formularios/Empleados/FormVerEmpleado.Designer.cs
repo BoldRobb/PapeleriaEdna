@@ -29,68 +29,240 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            panel3 = new Panel();
+            textBoxCargo = new TextBox();
+            label11 = new Label();
+            textBoxApellido = new TextBox();
+            label9 = new Label();
+            textBoxCURP = new TextBox();
+            label6 = new Label();
+            textBoxNumTel = new TextBox();
+            label5 = new Label();
+            textBoxDireccion = new TextBox();
+            textBoxCorreo = new TextBox();
+            label10 = new Label();
+            label7 = new Label();
+            textBoxNombre = new TextBox();
+            label4 = new Label();
+            label1 = new Label();
             buttonVolver = new Button();
-            Cargo = new Label();
-            comboBoxCargo = new ComboBox();
             label2 = new Label();
-            textBoxCurp = new TextBox();
             panel2 = new Panel();
             label3 = new Label();
             comboBoxEmpleados = new ComboBox();
-            textBoxCorreo = new TextBox();
-            textBoxName = new TextBox();
-            textBoxDireccion = new TextBox();
-            textBoxNumTel = new TextBox();
             panel1.SuspendLayout();
+            panel3.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(panel3);
             panel1.Controls.Add(buttonVolver);
-            panel1.Controls.Add(Cargo);
-            panel1.Controls.Add(comboBoxCargo);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(textBoxCurp);
             panel1.Controls.Add(panel2);
-            panel1.Controls.Add(textBoxCorreo);
-            panel1.Controls.Add(textBoxName);
-            panel1.Controls.Add(textBoxDireccion);
-            panel1.Controls.Add(textBoxNumTel);
-            panel1.Location = new Point(-8, -19);
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1065, 655);
+            panel1.Size = new Size(1094, 683);
             panel1.TabIndex = 4;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(textBoxCargo);
+            panel3.Controls.Add(label11);
+            panel3.Controls.Add(textBoxApellido);
+            panel3.Controls.Add(label9);
+            panel3.Controls.Add(textBoxCURP);
+            panel3.Controls.Add(label6);
+            panel3.Controls.Add(textBoxNumTel);
+            panel3.Controls.Add(label5);
+            panel3.Controls.Add(textBoxDireccion);
+            panel3.Controls.Add(textBoxCorreo);
+            panel3.Controls.Add(label10);
+            panel3.Controls.Add(label7);
+            panel3.Controls.Add(textBoxNombre);
+            panel3.Controls.Add(label4);
+            panel3.Controls.Add(label1);
+            panel3.Location = new Point(20, 193);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(969, 378);
+            panel3.TabIndex = 18;
+            // 
+            // textBoxCargo
+            // 
+            textBoxCargo.BorderStyle = BorderStyle.None;
+            textBoxCargo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxCargo.ForeColor = Color.White;
+            textBoxCargo.Location = new Point(462, 112);
+            textBoxCargo.Name = "textBoxCargo";
+            textBoxCargo.ReadOnly = true;
+            textBoxCargo.Size = new Size(400, 26);
+            textBoxCargo.TabIndex = 9;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(462, 88);
+            label11.Name = "label11";
+            label11.Size = new Size(52, 21);
+            label11.TabIndex = 8;
+            label11.Text = "Cargo";
+            // 
+            // textBoxApellido
+            // 
+            textBoxApellido.BorderStyle = BorderStyle.None;
+            textBoxApellido.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxApellido.ForeColor = Color.White;
+            textBoxApellido.Location = new Point(462, 41);
+            textBoxApellido.Name = "textBoxApellido";
+            textBoxApellido.ReadOnly = true;
+            textBoxApellido.Size = new Size(400, 26);
+            textBoxApellido.TabIndex = 7;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(462, 17);
+            label9.Name = "label9";
+            label9.Size = new Size(67, 21);
+            label9.TabIndex = 6;
+            label9.Text = "Apellido";
+            // 
+            // textBoxCURP
+            // 
+            textBoxCURP.BorderStyle = BorderStyle.None;
+            textBoxCURP.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxCURP.ForeColor = Color.White;
+            textBoxCURP.Location = new Point(6, 340);
+            textBoxCURP.Name = "textBoxCURP";
+            textBoxCURP.ReadOnly = true;
+            textBoxCURP.Size = new Size(400, 26);
+            textBoxCURP.TabIndex = 5;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(8, 316);
+            label6.Name = "label6";
+            label6.Size = new Size(50, 21);
+            label6.TabIndex = 4;
+            label6.Text = "CURP";
+            // 
+            // textBoxNumTel
+            // 
+            textBoxNumTel.BorderStyle = BorderStyle.None;
+            textBoxNumTel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxNumTel.ForeColor = Color.White;
+            textBoxNumTel.Location = new Point(6, 112);
+            textBoxNumTel.Name = "textBoxNumTel";
+            textBoxNumTel.ReadOnly = true;
+            textBoxNumTel.Size = new Size(400, 26);
+            textBoxNumTel.TabIndex = 3;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(6, 88);
+            label5.Name = "label5";
+            label5.Size = new Size(129, 21);
+            label5.TabIndex = 2;
+            label5.Text = "Numero telefono";
+            // 
+            // textBoxDireccion
+            // 
+            textBoxDireccion.BorderStyle = BorderStyle.None;
+            textBoxDireccion.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxDireccion.ForeColor = Color.White;
+            textBoxDireccion.Location = new Point(8, 265);
+            textBoxDireccion.Name = "textBoxDireccion";
+            textBoxDireccion.ReadOnly = true;
+            textBoxDireccion.Size = new Size(400, 26);
+            textBoxDireccion.TabIndex = 1;
+            // 
+            // textBoxCorreo
+            // 
+            textBoxCorreo.BorderStyle = BorderStyle.None;
+            textBoxCorreo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxCorreo.ForeColor = Color.White;
+            textBoxCorreo.Location = new Point(8, 190);
+            textBoxCorreo.Name = "textBoxCorreo";
+            textBoxCorreo.ReadOnly = true;
+            textBoxCorreo.Size = new Size(400, 26);
+            textBoxCorreo.TabIndex = 1;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(8, 241);
+            label10.Name = "label10";
+            label10.Size = new Size(75, 21);
+            label10.TabIndex = 0;
+            label10.Text = "Direccion";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(8, 166);
+            label7.Name = "label7";
+            label7.Size = new Size(58, 21);
+            label7.TabIndex = 0;
+            label7.Text = "Correo";
+            // 
+            // textBoxNombre
+            // 
+            textBoxNombre.BorderStyle = BorderStyle.None;
+            textBoxNombre.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxNombre.ForeColor = Color.White;
+            textBoxNombre.Location = new Point(8, 41);
+            textBoxNombre.Name = "textBoxNombre";
+            textBoxNombre.ReadOnly = true;
+            textBoxNombre.Size = new Size(400, 26);
+            textBoxNombre.TabIndex = 1;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(8, 17);
+            label4.Name = "label4";
+            label4.Size = new Size(68, 21);
+            label4.TabIndex = 0;
+            label4.Text = "Nombre";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(14, 17);
+            label1.Name = "label1";
+            label1.Size = new Size(52, 21);
+            label1.TabIndex = 0;
+            label1.Text = "label1";
             // 
             // buttonVolver
             // 
             buttonVolver.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             buttonVolver.ForeColor = SystemColors.ControlLightLight;
-            buttonVolver.Location = new Point(872, 565);
+            buttonVolver.Location = new Point(20, 585);
             buttonVolver.Name = "buttonVolver";
-            buttonVolver.Size = new Size(179, 63);
+            buttonVolver.Size = new Size(124, 50);
             buttonVolver.TabIndex = 17;
             buttonVolver.Text = "Volver";
             buttonVolver.UseVisualStyleBackColor = true;
-            // 
-            // Cargo
-            // 
-            Cargo.AutoSize = true;
-            Cargo.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Cargo.ForeColor = SystemColors.ControlLightLight;
-            Cargo.Location = new Point(26, 501);
-            Cargo.Name = "Cargo";
-            Cargo.Size = new Size(95, 37);
-            Cargo.TabIndex = 11;
-            Cargo.Text = "Cargo:";
-            // 
-            // comboBoxCargo
-            // 
-            comboBoxCargo.FormattingEnabled = true;
-            comboBoxCargo.Location = new Point(30, 541);
-            comboBoxCargo.Name = "comboBoxCargo";
-            comboBoxCargo.Size = new Size(267, 23);
-            comboBoxCargo.TabIndex = 10;
+            buttonVolver.Click += buttonVolver_Click;
             // 
             // label2
             // 
@@ -102,17 +274,6 @@
             label2.Size = new Size(333, 45);
             label2.TabIndex = 15;
             label2.Text = "Seleccionar empleado";
-            // 
-            // textBoxCurp
-            // 
-            textBoxCurp.BorderStyle = BorderStyle.None;
-            textBoxCurp.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxCurp.ForeColor = Color.WhiteSmoke;
-            textBoxCurp.Location = new Point(30, 443);
-            textBoxCurp.Name = "textBoxCurp";
-            textBoxCurp.Size = new Size(705, 29);
-            textBoxCurp.TabIndex = 9;
-            textBoxCurp.Text = "CURP";
             // 
             // panel2
             // 
@@ -139,55 +300,13 @@
             comboBoxEmpleados.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxEmpleados.FlatStyle = FlatStyle.Flat;
             comboBoxEmpleados.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxEmpleados.ForeColor = SystemColors.Window;
             comboBoxEmpleados.FormattingEnabled = true;
             comboBoxEmpleados.Location = new Point(16, 32);
             comboBoxEmpleados.Name = "comboBoxEmpleados";
             comboBoxEmpleados.Size = new Size(412, 38);
             comboBoxEmpleados.TabIndex = 0;
-            // 
-            // textBoxCorreo
-            // 
-            textBoxCorreo.BorderStyle = BorderStyle.None;
-            textBoxCorreo.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxCorreo.ForeColor = Color.WhiteSmoke;
-            textBoxCorreo.Location = new Point(30, 323);
-            textBoxCorreo.Name = "textBoxCorreo";
-            textBoxCorreo.Size = new Size(705, 29);
-            textBoxCorreo.TabIndex = 5;
-            textBoxCorreo.Text = "Correo electronico";
-            // 
-            // textBoxName
-            // 
-            textBoxName.BorderStyle = BorderStyle.None;
-            textBoxName.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxName.ForeColor = Color.WhiteSmoke;
-            textBoxName.Location = new Point(30, 207);
-            textBoxName.Name = "textBoxName";
-            textBoxName.Size = new Size(705, 28);
-            textBoxName.TabIndex = 8;
-            textBoxName.Text = "Nombre";
-            // 
-            // textBoxDireccion
-            // 
-            textBoxDireccion.BorderStyle = BorderStyle.None;
-            textBoxDireccion.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxDireccion.ForeColor = Color.WhiteSmoke;
-            textBoxDireccion.Location = new Point(30, 381);
-            textBoxDireccion.Name = "textBoxDireccion";
-            textBoxDireccion.Size = new Size(705, 29);
-            textBoxDireccion.TabIndex = 6;
-            textBoxDireccion.Text = "Dirección";
-            // 
-            // textBoxNumTel
-            // 
-            textBoxNumTel.BorderStyle = BorderStyle.None;
-            textBoxNumTel.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxNumTel.ForeColor = Color.WhiteSmoke;
-            textBoxNumTel.Location = new Point(30, 267);
-            textBoxNumTel.Name = "textBoxNumTel";
-            textBoxNumTel.Size = new Size(705, 29);
-            textBoxNumTel.TabIndex = 7;
-            textBoxNumTel.Text = "Numero telefonico";
+            comboBoxEmpleados.SelectedIndexChanged += comboBoxEmpleados_SelectedIndexChanged;
             // 
             // FormVerEmpleado
             // 
@@ -197,8 +316,11 @@
             Controls.Add(panel1);
             Name = "FormVerEmpleado";
             Text = "FormVerEmpleado";
+            Load += FormVerEmpleado_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
@@ -208,16 +330,25 @@
 
         private Panel panel1;
         private Button buttonVolver;
-        private Label Cargo;
-        private ComboBox comboBoxCargo;
         private Label label2;
-        private TextBox textBoxCurp;
         private Panel panel2;
         private Label label3;
         private ComboBox comboBoxEmpleados;
-        private TextBox textBoxCorreo;
-        private TextBox textBoxName;
-        private TextBox textBoxDireccion;
+        private Panel panel3;
+        private TextBox textBoxCargo;
+        private Label label11;
+        private TextBox textBoxApellido;
+        private Label label9;
+        private TextBox textBoxCURP;
+        private Label label6;
         private TextBox textBoxNumTel;
+        private Label label5;
+        private TextBox textBoxDireccion;
+        private TextBox textBoxCorreo;
+        private Label label10;
+        private Label label7;
+        private TextBox textBoxNombre;
+        private Label label4;
+        private Label label1;
     }
 }

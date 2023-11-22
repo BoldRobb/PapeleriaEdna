@@ -31,14 +31,22 @@ namespace Presentacion.Formularios.Empleados
             textBoxApellido.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxDireccion.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxCurp.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
+            comboBoxCargo.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
+            comboBoxGenero.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             buttonAgregar.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
             buttonVolver.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
+
+
+            comboBoxCargo.DropDownStyle = ComboBoxStyle.DropDownList;
 
             comboBoxCargo.Items.Add("Gerente");
             comboBoxCargo.Items.Add("Almacenista");
             comboBoxCargo.Items.Add("Encargado de ventas");
             comboBoxCargo.Items.Add("Encargado de compras");
             comboBoxCargo.Items.Add("Personal de limpieza");
+
+
+            comboBoxGenero.DropDownStyle = ComboBoxStyle.DropDownList;
 
             comboBoxGenero.Items.Add("Femenino");
             comboBoxGenero.Items.Add("Masculino");
@@ -217,6 +225,52 @@ namespace Presentacion.Formularios.Empleados
             }
         }
 
-        
+        private void textBoxDireccion_Enter(object sender, EventArgs e)
+        {
+            if (textBoxDireccion.Text == "Dirección")
+            {
+                textBoxDireccion.Text = "";
+                textBoxDireccion.ForeColor = Color.Black;
+
+            }
+        }
+
+        private void textBoxDireccion_Leave(object sender, EventArgs e)
+        {
+            if (textBoxDireccion.Text == "")
+            {
+                textBoxDireccion.Text = "Dirección";
+                textBoxDireccion.ForeColor = Color.WhiteSmoke;
+
+            }
+            else
+            {
+                textBoxDireccion.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxCurp_Enter(object sender, EventArgs e)
+        {
+            if (textBoxCurp.Text == "CURP")
+            {
+                textBoxCurp.Text = "";
+                textBoxCurp.ForeColor = Color.Black;
+
+            }
+        }
+
+        private void textBoxCurp_Leave(object sender, EventArgs e)
+        {
+            if (textBoxCurp.Text == "")
+            {
+                textBoxCurp.Text = "CURP";
+                textBoxCurp.ForeColor = Color.WhiteSmoke;
+
+            }
+            else
+            {
+                textBoxCurp.ForeColor = Color.Black;
+            }
+        }
     }
 }

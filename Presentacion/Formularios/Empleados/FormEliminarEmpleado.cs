@@ -48,7 +48,7 @@ namespace Presentacion.Formularios.Empleados
             this.Close();
         }
 
-        
+
 
         private void textBoxNombre_TextChanged(object sender, EventArgs e)
         {
@@ -218,7 +218,7 @@ namespace Presentacion.Formularios.Empleados
                 command.ExecuteNonQuery();
             }
             LeerInfoEmpleados();
-            MessageBox.Show("Se ha eliminado al cempleado correctamente");
+            MessageBox.Show("Se ha eliminado al empleado correctamente");
         }
 
 

@@ -82,6 +82,7 @@
             comboBoxEmpleados.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxEmpleados.FlatStyle = FlatStyle.Flat;
             comboBoxEmpleados.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxEmpleados.ForeColor = SystemColors.Window;
             comboBoxEmpleados.FormattingEnabled = true;
             comboBoxEmpleados.Location = new Point(16, 32);
             comboBoxEmpleados.Name = "comboBoxEmpleados";
@@ -116,7 +117,7 @@
             textBoxCargo.BorderStyle = BorderStyle.None;
             textBoxCargo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxCargo.ForeColor = Color.White;
-            textBoxCargo.Location = new Point(462, 128);
+            textBoxCargo.Location = new Point(462, 112);
             textBoxCargo.Name = "textBoxCargo";
             textBoxCargo.ReadOnly = true;
             textBoxCargo.Size = new Size(400, 26);

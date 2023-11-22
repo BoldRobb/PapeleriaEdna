@@ -124,10 +124,13 @@
             // 
             // comboBoxGenero
             // 
+            comboBoxGenero.FlatStyle = FlatStyle.Flat;
+            comboBoxGenero.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxGenero.ForeColor = SystemColors.Window;
             comboBoxGenero.FormattingEnabled = true;
             comboBoxGenero.Location = new Point(791, 181);
             comboBoxGenero.Name = "comboBoxGenero";
-            comboBoxGenero.Size = new Size(156, 23);
+            comboBoxGenero.Size = new Size(156, 29);
             comboBoxGenero.TabIndex = 7;
             // 
             // label1
@@ -167,10 +170,13 @@
             // 
             // comboBoxCargo
             // 
+            comboBoxCargo.FlatStyle = FlatStyle.Flat;
+            comboBoxCargo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxCargo.ForeColor = SystemColors.Window;
             comboBoxCargo.FormattingEnabled = true;
             comboBoxCargo.Location = new Point(22, 413);
             comboBoxCargo.Name = "comboBoxCargo";
-            comboBoxCargo.Size = new Size(267, 23);
+            comboBoxCargo.Size = new Size(267, 29);
             comboBoxCargo.TabIndex = 3;
             // 
             // textBoxCurp
@@ -183,6 +189,8 @@
             textBoxCurp.Size = new Size(705, 29);
             textBoxCurp.TabIndex = 2;
             textBoxCurp.Text = "CURP";
+            textBoxCurp.Enter += textBoxCurp_Enter;
+            textBoxCurp.Leave += textBoxCurp_Leave;
             // 
             // textBoxCorreo
             // 
@@ -207,6 +215,8 @@
             textBoxDireccion.Size = new Size(705, 29);
             textBoxDireccion.TabIndex = 1;
             textBoxDireccion.Text = "Dirección";
+            textBoxDireccion.Enter += textBoxDireccion_Enter;
+            textBoxDireccion.Leave += textBoxDireccion_Leave;
             // 
             // textBoxNumTel
             // 
