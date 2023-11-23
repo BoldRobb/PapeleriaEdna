@@ -85,7 +85,7 @@ namespace Presentacion.Formularios.Empleados
                 MessageBox.Show("El campo Numero telefonico está vacío");
             }
 
-            if (textBoxCorreo.Text != " Correo" && textBoxDireccion.Text != " Direccion" && textBoxNumTel.Text != " Telefono" && textBoxCurp.Text != " CURP" && textBoxName.Text != " Nombre")
+            if (textBoxCorreo.Text != "Correo" && textBoxDireccion.Text != "Direccion" && textBoxNumTel.Text != "Telefono" && textBoxCurp.Text != "CURP" && textBoxName.Text != "Nombre")
             {
                 SqlCommand aggCmd = new SqlCommand("insert into Empleados values (@Nombre, @Apellido, @Genero); SELECT SCOPE_IDENTITY();", connection);
 
@@ -123,9 +123,6 @@ namespace Presentacion.Formularios.Empleados
             {
                 MessageBox.Show("Fallo al agregar el cliente");
             }
-
-
-
 
         }
 

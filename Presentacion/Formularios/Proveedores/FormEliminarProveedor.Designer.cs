@@ -32,7 +32,7 @@
             label9 = new Label();
             panel2 = new Panel();
             label3 = new Label();
-            comboBoxClientes = new ComboBox();
+            comboBoxProveedores = new ComboBox();
             panel1 = new Panel();
             buttonEliminar = new Button();
             buttonVolver = new Button();
@@ -76,7 +76,7 @@
             // panel2
             // 
             panel2.Controls.Add(label3);
-            panel2.Controls.Add(comboBoxClientes);
+            panel2.Controls.Add(comboBoxProveedores);
             panel2.Location = new Point(40, 58);
             panel2.Name = "panel2";
             panel2.Size = new Size(970, 106);
@@ -93,16 +93,18 @@
             label3.TabIndex = 0;
             label3.Text = "Nombre";
             // 
-            // comboBoxClientes
+            // comboBoxProveedores
             // 
-            comboBoxClientes.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxClientes.FlatStyle = FlatStyle.Flat;
-            comboBoxClientes.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBoxClientes.FormattingEnabled = true;
-            comboBoxClientes.Location = new Point(16, 32);
-            comboBoxClientes.Name = "comboBoxClientes";
-            comboBoxClientes.Size = new Size(412, 38);
-            comboBoxClientes.TabIndex = 0;
+            comboBoxProveedores.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxProveedores.FlatStyle = FlatStyle.Flat;
+            comboBoxProveedores.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBoxProveedores.ForeColor = SystemColors.Window;
+            comboBoxProveedores.FormattingEnabled = true;
+            comboBoxProveedores.Location = new Point(16, 32);
+            comboBoxProveedores.Name = "comboBoxProveedores";
+            comboBoxProveedores.Size = new Size(412, 38);
+            comboBoxProveedores.TabIndex = 0;
+            comboBoxProveedores.SelectedIndexChanged += comboBoxProveedores_SelectedIndexChanged;
             // 
             // panel1
             // 
@@ -130,6 +132,7 @@
             buttonEliminar.TabIndex = 11;
             buttonEliminar.Text = "Eliminar";
             buttonEliminar.UseVisualStyleBackColor = true;
+            buttonEliminar.Click += buttonEliminar_Click;
             // 
             // buttonVolver
             // 
@@ -144,6 +147,7 @@
             buttonVolver.TabIndex = 12;
             buttonVolver.Text = "Volver";
             buttonVolver.UseVisualStyleBackColor = true;
+            buttonVolver.Click += buttonVolver_Click;
             // 
             // panel3
             // 
@@ -232,7 +236,7 @@
             textBoxNombre.BorderStyle = BorderStyle.None;
             textBoxNombre.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxNombre.ForeColor = Color.White;
-            textBoxNombre.Location = new Point(14, 41);
+            textBoxNombre.Location = new Point(8, 41);
             textBoxNombre.Name = "textBoxNombre";
             textBoxNombre.ReadOnly = true;
             textBoxNombre.Size = new Size(400, 26);
@@ -243,7 +247,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(14, 17);
+            label4.Location = new Point(8, 17);
             label4.Name = "label4";
             label4.Size = new Size(68, 21);
             label4.TabIndex = 0;
@@ -267,6 +271,7 @@
             Controls.Add(panel1);
             Name = "FormEliminarProveedor";
             Text = "FormEliminarProveedor";
+            Load += FormEliminarProveedor_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
@@ -281,7 +286,7 @@
         private Label label9;
         private Panel panel2;
         private Label label3;
-        private ComboBox comboBoxClientes;
+        private ComboBox comboBoxProveedores;
         private Panel panel1;
         private Panel panel3;
         private TextBox textBoxNumTel;

@@ -38,11 +38,6 @@ namespace Presentacion.Formularios.Empleados
         }
 
 
-
-
-
-
-
         private void buttonVolver_Click(object sender, EventArgs e)
         {
             this.Close();

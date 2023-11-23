@@ -32,7 +32,7 @@
             textBoxCorreo = new TextBox();
             textBoxDireccion = new TextBox();
             textBoxNumTel = new TextBox();
-            textBoxName = new TextBox();
+            textBoxNombre = new TextBox();
             buttonVolver = new Button();
             buttonAgregar = new Button();
             panel1 = new Panel();
@@ -46,10 +46,10 @@
             panel2.Controls.Add(textBoxCorreo);
             panel2.Controls.Add(textBoxDireccion);
             panel2.Controls.Add(textBoxNumTel);
-            panel2.Controls.Add(textBoxName);
+            panel2.Controls.Add(textBoxNombre);
             panel2.Location = new Point(33, 143);
             panel2.Name = "panel2";
-            panel2.Size = new Size(973, 255);
+            panel2.Size = new Size(973, 311);
             panel2.TabIndex = 4;
             // 
             // textBoxCorreo
@@ -57,44 +57,52 @@
             textBoxCorreo.BorderStyle = BorderStyle.None;
             textBoxCorreo.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxCorreo.ForeColor = Color.WhiteSmoke;
-            textBoxCorreo.Location = new Point(22, 151);
+            textBoxCorreo.Location = new Point(22, 143);
             textBoxCorreo.Name = "textBoxCorreo";
             textBoxCorreo.Size = new Size(705, 29);
             textBoxCorreo.TabIndex = 1;
-            textBoxCorreo.Text = "Correo electronico";
+            textBoxCorreo.Text = "Correo";
+            textBoxCorreo.Enter += textBoxCorreo_Enter;
+            textBoxCorreo.Leave += textBoxCorreo_Leave;
             // 
             // textBoxDireccion
             // 
             textBoxDireccion.BorderStyle = BorderStyle.None;
             textBoxDireccion.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxDireccion.ForeColor = Color.WhiteSmoke;
-            textBoxDireccion.Location = new Point(22, 209);
+            textBoxDireccion.Location = new Point(22, 197);
             textBoxDireccion.Name = "textBoxDireccion";
             textBoxDireccion.Size = new Size(705, 29);
             textBoxDireccion.TabIndex = 1;
             textBoxDireccion.Text = "Dirección";
+            textBoxDireccion.Enter += textBoxDireccion_Enter;
+            textBoxDireccion.Leave += textBoxDireccion_Leave;
             // 
             // textBoxNumTel
             // 
             textBoxNumTel.BorderStyle = BorderStyle.None;
             textBoxNumTel.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxNumTel.ForeColor = Color.WhiteSmoke;
-            textBoxNumTel.Location = new Point(22, 95);
+            textBoxNumTel.Location = new Point(22, 89);
             textBoxNumTel.Name = "textBoxNumTel";
             textBoxNumTel.Size = new Size(705, 29);
             textBoxNumTel.TabIndex = 1;
-            textBoxNumTel.Text = "Numero telefonico";
+            textBoxNumTel.Text = "Telefono";
+            textBoxNumTel.Enter += textBoxNumTel_Enter;
+            textBoxNumTel.Leave += textBoxNumTel_Leave;
             // 
-            // textBoxName
+            // textBoxNombre
             // 
-            textBoxName.BorderStyle = BorderStyle.None;
-            textBoxName.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxName.ForeColor = Color.WhiteSmoke;
-            textBoxName.Location = new Point(22, 35);
-            textBoxName.Name = "textBoxName";
-            textBoxName.Size = new Size(705, 28);
-            textBoxName.TabIndex = 1;
-            textBoxName.Text = "Nombre";
+            textBoxNombre.BorderStyle = BorderStyle.None;
+            textBoxNombre.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxNombre.ForeColor = Color.WhiteSmoke;
+            textBoxNombre.Location = new Point(22, 35);
+            textBoxNombre.Name = "textBoxNombre";
+            textBoxNombre.Size = new Size(705, 28);
+            textBoxNombre.TabIndex = 1;
+            textBoxNombre.Text = "Nombre";
+            textBoxNombre.Enter += textBoxNombre_Enter;
+            textBoxNombre.Leave += textBoxNombre_Leave;
             // 
             // buttonVolver
             // 
@@ -109,6 +117,7 @@
             buttonVolver.TabIndex = 5;
             buttonVolver.Text = "Volver";
             buttonVolver.UseVisualStyleBackColor = true;
+            buttonVolver.Click += buttonVolver_Click;
             // 
             // buttonAgregar
             // 
@@ -123,6 +132,7 @@
             buttonAgregar.TabIndex = 6;
             buttonAgregar.Text = "Agregar";
             buttonAgregar.UseVisualStyleBackColor = true;
+            buttonAgregar.Click += buttonAgregar_Click;
             // 
             // panel1
             // 
@@ -166,7 +176,7 @@
         private TextBox textBoxCorreo;
         private TextBox textBoxDireccion;
         private TextBox textBoxNumTel;
-        private TextBox textBoxName;
+        private TextBox textBoxNombre;
         private Button buttonVolver;
         private Button buttonAgregar;
         private Panel panel1;
