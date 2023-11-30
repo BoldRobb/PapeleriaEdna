@@ -31,10 +31,12 @@ namespace Presentacion.Formularios.Empleados
             textBoxApellido.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxDireccion.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxCurp.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
+            textBoxRFC.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             comboBoxCargo.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             comboBoxGenero.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             buttonAgregar.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
             buttonVolver.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
+
 
 
             comboBoxCargo.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -84,8 +86,12 @@ namespace Presentacion.Formularios.Empleados
             {
                 MessageBox.Show("El campo Numero telefonico está vacío");
             }
+            if (textBoxRFC.Text == "RFC")
+            {
+                MessageBox.Show("El campo Numero telefonico está vacío");
+            }
 
-            if (textBoxCorreo.Text != "Correo" && textBoxDireccion.Text != "Direccion" && textBoxNumTel.Text != "Telefono" && textBoxCurp.Text != "CURP" && textBoxName.Text != "Nombre")
+            if (textBoxRFC.Text != "RFC" && textBoxCorreo.Text != "Correo" && textBoxDireccion.Text != "Direccion" && textBoxNumTel.Text != "Telefono" && textBoxCurp.Text != "CURP" && textBoxName.Text != "Nombre")
             {
                 SqlCommand aggCmd = new SqlCommand("insert into Empleados values (@Nombre, @Apellido, @Genero); SELECT SCOPE_IDENTITY();", connection);
 
@@ -95,7 +101,7 @@ namespace Presentacion.Formularios.Empleados
                 object result = aggCmd.ExecuteScalar();
                 int id_cliente = Convert.ToInt32(result);
 
-                SqlCommand agg_detallesCmd = new SqlCommand("insert into Detalles_Empleados values (@ID_Empleado, @Cargo, @Correo, @Pago, @Fecba_proximo_pago, @Dirección, @CURP, @Telefono)", connection);
+                SqlCommand agg_detallesCmd = new SqlCommand("insert into Detalles_Empleados values (@ID_Empleado, @Cargo, @Correo, @Pago, @Fecba_proximo_pago, @Dirección, @CURP, @Telefono, @RFC)", connection);
 
                 agg_detallesCmd.Parameters.AddWithValue("@ID_Empleado", id_cliente);
                 agg_detallesCmd.Parameters.AddWithValue("@Cargo", comboBoxCargo.Text);
@@ -105,11 +111,34 @@ namespace Presentacion.Formularios.Empleados
                 agg_detallesCmd.Parameters.AddWithValue("@Dirección", textBoxDireccion.Text);
                 agg_detallesCmd.Parameters.AddWithValue("@CURP", textBoxCurp.Text);
                 agg_detallesCmd.Parameters.AddWithValue("@Telefono", textBoxNumTel.Text);
+                agg_detallesCmd.Parameters.AddWithValue("@RFC", textBoxRFC.Text);
+
+
+
+                //REGISTRAR USUARIO Y CONTRASEÑA PARA ACCEDER CON SU RESPECTIVA CUENTA
+                SqlCommand agg_user = new SqlCommand("insert into Users values (@LoginName, @Password, @FirstName, @LastName, @Position, @Email)", connection);
+
+                //SACAR SOLAMENTE UN NOMBRE DEL TEXTBOX NOMBRES
+                string nombre = textBoxName.Text;
+                string[] todo = nombre.Split(' ');
+                nombre = todo[0];
+
+
+                agg_user.Parameters.AddWithValue("@LoginName", nombre);
+                agg_user.Parameters.AddWithValue("@Password", "abc123456");
+                agg_user.Parameters.AddWithValue("@FirstName", textBoxName.Text);
+                agg_user.Parameters.AddWithValue("@LastName", textBoxApellido.Text);
+                agg_user.Parameters.AddWithValue("@Position", "Administrator");
+                agg_user.Parameters.AddWithValue("@Email", textBoxCorreo.Text);
+
+
 
 
 
 
                 agg_detallesCmd.ExecuteNonQuery();
+                agg_user.ExecuteNonQuery();
+
                 MessageBox.Show("Cliente agregado correctamente");
                 textBoxApellido.Text = " Apellidos";
                 textBoxCorreo.Text = " Correo";
@@ -267,6 +296,30 @@ namespace Presentacion.Formularios.Empleados
             else
             {
                 textBoxCurp.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBoxRFC_Enter(object sender, EventArgs e)
+        {
+            if (textBoxRFC.Text == "RFC")
+            {
+                textBoxRFC.Text = "";
+                textBoxRFC.ForeColor = Color.Black;
+
+            }
+        }
+
+        private void textBoxRFC_Leave(object sender, EventArgs e)
+        {
+            if (textBoxRFC.Text == "")
+            {
+                textBoxRFC.Text = "RFC";
+                textBoxRFC.ForeColor = Color.WhiteSmoke;
+
+            }
+            else
+            {
+                textBoxRFC.ForeColor = Color.Black;
             }
         }
     }

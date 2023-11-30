@@ -32,12 +32,14 @@
             btnConProv = new Button();
             btnEliProv = new Button();
             btnRegProv = new Button();
+            btnModProv = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.AppWorkspace;
+            panel1.Controls.Add(btnModProv);
             panel1.Controls.Add(btnConProv);
             panel1.Controls.Add(btnEliProv);
             panel1.Controls.Add(btnRegProv);
@@ -56,7 +58,7 @@
             btnConProv.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnConProv.ForeColor = SystemColors.Window;
             btnConProv.ImageAlign = ContentAlignment.TopCenter;
-            btnConProv.Location = new Point(-3, 408);
+            btnConProv.Location = new Point(0, 161);
             btnConProv.Name = "btnConProv";
             btnConProv.Size = new Size(1046, 114);
             btnConProv.TabIndex = 0;
@@ -74,7 +76,7 @@
             btnEliProv.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnEliProv.ForeColor = SystemColors.Window;
             btnEliProv.ImageAlign = ContentAlignment.TopCenter;
-            btnEliProv.Location = new Point(0, 219);
+            btnEliProv.Location = new Point(0, 483);
             btnEliProv.Name = "btnEliProv";
             btnEliProv.Size = new Size(1049, 106);
             btnEliProv.TabIndex = 0;
@@ -92,7 +94,7 @@
             btnRegProv.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnRegProv.ForeColor = SystemColors.Window;
             btnRegProv.ImageAlign = ContentAlignment.TopCenter;
-            btnRegProv.Location = new Point(-3, 47);
+            btnRegProv.Location = new Point(0, 29);
             btnRegProv.Name = "btnRegProv";
             btnRegProv.Size = new Size(1049, 101);
             btnRegProv.TabIndex = 0;
@@ -100,6 +102,24 @@
             btnRegProv.TextAlign = ContentAlignment.BottomCenter;
             btnRegProv.UseVisualStyleBackColor = true;
             btnRegProv.Click += btnRegProv_Click;
+            // 
+            // btnModProv
+            // 
+            btnModProv.Anchor = AnchorStyles.None;
+            btnModProv.FlatAppearance.BorderColor = Color.White;
+            btnModProv.FlatAppearance.BorderSize = 0;
+            btnModProv.FlatStyle = FlatStyle.Flat;
+            btnModProv.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnModProv.ForeColor = SystemColors.Window;
+            btnModProv.ImageAlign = ContentAlignment.TopCenter;
+            btnModProv.Location = new Point(0, 345);
+            btnModProv.Name = "btnModProv";
+            btnModProv.Size = new Size(1049, 106);
+            btnModProv.TabIndex = 1;
+            btnModProv.Text = "Modificar proveedor";
+            btnModProv.TextAlign = ContentAlignment.BottomCenter;
+            btnModProv.UseVisualStyleBackColor = true;
+            btnModProv.Click += btnModProv_Click;
             // 
             // FormProveedoresBase
             // 
@@ -120,5 +140,6 @@
         private Button btnRegProv;
         private Button btnConProv;
         private Button btnEliProv;
+        private Button btnModProv;
     }
 }

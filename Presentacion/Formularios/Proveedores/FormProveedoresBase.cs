@@ -61,5 +61,10 @@ namespace Presentacion.Formularios.Proveedores
         {
             OpenChildForm(new Formularios.Proveedores.FormConsultarProveedor());
         }
+
+        private void btnModProv_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Proveedores.FormModificarProveedor());
+        }
     }
 }

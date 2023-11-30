@@ -34,6 +34,7 @@
             button2 = new Button();
             buttonVolver = new Button();
             panel2 = new Panel();
+            textBoxRFC = new TextBox();
             comboBoxGenero = new ComboBox();
             label1 = new Label();
             textBoxApellido = new TextBox();
@@ -107,6 +108,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(textBoxRFC);
             panel2.Controls.Add(comboBoxGenero);
             panel2.Controls.Add(label1);
             panel2.Controls.Add(textBoxApellido);
@@ -119,8 +121,21 @@
             panel2.Controls.Add(textBoxName);
             panel2.Location = new Point(14, 57);
             panel2.Name = "panel2";
-            panel2.Size = new Size(973, 452);
+            panel2.Size = new Size(973, 461);
             panel2.TabIndex = 9;
+            // 
+            // textBoxRFC
+            // 
+            textBoxRFC.BorderStyle = BorderStyle.None;
+            textBoxRFC.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxRFC.ForeColor = Color.WhiteSmoke;
+            textBoxRFC.Location = new Point(18, 345);
+            textBoxRFC.Name = "textBoxRFC";
+            textBoxRFC.Size = new Size(705, 29);
+            textBoxRFC.TabIndex = 8;
+            textBoxRFC.Text = "RFC";
+            textBoxRFC.Enter += textBoxRFC_Enter;
+            textBoxRFC.Leave += textBoxRFC_Leave;
             // 
             // comboBoxGenero
             // 
@@ -149,7 +164,7 @@
             textBoxApellido.BorderStyle = BorderStyle.None;
             textBoxApellido.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxApellido.ForeColor = Color.WhiteSmoke;
-            textBoxApellido.Location = new Point(22, 92);
+            textBoxApellido.Location = new Point(18, 80);
             textBoxApellido.Name = "textBoxApellido";
             textBoxApellido.Size = new Size(705, 29);
             textBoxApellido.TabIndex = 5;
@@ -162,7 +177,7 @@
             Cargo.AutoSize = true;
             Cargo.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             Cargo.ForeColor = SystemColors.ControlLightLight;
-            Cargo.Location = new Point(18, 373);
+            Cargo.Location = new Point(18, 389);
             Cargo.Name = "Cargo";
             Cargo.Size = new Size(95, 37);
             Cargo.TabIndex = 4;
@@ -174,7 +189,7 @@
             comboBoxCargo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             comboBoxCargo.ForeColor = SystemColors.Window;
             comboBoxCargo.FormattingEnabled = true;
-            comboBoxCargo.Location = new Point(22, 413);
+            comboBoxCargo.Location = new Point(18, 429);
             comboBoxCargo.Name = "comboBoxCargo";
             comboBoxCargo.Size = new Size(267, 29);
             comboBoxCargo.TabIndex = 3;
@@ -184,7 +199,7 @@
             textBoxCurp.BorderStyle = BorderStyle.None;
             textBoxCurp.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxCurp.ForeColor = Color.WhiteSmoke;
-            textBoxCurp.Location = new Point(22, 310);
+            textBoxCurp.Location = new Point(18, 298);
             textBoxCurp.Name = "textBoxCurp";
             textBoxCurp.Size = new Size(705, 29);
             textBoxCurp.TabIndex = 2;
@@ -197,7 +212,7 @@
             textBoxCorreo.BorderStyle = BorderStyle.None;
             textBoxCorreo.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxCorreo.ForeColor = Color.WhiteSmoke;
-            textBoxCorreo.Location = new Point(22, 201);
+            textBoxCorreo.Location = new Point(18, 189);
             textBoxCorreo.Name = "textBoxCorreo";
             textBoxCorreo.Size = new Size(705, 29);
             textBoxCorreo.TabIndex = 1;
@@ -210,7 +225,7 @@
             textBoxDireccion.BorderStyle = BorderStyle.None;
             textBoxDireccion.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxDireccion.ForeColor = Color.WhiteSmoke;
-            textBoxDireccion.Location = new Point(22, 255);
+            textBoxDireccion.Location = new Point(18, 243);
             textBoxDireccion.Name = "textBoxDireccion";
             textBoxDireccion.Size = new Size(705, 29);
             textBoxDireccion.TabIndex = 1;
@@ -223,7 +238,7 @@
             textBoxNumTel.BorderStyle = BorderStyle.None;
             textBoxNumTel.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxNumTel.ForeColor = Color.WhiteSmoke;
-            textBoxNumTel.Location = new Point(22, 149);
+            textBoxNumTel.Location = new Point(18, 137);
             textBoxNumTel.Name = "textBoxNumTel";
             textBoxNumTel.Size = new Size(705, 29);
             textBoxNumTel.TabIndex = 1;
@@ -236,7 +251,7 @@
             textBoxName.BorderStyle = BorderStyle.None;
             textBoxName.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxName.ForeColor = Color.WhiteSmoke;
-            textBoxName.Location = new Point(22, 43);
+            textBoxName.Location = new Point(18, 31);
             textBoxName.Name = "textBoxName";
             textBoxName.Size = new Size(705, 28);
             textBoxName.TabIndex = 1;
@@ -277,5 +292,6 @@
         private ComboBox comboBoxGenero;
         private Label label1;
         private TextBox textBoxApellido;
+        private TextBox textBoxRFC;
     }
 }

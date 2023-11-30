@@ -52,6 +52,8 @@
             panel1 = new Panel();
             label1 = new Label();
             label8 = new Label();
+            textBoxRFC = new TextBox();
+            label12 = new Label();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -92,6 +94,8 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(textBoxRFC);
+            panel2.Controls.Add(label12);
             panel2.Controls.Add(textBoxCargo);
             panel2.Controls.Add(label11);
             panel2.Controls.Add(textBoxApellido);
@@ -340,6 +344,28 @@
             label8.TabIndex = 0;
             label8.Text = "Seleccionar empleado";
             // 
+            // textBoxRFC
+            // 
+            textBoxRFC.BorderStyle = BorderStyle.None;
+            textBoxRFC.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxRFC.ForeColor = Color.White;
+            textBoxRFC.Location = new Point(462, 190);
+            textBoxRFC.Name = "textBoxRFC";
+            textBoxRFC.ReadOnly = true;
+            textBoxRFC.Size = new Size(400, 26);
+            textBoxRFC.TabIndex = 11;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label12.ForeColor = Color.White;
+            label12.Location = new Point(462, 166);
+            label12.Name = "label12";
+            label12.Size = new Size(38, 21);
+            label12.TabIndex = 10;
+            label12.Text = "RFC";
+            // 
             // FormEliminarEmpleado
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -385,5 +411,7 @@
         private Label label9;
         private TextBox textBoxCargo;
         private Label label11;
+        private TextBox textBoxRFC;
+        private Label label12;
     }
 }

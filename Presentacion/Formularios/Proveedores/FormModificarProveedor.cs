@@ -1,5 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,54 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
 
-namespace Presentacion.Formularios.Empleados
+namespace Presentacion.Formularios.Proveedores
 {
-    public partial class FormEliminarEmpleado : Form
+    public partial class FormModificarProveedor : Form
     {
 
         ConexionBD conexion = new ConexionBD();
         SqlConnection connection = new SqlConnection();
 
-        public FormEliminarEmpleado()
+        public FormModificarProveedor()
         {
             connection = conexion.GetConnection();
             connection.Open();
             InitializeComponent();
             panel1.BackColor = ThemeColor.SecondaryColor;
-            panel3.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
             panel2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
+            panel3.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
             textBoxCorreo.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            textBoxApellido.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            textBoxCargo.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            textBoxCURP.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxDireccion.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxNombre.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxNumTel.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            textBoxRFC.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            buttonVolver.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
-            buttonEliminar.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
-            comboBoxEmpleados.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
+            button1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
+            button2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
         }
 
-
-        private void buttonVolver_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-
-
-        private void textBoxNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
 
         private int ObtenerNumeroEmpleadosDesdeBaseDeDatos(SqlConnection connection)
         {
             int numEmpleados = 0;
-            string query = "SELECT COUNT(*) FROM Empleados";
+            string query = "SELECT COUNT(*) FROM Proveedores";
 
             using (SqlCommand command = new SqlCommand(query, connection))
             {
@@ -64,10 +47,11 @@ namespace Presentacion.Formularios.Empleados
             return numEmpleados;
         }
 
+
         private List<string> ObtenerNombresEmpleadosDesdeBaseDeDatos(SqlConnection connection, int numEmpleados)
         {
             List<string> nombresEmpleados = new List<string>();
-            string query = "SELECT Apellido FROM Empleados";
+            string query = "SELECT Nombre FROM Proveedores";
 
             using (SqlCommand command = new SqlCommand(query, connection))
             {
@@ -75,7 +59,7 @@ namespace Presentacion.Formularios.Empleados
                 {
                     while (reader.Read())
                     {
-                        string nombreEmpleado = reader["Apellido"].ToString();
+                        string nombreEmpleado = reader["Nombre"].ToString();
                         nombresEmpleados.Add(nombreEmpleado);
                     }
                 }
@@ -83,12 +67,13 @@ namespace Presentacion.Formularios.Empleados
             return nombresEmpleados;
         }
 
-        private void FormEliminarEmpleados_Load(object sender, EventArgs e)
+        private void FormModificarProveedor_Load(object sender, EventArgs e)
         {
-            LeerInfoEmpleados();
+            LeerInfoProveedores();
         }
 
-        private void LeerInfoEmpleados()
+
+        private void LeerInfoProveedores()
         {
             if (connection.State != System.Data.ConnectionState.Open)
             {
@@ -111,15 +96,11 @@ namespace Presentacion.Formularios.Empleados
             }
             connection.Close();
             textBoxCorreo.Text = "";
-            textBoxCURP.Text = "";
             textBoxDireccion.Text = "";
             textBoxNombre.Text = "";
             textBoxNumTel.Text = "";
-            textBoxApellido.Text = "";
-            textBoxCargo.Text = "";
-            textBoxRFC.Text = "";
-        }
 
+        }
 
         private void comboBoxEmpleados_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -132,10 +113,10 @@ namespace Presentacion.Formularios.Empleados
             int ID_Empleado;
             var empleadoSeleccionado = (String)comboBoxEmpleados.SelectedItem;
 
-            string query = "SELECT ID_Empleado, Nombre, Apellido FROM Empleados where Apellido = @Apellido; SELECT SCOPE_IDENTITY();";
+            string query = "SELECT ID_Proveedor, Nombre FROM Proveedores where Nombre = @Nombre; SELECT SCOPE_IDENTITY();";
             using (SqlCommand command = new SqlCommand(query, connection))
             {
-                command.Parameters.AddWithValue("@Apellido", empleadoSeleccionado);
+                command.Parameters.AddWithValue("@Nombre", empleadoSeleccionado);
 
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
@@ -143,7 +124,6 @@ namespace Presentacion.Formularios.Empleados
                     while (reader.Read())
                     {
                         textBoxNombre.Text = reader.GetString(1);
-                        textBoxApellido.Text = reader.GetString(2);
                     }
 
                 }
@@ -151,16 +131,16 @@ namespace Presentacion.Formularios.Empleados
 
 
             }
-            query = "SELECT ID_Empleado from Empleados where Apellido = @Apellido;";
+            query = "SELECT ID_Proveedor from Proveedores where Nombre = @Nombre;";
             using (SqlCommand command = new SqlCommand(query, connection))
             {
-                command.Parameters.AddWithValue("@Apellido", empleadoSeleccionado);
+                command.Parameters.AddWithValue("@Nombre", empleadoSeleccionado);
                 object result = command.ExecuteScalar();
                 ID_Empleado = (int)result;
 
             }
 
-            query = "SELECT Dirección, Telefono, Correo, CURP, Cargo, RFC FROM Detalles_Empleados where ID_Empleado = @ID";
+            query = "SELECT Telefono, Correo, Direccion FROM Proveedores_Detalles where ID_Proveedor = @ID";
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 command.Parameters.AddWithValue("@ID", ID_Empleado);
@@ -170,12 +150,9 @@ namespace Presentacion.Formularios.Empleados
                     while (reader.Read())
                     {
 
-                        textBoxCorreo.Text = reader.GetString(2);
-                        textBoxCURP.Text = reader.GetString(3);
-                        textBoxDireccion.Text = reader.GetString(0);
-                        textBoxNumTel.Text = reader.GetString(1);
-                        textBoxCargo.Text = reader.GetString(4);
-                        textBoxRFC.Text = reader.GetString(5);
+                        textBoxCorreo.Text = reader.GetString(1);
+                        textBoxDireccion.Text = reader.GetString(2);
+                        textBoxNumTel.Text = reader.GetString(0);
 
                     }
 
@@ -184,49 +161,53 @@ namespace Presentacion.Formularios.Empleados
             }
         }
 
-        private void buttonEliminar_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             if (connection.State != System.Data.ConnectionState.Open)
             {
                 connection = conexion.GetConnection();
                 connection.Open();
             }
-            int id_empleado;
-            string query = "SELECT ID_Empleado from Empleados where Apellido = @Apellido;";
+            int id_cliente;
+            string query = "SELECT ID_Proveedor from Proveedores where Nombre = @Nombre;";
             using (SqlCommand command = new SqlCommand(query, connection))
             {
-                var empleadosSeleccionado = (String)comboBoxEmpleados.SelectedItem;
-                command.Parameters.AddWithValue("@Apellido", empleadosSeleccionado);
+                var clienteSeleccionado = (String)comboBoxEmpleados.SelectedItem;
+                command.Parameters.AddWithValue("@Nombre", clienteSeleccionado);
                 object result = command.ExecuteScalar();
-                id_empleado = (int)result;
+                id_cliente = (int)result;
 
             }
-            query = "DELETE FROM Detalles_Empleados Where ID_Empleado = @ID";
+            query = "UPDATE Proveedores SET Nombre = @Nombre WHERE ID_Proveedor = @ID";
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@Nombre", textBoxNombre.Text);
+                command.Parameters.AddWithValue("@ID", id_cliente);
+                command.ExecuteNonQuery();
+            }
+            query = "UPDATE Proveedores_Detalles SET Direccion = @Direccion, Correo=@Correo, Telefono = @Telefono WHERE ID_Proveedor = @ID";
             using (SqlCommand command = new SqlCommand(query, connection))
             {
 
-                command.Parameters.AddWithValue("@ID", id_empleado);
-                command.ExecuteNonQuery();
-            }
-            query = "DELETE FROM Empleados Where ID_Empleado = @ID";
-            using (SqlCommand command = new SqlCommand(query, connection))
-            {
+                command.Parameters.AddWithValue("@Direccion", textBoxDireccion.Text);
+                command.Parameters.AddWithValue("@Correo", textBoxCorreo.Text);
+                command.Parameters.AddWithValue("@Telefono", textBoxNumTel.Text);
+                command.Parameters.AddWithValue("@ID", id_cliente);
 
-                command.Parameters.AddWithValue("@ID", id_empleado);
+
+
+
+
+
                 command.ExecuteNonQuery();
             }
-            string queryEliminarUsuario = "DELETE FROM Users WHERE LoginName = @LoginName;";
-            using (SqlCommand commandEliminarUsuario = new SqlCommand(queryEliminarUsuario, connection))
-            {
-                string nombre = textBoxNombre.Text.Split(' ')[0];
-                commandEliminarUsuario.Parameters.AddWithValue("@LoginName", nombre);
-                commandEliminarUsuario.ExecuteNonQuery();
-            }
-            LeerInfoEmpleados();
-            MessageBox.Show("Se ha eliminado al empleado correctamente");
+            LeerInfoProveedores();
+            MessageBox.Show("Se ha modificado el proveedor correctamente");
         }
 
-
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

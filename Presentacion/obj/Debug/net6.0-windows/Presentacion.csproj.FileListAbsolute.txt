@@ -247,3 +247,4 @@ E:\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.
 E:\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Empleados.FormModificarEmpleado.resources
 E:\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Empleados.FormVerEmpleado.resources
 E:\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Empleados.FormEliminarEmpleado.resources
+E:\PapeleriaEdna\Presentacion\obj\Debug\net6.0-windows\Presentacion.Formularios.Proveedores.FormModificarProveedor.resources
