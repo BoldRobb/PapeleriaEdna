@@ -219,41 +219,41 @@ namespace Presentacion.Formularios.Empleados
              */
 
             query = "SELECT Cargo From Detalles_Empleados WHERE ID_Empleado = @ID";
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
                 command.Parameters.AddWithValue("@ID", ID_Empleado);
-                    
-                    string valorCargo = (string)command.ExecuteScalar();
 
-                    if (valorCargo == "Administrador")
-                    {
-                        comboBoxCargo.SelectedIndex = 0;
-                    }
-                    else if (valorCargo == "Gerente")
-                    {
-                        comboBoxCargo.SelectedIndex = 1;
-                    }
-                    else if (valorCargo == "Encargado de Recursos Humanos")
-                    {
-                        comboBoxCargo.SelectedIndex = 2;
-                    }
-                    else if (valorCargo == "Almacenista")
-                    {
-                        comboBoxCargo.SelectedIndex = 3;
-                    }
-                    else if (valorCargo == "Encargado de ventas")
-                    {
-                        comboBoxCargo.SelectedIndex = 4;
-                    }
-                    else if (valorCargo == "Encargado de compras")
-                    {
-                        comboBoxCargo.SelectedIndex = 5;
-                    }
-                    else if (valorCargo == "Personal de limpieza")
-                    {
-                        comboBoxCargo.SelectedIndex = 6;
-                    }
+                string valorCargo = (string)command.ExecuteScalar();
+
+                if (valorCargo == "Administrador")
+                {
+                    comboBoxCargo.SelectedIndex = 0;
                 }
+                else if (valorCargo == "Gerente")
+                {
+                    comboBoxCargo.SelectedIndex = 1;
+                }
+                else if (valorCargo == "Encargado de Recursos Humanos")
+                {
+                    comboBoxCargo.SelectedIndex = 2;
+                }
+                else if (valorCargo == "Almacenista")
+                {
+                    comboBoxCargo.SelectedIndex = 3;
+                }
+                else if (valorCargo == "Encargado de ventas")
+                {
+                    comboBoxCargo.SelectedIndex = 4;
+                }
+                else if (valorCargo == "Encargado de compras")
+                {
+                    comboBoxCargo.SelectedIndex = 5;
+                }
+                else if (valorCargo == "Personal de limpieza")
+                {
+                    comboBoxCargo.SelectedIndex = 6;
+                }
+            }
 
 
 

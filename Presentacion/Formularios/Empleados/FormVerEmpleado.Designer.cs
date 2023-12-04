@@ -30,6 +30,9 @@
         {
             panel1 = new Panel();
             panel3 = new Panel();
+            button1 = new Button();
+            textBoxEstatus = new TextBox();
+            label8 = new Label();
             textBoxCargo = new TextBox();
             label11 = new Label();
             textBoxApellido = new TextBox();
@@ -68,6 +71,9 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(button1);
+            panel3.Controls.Add(textBoxEstatus);
+            panel3.Controls.Add(label8);
             panel3.Controls.Add(textBoxCargo);
             panel3.Controls.Add(label11);
             panel3.Controls.Add(textBoxApellido);
@@ -87,6 +93,41 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(969, 378);
             panel3.TabIndex = 18;
+            // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ControlLightLight;
+            button1.Location = new Point(462, 241);
+            button1.Name = "button1";
+            button1.Size = new Size(124, 50);
+            button1.TabIndex = 19;
+            button1.Text = "Reactivar Cliente";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // textBoxEstatus
+            // 
+            textBoxEstatus.BorderStyle = BorderStyle.None;
+            textBoxEstatus.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxEstatus.ForeColor = Color.White;
+            textBoxEstatus.Location = new Point(462, 190);
+            textBoxEstatus.Name = "textBoxEstatus";
+            textBoxEstatus.ReadOnly = true;
+            textBoxEstatus.Size = new Size(400, 26);
+            textBoxEstatus.TabIndex = 11;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(462, 166);
+            label8.Name = "label8";
+            label8.Size = new Size(59, 21);
+            label8.TabIndex = 10;
+            label8.Text = "Estatus";
             // 
             // textBoxCargo
             // 
@@ -254,6 +295,7 @@
             // 
             // buttonVolver
             // 
+            buttonVolver.FlatStyle = FlatStyle.Flat;
             buttonVolver.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             buttonVolver.ForeColor = SystemColors.ControlLightLight;
             buttonVolver.Location = new Point(20, 585);
@@ -312,6 +354,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaptionText;
             ClientSize = new Size(1049, 616);
             Controls.Add(panel1);
             Name = "FormVerEmpleado";
@@ -350,5 +393,8 @@
         private TextBox textBoxNombre;
         private Label label4;
         private Label label1;
+        private TextBox textBoxEstatus;
+        private Label label8;
+        private Button button1;
     }
 }

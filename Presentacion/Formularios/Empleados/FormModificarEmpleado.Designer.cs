@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
             comboBoxGenero = new ComboBox();
             label1 = new Label();
             buttonActualizar = new Button();
@@ -45,12 +51,6 @@
             textBoxNombre = new TextBox();
             textBoxDireccion = new TextBox();
             textBoxNumTel = new TextBox();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -82,6 +82,72 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1103, 673);
             panel1.TabIndex = 3;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(30, 436);
+            label9.Name = "label9";
+            label9.Size = new Size(50, 21);
+            label9.TabIndex = 29;
+            label9.Text = "CURP";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(30, 379);
+            label8.Name = "label8";
+            label8.Size = new Size(75, 21);
+            label8.TabIndex = 28;
+            label8.Text = "Dirección";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(30, 323);
+            label7.Name = "label7";
+            label7.Size = new Size(58, 21);
+            label7.TabIndex = 27;
+            label7.Text = "Correo";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(30, 267);
+            label6.Name = "label6";
+            label6.Size = new Size(68, 21);
+            label6.TabIndex = 26;
+            label6.Text = "Telefono";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(30, 212);
+            label5.Name = "label5";
+            label5.Size = new Size(67, 21);
+            label5.TabIndex = 25;
+            label5.Text = "Apellido";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(30, 157);
+            label4.Name = "label4";
+            label4.Size = new Size(68, 21);
+            label4.TabIndex = 24;
+            label4.Text = "Nombre";
             // 
             // comboBoxGenero
             // 
@@ -142,7 +208,7 @@
             textBoxApellido.ForeColor = Color.WhiteSmoke;
             textBoxApellido.Location = new Point(30, 235);
             textBoxApellido.Name = "textBoxApellido";
-            textBoxApellido.Size = new Size(705, 29);
+            textBoxApellido.Size = new Size(674, 29);
             textBoxApellido.TabIndex = 19;
             textBoxApellido.Text = "Apellidos";
             // 
@@ -187,7 +253,7 @@
             textBoxCURP.ForeColor = Color.WhiteSmoke;
             textBoxCURP.Location = new Point(30, 460);
             textBoxCURP.Name = "textBoxCURP";
-            textBoxCURP.Size = new Size(705, 29);
+            textBoxCURP.Size = new Size(674, 29);
             textBoxCURP.TabIndex = 9;
             textBoxCURP.Text = "CURP";
             // 
@@ -231,7 +297,7 @@
             textBoxCorreo.ForeColor = Color.WhiteSmoke;
             textBoxCorreo.Location = new Point(30, 347);
             textBoxCorreo.Name = "textBoxCorreo";
-            textBoxCorreo.Size = new Size(705, 29);
+            textBoxCorreo.Size = new Size(674, 29);
             textBoxCorreo.TabIndex = 5;
             textBoxCorreo.Text = "Correo";
             // 
@@ -242,7 +308,7 @@
             textBoxNombre.ForeColor = Color.WhiteSmoke;
             textBoxNombre.Location = new Point(30, 181);
             textBoxNombre.Name = "textBoxNombre";
-            textBoxNombre.Size = new Size(705, 28);
+            textBoxNombre.Size = new Size(674, 28);
             textBoxNombre.TabIndex = 8;
             textBoxNombre.Text = "Nombre";
             // 
@@ -253,7 +319,7 @@
             textBoxDireccion.ForeColor = Color.WhiteSmoke;
             textBoxDireccion.Location = new Point(30, 402);
             textBoxDireccion.Name = "textBoxDireccion";
-            textBoxDireccion.Size = new Size(705, 29);
+            textBoxDireccion.Size = new Size(674, 29);
             textBoxDireccion.TabIndex = 6;
             textBoxDireccion.Text = "Dirección";
             // 
@@ -264,75 +330,9 @@
             textBoxNumTel.ForeColor = Color.WhiteSmoke;
             textBoxNumTel.Location = new Point(30, 291);
             textBoxNumTel.Name = "textBoxNumTel";
-            textBoxNumTel.Size = new Size(705, 29);
+            textBoxNumTel.Size = new Size(674, 29);
             textBoxNumTel.TabIndex = 7;
             textBoxNumTel.Text = "Telefono";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(30, 157);
-            label4.Name = "label4";
-            label4.Size = new Size(68, 21);
-            label4.TabIndex = 24;
-            label4.Text = "Nombre";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(30, 212);
-            label5.Name = "label5";
-            label5.Size = new Size(67, 21);
-            label5.TabIndex = 25;
-            label5.Text = "Apellido";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(30, 267);
-            label6.Name = "label6";
-            label6.Size = new Size(68, 21);
-            label6.TabIndex = 26;
-            label6.Text = "Telefono";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(30, 323);
-            label7.Name = "label7";
-            label7.Size = new Size(58, 21);
-            label7.TabIndex = 27;
-            label7.Text = "Correo";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(30, 379);
-            label8.Name = "label8";
-            label8.Size = new Size(75, 21);
-            label8.TabIndex = 28;
-            label8.Text = "Dirección";
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.ForeColor = Color.White;
-            label9.Location = new Point(30, 436);
-            label9.Name = "label9";
-            label9.Size = new Size(50, 21);
-            label9.TabIndex = 29;
-            label9.Text = "CURP";
             // 
             // FormModificarEmpleado
             // 

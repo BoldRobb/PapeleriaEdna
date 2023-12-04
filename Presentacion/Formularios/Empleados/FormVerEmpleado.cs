@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace Presentacion.Formularios.Empleados
 
         ConexionBD conexion = new ConexionBD();
         SqlConnection connection = new SqlConnection();
+        int ID_Empleado;
 
         public FormVerEmpleado()
         {
@@ -33,6 +35,8 @@ namespace Presentacion.Formularios.Empleados
             textBoxCURP.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             buttonVolver.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
             comboBoxEmpleados.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
+            textBoxEstatus.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
+            button1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
         }
 
 
@@ -72,6 +76,7 @@ namespace Presentacion.Formularios.Empleados
         private void FormVerEmpleado_Load(object sender, EventArgs e)
         {
             LeerInfoEmpleados();
+            button1.Visible = false;
         }
 
         private void LeerInfoEmpleados()
@@ -113,7 +118,7 @@ namespace Presentacion.Formularios.Empleados
                 connection.Open();
             }
 
-            int ID_Empleado;
+            
             var empleadoSeleccionado = (String)comboBoxEmpleados.SelectedItem;
 
             string query = "SELECT ID_Empleado, Nombre, Apellido FROM Empleados where Apellido = @Apellido; SELECT SCOPE_IDENTITY();";
@@ -144,7 +149,7 @@ namespace Presentacion.Formularios.Empleados
 
             }
 
-            query = "SELECT Dirección, Telefono, Correo, CURP, Cargo FROM Detalles_Empleados where ID_Empleado = @ID";
+            query = "SELECT Dirección, Telefono, Correo, CURP, Cargo, Estatus FROM Detalles_Empleados where ID_Empleado = @ID";
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 command.Parameters.AddWithValue("@ID", ID_Empleado);
@@ -159,17 +164,52 @@ namespace Presentacion.Formularios.Empleados
                         textBoxDireccion.Text = reader.GetString(0);
                         textBoxNumTel.Text = reader.GetString(1);
                         textBoxCargo.Text = reader.GetString(4);
+                        textBoxEstatus.Text = reader.GetString(5);
 
                     }
 
                 }
                 reader.Close();
             }
+
+            if (textBoxEstatus.Text == "Activo")
+            {
+                button1.Visible = false;
+            }
+            else if (textBoxEstatus.Text == "Inactivo")
+            {
+                button1.Visible = true;
+            }
+
         }
 
         private void buttonVolver_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (connection.State != System.Data.ConnectionState.Open)
+            {
+                connection = conexion.GetConnection();
+                connection.Open();
+            }
+
+            string query = "UPDATE Detalles_Empleados SET Estatus = @Estatus WHERE ID_Empleado = @ID";
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@Estatus", "Activo");
+                command.Parameters.AddWithValue("@ID", ID_Empleado);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Empleado Reactivado.");
+                textBoxEstatus.Text="Activo";
+
+                button1.Visible=false;
+
+            }
+
         }
     }
 }

@@ -201,26 +201,13 @@ namespace Presentacion.Formularios.Empleados
                 id_empleado = (int)result;
 
             }
-            query = "DELETE FROM Detalles_Empleados Where ID_Empleado = @ID";
+            query = "UPDATE Detalles_Empleados SET Estatus = @Estatus Where ID_Empleado = @ID";
             using (SqlCommand command = new SqlCommand(query, connection))
             {
 
                 command.Parameters.AddWithValue("@ID", id_empleado);
+                command.Parameters.AddWithValue("@Estatus", "Inactivo");
                 command.ExecuteNonQuery();
-            }
-            query = "DELETE FROM Empleados Where ID_Empleado = @ID";
-            using (SqlCommand command = new SqlCommand(query, connection))
-            {
-
-                command.Parameters.AddWithValue("@ID", id_empleado);
-                command.ExecuteNonQuery();
-            }
-            string queryEliminarUsuario = "DELETE FROM Users WHERE LoginName = @LoginName;";
-            using (SqlCommand commandEliminarUsuario = new SqlCommand(queryEliminarUsuario, connection))
-            {
-                string nombre = textBoxNombre.Text.Split(' ')[0];
-                commandEliminarUsuario.Parameters.AddWithValue("@LoginName", nombre);
-                commandEliminarUsuario.ExecuteNonQuery();
             }
             LeerInfoEmpleados();
             MessageBox.Show("Se ha eliminado al empleado correctamente");

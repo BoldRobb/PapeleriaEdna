@@ -103,7 +103,7 @@ namespace Presentacion.Formularios.Empleados
                 object result = aggCmd.ExecuteScalar();
                 int id_cliente = Convert.ToInt32(result);
 
-                SqlCommand agg_detallesCmd = new SqlCommand("insert into Detalles_Empleados values (@ID_Empleado, @Cargo, @Correo, @Pago, @Fecba_proximo_pago, @Dirección, @CURP, @Telefono, @RFC)", connection);
+                SqlCommand agg_detallesCmd = new SqlCommand("insert into Detalles_Empleados values (@ID_Empleado, @Cargo, @Correo, @Pago, @Fecba_proximo_pago, @Dirección, @CURP, @Telefono, @RFC, @Estatus)", connection);
 
                 agg_detallesCmd.Parameters.AddWithValue("@ID_Empleado", id_cliente);
                 agg_detallesCmd.Parameters.AddWithValue("@Cargo", comboBoxCargo.Text);
@@ -114,6 +114,7 @@ namespace Presentacion.Formularios.Empleados
                 agg_detallesCmd.Parameters.AddWithValue("@CURP", textBoxCurp.Text);
                 agg_detallesCmd.Parameters.AddWithValue("@Telefono", textBoxNumTel.Text);
                 agg_detallesCmd.Parameters.AddWithValue("@RFC", textBoxRFC.Text);
+                agg_detallesCmd.Parameters.AddWithValue("@Estatus", "Activo");
                 agg_detallesCmd.ExecuteNonQuery();
 
 
