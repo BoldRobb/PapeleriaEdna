@@ -97,7 +97,7 @@ namespace Presentacion.Formularios.Empleados
 
                 aggCmd.Parameters.AddWithValue("@Nombre", textBoxName.Text);
                 aggCmd.Parameters.AddWithValue("@Apellido", textBoxApellido.Text);
-                aggCmd.Parameters.AddWithValue("@Genero", comboBoxGenero.Text);
+                aggCmd.Parameters.AddWithValue("@Genero", (string)comboBoxGenero.SelectedItem);
                 object result = aggCmd.ExecuteScalar();
                 int id_cliente = Convert.ToInt32(result);
 
@@ -112,7 +112,7 @@ namespace Presentacion.Formularios.Empleados
                 agg_detallesCmd.Parameters.AddWithValue("@CURP", textBoxCurp.Text);
                 agg_detallesCmd.Parameters.AddWithValue("@Telefono", textBoxNumTel.Text);
                 agg_detallesCmd.Parameters.AddWithValue("@RFC", textBoxRFC.Text);
-
+                agg_detallesCmd.ExecuteNonQuery();
 
 
                 //REGISTRAR USUARIO Y CONTRASEÑA PARA ACCEDER CON SU RESPECTIVA CUENTA
@@ -131,12 +131,6 @@ namespace Presentacion.Formularios.Empleados
                 agg_user.Parameters.AddWithValue("@Position", "Administrator");
                 agg_user.Parameters.AddWithValue("@Email", textBoxCorreo.Text);
 
-
-
-
-
-
-                agg_detallesCmd.ExecuteNonQuery();
                 agg_user.ExecuteNonQuery();
 
                 MessageBox.Show("Cliente agregado correctamente");

@@ -2019,19 +2019,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jazie\\.nuget\\packages\\": {}
+    "C:\\Users\\Jaziel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "D:\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "E:\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\jazie\\.nuget\\packages\\",
-      "outputPath": "E:\\PapeleriaEdna\\DataAccess\\obj\\",
+      "projectPath": "D:\\PapeleriaEdna\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Jaziel\\.nuget\\packages\\",
+      "outputPath": "D:\\PapeleriaEdna\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jazie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jaziel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2045,8 +2045,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\PapeleriaEdna\\Common\\Common.csproj": {
-              "projectPath": "E:\\PapeleriaEdna\\Common\\Common.csproj"
+            "D:\\PapeleriaEdna\\Common\\Common.csproj": {
+              "projectPath": "D:\\PapeleriaEdna\\Common\\Common.csproj"
             }
           }
         }
@@ -2082,7 +2082,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

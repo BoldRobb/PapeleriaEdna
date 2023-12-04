@@ -42,3 +42,14 @@ E:\PapeleriaEdna\Common\obj\Debug\net6.0\Common.dll
 E:\PapeleriaEdna\Common\obj\Debug\net6.0\refint\Common.dll
 E:\PapeleriaEdna\Common\obj\Debug\net6.0\Common.pdb
 E:\PapeleriaEdna\Common\obj\Debug\net6.0\ref\Common.dll
+D:\PapeleriaEDNA\Common\bin\Debug\net6.0\Common.deps.json
+D:\PapeleriaEDNA\Common\bin\Debug\net6.0\Common.dll
+D:\PapeleriaEDNA\Common\bin\Debug\net6.0\Common.pdb
+D:\PapeleriaEDNA\Common\obj\Debug\net6.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\PapeleriaEDNA\Common\obj\Debug\net6.0\Common.AssemblyInfoInputs.cache
+D:\PapeleriaEDNA\Common\obj\Debug\net6.0\Common.AssemblyInfo.cs
+D:\PapeleriaEDNA\Common\obj\Debug\net6.0\Common.csproj.CoreCompileInputs.cache
+D:\PapeleriaEDNA\Common\obj\Debug\net6.0\Common.dll
+D:\PapeleriaEDNA\Common\obj\Debug\net6.0\refint\Common.dll
+D:\PapeleriaEDNA\Common\obj\Debug\net6.0\Common.pdb
+D:\PapeleriaEDNA\Common\obj\Debug\net6.0\ref\Common.dll

@@ -197,9 +197,73 @@ namespace Presentacion.Formularios.Empleados
                     }
 
                 }
+
+
                 reader.Close();
+
             }
+
+                query = "SELECT Cargo From Detalles_Empleados WHERE ID_Empleado = @ID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                command.Parameters.AddWithValue("@ID", ID_Empleado);
+                    
+                    string valorCargo = (string)command.ExecuteScalar();
+
+                    if (valorCargo == "Gerente")
+                    {
+                        comboBoxCargo.SelectedIndex = 0;
+                    }
+                    else if (valorCargo == "Almacenista")
+                    {
+                        comboBoxCargo.SelectedIndex = 1;
+                    }
+                    else if (valorCargo == "Encargado de ventas")
+                    {
+                        comboBoxCargo.SelectedIndex = 2;
+                    }
+                    else if (valorCargo == "Encargado de compras")
+                    {
+                        comboBoxCargo.SelectedIndex = 3;
+                    }
+                    else if (valorCargo == "Personal de limpieza")
+                    {
+                        comboBoxCargo.SelectedIndex = 4;
+                    }
+                }
+
+
+
+
+            query = "SELECT Genero From Empleados WHERE ID_Empleado = @ID";
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@ID", ID_Empleado);
+
+                string valorCargo = (string)command.ExecuteScalar();
+
+                if (valorCargo == "Femenino            ")
+                {
+                    comboBoxGenero.SelectedIndex = 0;
+                }
+                else if (valorCargo == "Masculino           ")
+                {
+                    comboBoxGenero.SelectedIndex = 1;
+                }
+                else if (valorCargo == "Otro                ")
+                {
+                    comboBoxGenero.SelectedIndex = 2;
+                }
+                else
+                {
+                    MessageBox.Show(valorCargo);
+                }
+            }
+
+
         }
+
+
 
         private void buttonActualizar_Click(object sender, EventArgs e)
         {
@@ -218,15 +282,16 @@ namespace Presentacion.Formularios.Empleados
                 id_cliente = (int)result;
 
             }
-            query = "UPDATE Empleados SET Nombre = @Nombre, Apellido=@Apellidos WHERE ID_Empleado = @ID";
+            query = "UPDATE Empleados SET Nombre = @Nombre, Apellido=@Apellidos, Genero=@Genero WHERE ID_Empleado = @ID";
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 command.Parameters.AddWithValue("@Nombre", textBoxNombre.Text);
                 command.Parameters.AddWithValue("@Apellidos", textBoxApellido.Text);
+                command.Parameters.AddWithValue("@Genero", comboBoxGenero.Text);
                 command.Parameters.AddWithValue("@ID", id_cliente);
                 command.ExecuteNonQuery();
             }
-            query = "UPDATE Detalles_Empleados SET Dirección = @Direccion, Correo=@Correo, Telefono = @Telefono, CURP = @CURP, Cargo = @Cargo WHERE ID_Empleado = @ID";
+            query = "UPDATE Detalles_Empleados SET Dirección = @Direccion, Correo=@Correo, Telefono = @Telefono, CURP = @CURP, Cargo=@Cargo WHERE ID_Empleado = @ID";
             using (SqlCommand command = new SqlCommand(query, connection))
             {
 
@@ -234,32 +299,8 @@ namespace Presentacion.Formularios.Empleados
                 command.Parameters.AddWithValue("@Correo", textBoxCorreo.Text);
                 command.Parameters.AddWithValue("@Telefono", textBoxNumTel.Text);
                 command.Parameters.AddWithValue("@CURP", textBoxCURP.Text);
+                command.Parameters.AddWithValue("@Cargo", comboBoxCargo.Text);
                 command.Parameters.AddWithValue("@ID", id_cliente);
-
-                string valorCargo = command.Parameters["@Cargo"].Value.ToString();
-
-                if (valorCargo == "Gerente")
-                {
-                    comboBoxCargo.SelectedIndex = 0;
-                }
-                else if (valorCargo == "Almacenista")
-                {
-                    comboBoxCargo.SelectedIndex = 1;
-                }
-                else if (valorCargo == "Encargado de ventas")
-                {
-                    comboBoxCargo.SelectedIndex = 2;
-                }
-                else if (valorCargo == "Encargado de compras")
-                {
-                    comboBoxCargo.SelectedIndex = 3;
-                }
-                else if (valorCargo == "Personal de limpieza")
-                {
-                    comboBoxCargo.SelectedIndex = 4;
-                }
-
-
 
 
 
