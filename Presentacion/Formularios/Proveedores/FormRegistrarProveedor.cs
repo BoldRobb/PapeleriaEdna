@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Collections.Generic;
 
 namespace Presentacion.Formularios.Proveedores
 {
@@ -17,6 +18,7 @@ namespace Presentacion.Formularios.Proveedores
 
         ConexionBD conexion = new ConexionBD();
         SqlConnection connection = new SqlConnection();
+        int id_cliente;
 
         public FormRegistrarProvedor()
         {
@@ -25,12 +27,14 @@ namespace Presentacion.Formularios.Proveedores
             InitializeComponent();
             panel1.BackColor = ThemeColor.SecondaryColor;
             panel2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
+            panel3.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
             textBoxNombre.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxNumTel.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxCorreo.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxDireccion.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             buttonAgregar.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
             buttonVolver.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
+            checkedListBoxProductos.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
 
         }
 
@@ -61,11 +65,19 @@ namespace Presentacion.Formularios.Proveedores
 
             if (textBoxCorreo.Text != "Correo" && textBoxDireccion.Text != "Direccion" && textBoxNumTel.Text != "Telefono" && textBoxNombre.Text != "Nombre")
             {
+                if (connection.State != System.Data.ConnectionState.Open)
+                {
+                    connection = conexion.GetConnection();
+                    connection.Open();
+                }
+
                 SqlCommand aggCmd = new SqlCommand("insert into Proveedores values (@Nombre); SELECT SCOPE_IDENTITY();", connection);
+
+
 
                 aggCmd.Parameters.AddWithValue("@Nombre", textBoxNombre.Text);
                 object result = aggCmd.ExecuteScalar();
-                int id_cliente = Convert.ToInt32(result);
+                id_cliente = Convert.ToInt32(result);
 
                 SqlCommand agg_detallesCmd = new SqlCommand("insert into Proveedores_Detalles values (@ID_Proveedor, @Direccion, @Telefono, @Correo)", connection);
 
@@ -80,7 +92,7 @@ namespace Presentacion.Formularios.Proveedores
                 agg_detallesCmd.ExecuteNonQuery();
                 MessageBox.Show("Cliente agregado correctamente");
                 textBoxCorreo.Text = "Correo";
-                textBoxDireccion.Text = "Direccion";
+                textBoxDireccion.Text = "Dirección";
                 textBoxNombre.Text = "Nombre";
                 textBoxNumTel.Text = "Telefono";
 
@@ -88,6 +100,34 @@ namespace Presentacion.Formularios.Proveedores
             else
             {
                 MessageBox.Show("Fallo al agregar el Proveedor");
+            }
+
+
+
+
+            //AGREGAR PRODUCTO AL PROVEEDOR----------------
+
+            List<string> productosCheck = new List<string>();
+
+            foreach (var item in checkedListBoxProductos.CheckedItems)
+            {
+
+                using (connection = conexion.GetConnection())
+                {
+                    connection.Open();
+                    string query = "SELECT ID_Producto FROM Productos where Nombre = @Nombre;";
+                    SqlCommand buscarID = new SqlCommand(query, connection);
+                    buscarID.Parameters.AddWithValue("@Nombre", item.ToString());
+                    int id_producto = (int)buscarID.ExecuteScalar();
+
+                    SqlCommand aggProductos = new SqlCommand("insert into Catalago_Proveedor values (@ID_Proveedor, @ID_Producto);", connection);
+                    aggProductos.Parameters.AddWithValue("@ID_Proveedor", id_cliente);
+                    aggProductos.Parameters.AddWithValue("@ID_Producto", id_producto);
+                    aggProductos.ExecuteNonQuery();
+                }
+
+
+
             }
 
         }
@@ -186,6 +226,49 @@ namespace Presentacion.Formularios.Proveedores
             {
                 textBoxDireccion.ForeColor = Color.Black;
             }
+        }
+
+        private void checkedListBoxProductos_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+
+        }
+
+
+        private void ObtenerNombresEmpleadosDesdeBaseDeDatos(SqlConnection connection)
+        {
+
+
+
+            List<string> nombresEmpleados = new List<string>();
+            string query = "SELECT Nombre FROM Productos";
+            connection.Open();
+
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string nombreEmpleado = reader["Nombre"].ToString();
+                        checkedListBoxProductos.Items.Add(nombreEmpleado);
+                    }
+                }
+            }
+        }
+
+
+
+
+
+        private void FormRegistrarProvedor_Load(object sender, EventArgs e)
+        {
+
+            connection = conexion.GetConnection();
+            ObtenerNombresEmpleadosDesdeBaseDeDatos(connection);
+
+
+
+
         }
     }
 }

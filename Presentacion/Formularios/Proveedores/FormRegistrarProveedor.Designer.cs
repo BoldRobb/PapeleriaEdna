@@ -36,9 +36,12 @@
             buttonVolver = new Button();
             buttonAgregar = new Button();
             panel1 = new Panel();
+            panel3 = new Panel();
+            checkedListBoxProductos = new CheckedListBox();
             label9 = new Label();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel2
@@ -47,9 +50,9 @@
             panel2.Controls.Add(textBoxDireccion);
             panel2.Controls.Add(textBoxNumTel);
             panel2.Controls.Add(textBoxNombre);
-            panel2.Location = new Point(33, 143);
+            panel2.Location = new Point(12, 159);
             panel2.Name = "panel2";
-            panel2.Size = new Size(973, 311);
+            panel2.Size = new Size(595, 236);
             panel2.TabIndex = 4;
             // 
             // textBoxCorreo
@@ -57,9 +60,9 @@
             textBoxCorreo.BorderStyle = BorderStyle.None;
             textBoxCorreo.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxCorreo.ForeColor = Color.WhiteSmoke;
-            textBoxCorreo.Location = new Point(22, 143);
+            textBoxCorreo.Location = new Point(12, 122);
             textBoxCorreo.Name = "textBoxCorreo";
-            textBoxCorreo.Size = new Size(705, 29);
+            textBoxCorreo.Size = new Size(563, 29);
             textBoxCorreo.TabIndex = 1;
             textBoxCorreo.Text = "Correo";
             textBoxCorreo.Enter += textBoxCorreo_Enter;
@@ -70,9 +73,9 @@
             textBoxDireccion.BorderStyle = BorderStyle.None;
             textBoxDireccion.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxDireccion.ForeColor = Color.WhiteSmoke;
-            textBoxDireccion.Location = new Point(22, 197);
+            textBoxDireccion.Location = new Point(12, 176);
             textBoxDireccion.Name = "textBoxDireccion";
-            textBoxDireccion.Size = new Size(705, 29);
+            textBoxDireccion.Size = new Size(563, 29);
             textBoxDireccion.TabIndex = 1;
             textBoxDireccion.Text = "Dirección";
             textBoxDireccion.Enter += textBoxDireccion_Enter;
@@ -83,9 +86,9 @@
             textBoxNumTel.BorderStyle = BorderStyle.None;
             textBoxNumTel.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxNumTel.ForeColor = Color.WhiteSmoke;
-            textBoxNumTel.Location = new Point(22, 89);
+            textBoxNumTel.Location = new Point(12, 68);
             textBoxNumTel.Name = "textBoxNumTel";
-            textBoxNumTel.Size = new Size(705, 29);
+            textBoxNumTel.Size = new Size(563, 29);
             textBoxNumTel.TabIndex = 1;
             textBoxNumTel.Text = "Telefono";
             textBoxNumTel.Enter += textBoxNumTel_Enter;
@@ -96,9 +99,9 @@
             textBoxNombre.BorderStyle = BorderStyle.None;
             textBoxNombre.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBoxNombre.ForeColor = Color.WhiteSmoke;
-            textBoxNombre.Location = new Point(22, 35);
+            textBoxNombre.Location = new Point(12, 18);
             textBoxNombre.Name = "textBoxNombre";
-            textBoxNombre.Size = new Size(705, 28);
+            textBoxNombre.Size = new Size(563, 28);
             textBoxNombre.TabIndex = 1;
             textBoxNombre.Text = "Nombre";
             textBoxNombre.Enter += textBoxNombre_Enter;
@@ -136,6 +139,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(panel3);
             panel1.Controls.Add(buttonAgregar);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(buttonVolver);
@@ -144,6 +148,24 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1065, 655);
             panel1.TabIndex = 7;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(checkedListBoxProductos);
+            panel3.Location = new Point(646, 39);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(357, 457);
+            panel3.TabIndex = 9;
+            // 
+            // checkedListBoxProductos
+            // 
+            checkedListBoxProductos.ForeColor = SystemColors.Window;
+            checkedListBoxProductos.FormattingEnabled = true;
+            checkedListBoxProductos.Location = new Point(23, 18);
+            checkedListBoxProductos.Name = "checkedListBoxProductos";
+            checkedListBoxProductos.Size = new Size(312, 418);
+            checkedListBoxProductos.TabIndex = 10;
+            checkedListBoxProductos.ItemCheck += checkedListBoxProductos_ItemCheck;
             // 
             // label9
             // 
@@ -164,10 +186,12 @@
             Controls.Add(panel1);
             Name = "FormRegistrarProvedor";
             Text = "FormRegistrarProveedor";
+            Load += FormRegistrarProvedor_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -181,5 +205,7 @@
         private Button buttonAgregar;
         private Panel panel1;
         private Label label9;
+        private Panel panel3;
+        private CheckedListBox checkedListBoxProductos;
     }
 }

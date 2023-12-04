@@ -35,6 +35,8 @@
             label3 = new Label();
             comboBoxEmpleados = new ComboBox();
             panel1 = new Panel();
+            panel4 = new Panel();
+            checkedListBoxProductos = new CheckedListBox();
             panel3 = new Panel();
             label7 = new Label();
             label6 = new Label();
@@ -49,6 +51,7 @@
             button2 = new Button();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
+            panel4.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
             // 
@@ -97,7 +100,7 @@
             panel2.Controls.Add(comboBoxEmpleados);
             panel2.Location = new Point(40, 100);
             panel2.Name = "panel2";
-            panel2.Size = new Size(886, 85);
+            panel2.Size = new Size(579, 85);
             panel2.TabIndex = 14;
             // 
             // label3
@@ -126,6 +129,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(button2);
@@ -137,6 +141,25 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1094, 674);
             panel1.TabIndex = 4;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(checkedListBoxProductos);
+            panel4.Location = new Point(668, 100);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(347, 451);
+            panel4.TabIndex = 27;
+            // 
+            // checkedListBoxProductos
+            // 
+            checkedListBoxProductos.ForeColor = SystemColors.Window;
+            checkedListBoxProductos.FormattingEnabled = true;
+            checkedListBoxProductos.Location = new Point(19, 18);
+            checkedListBoxProductos.Name = "checkedListBoxProductos";
+            checkedListBoxProductos.Size = new Size(306, 418);
+            checkedListBoxProductos.TabIndex = 10;
+            checkedListBoxProductos.ItemCheck += checkedListBoxProductos_ItemCheck;
+            checkedListBoxProductos.SelectedIndexChanged += checkedListBoxProductos_SelectedIndexChanged;
             // 
             // panel3
             // 
@@ -151,7 +174,7 @@
             panel3.Controls.Add(textBoxNombre);
             panel3.Location = new Point(40, 206);
             panel3.Name = "panel3";
-            panel3.Size = new Size(973, 345);
+            panel3.Size = new Size(579, 345);
             panel3.TabIndex = 26;
             // 
             // label7
@@ -216,7 +239,7 @@
             textBoxCorreo.ForeColor = Color.WhiteSmoke;
             textBoxCorreo.Location = new Point(16, 231);
             textBoxCorreo.Name = "textBoxCorreo";
-            textBoxCorreo.Size = new Size(705, 29);
+            textBoxCorreo.Size = new Size(549, 29);
             textBoxCorreo.TabIndex = 1;
             textBoxCorreo.Text = "Correo";
             // 
@@ -227,7 +250,7 @@
             textBoxDireccion.ForeColor = Color.WhiteSmoke;
             textBoxDireccion.Location = new Point(16, 301);
             textBoxDireccion.Name = "textBoxDireccion";
-            textBoxDireccion.Size = new Size(705, 29);
+            textBoxDireccion.Size = new Size(549, 29);
             textBoxDireccion.TabIndex = 1;
             textBoxDireccion.Text = "Dirección";
             // 
@@ -238,7 +261,7 @@
             textBoxNumTel.ForeColor = Color.WhiteSmoke;
             textBoxNumTel.Location = new Point(16, 152);
             textBoxNumTel.Name = "textBoxNumTel";
-            textBoxNumTel.Size = new Size(705, 29);
+            textBoxNumTel.Size = new Size(549, 29);
             textBoxNumTel.TabIndex = 1;
             textBoxNumTel.Text = "Telefono";
             // 
@@ -249,7 +272,7 @@
             textBoxNombre.ForeColor = Color.WhiteSmoke;
             textBoxNombre.Location = new Point(16, 84);
             textBoxNombre.Name = "textBoxNombre";
-            textBoxNombre.Size = new Size(705, 28);
+            textBoxNombre.Size = new Size(549, 28);
             textBoxNombre.TabIndex = 1;
             textBoxNombre.Text = "Nombre";
             // 
@@ -296,6 +319,7 @@
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel4.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ResumeLayout(false);
@@ -321,5 +345,7 @@
         private TextBox textBoxDireccion;
         private TextBox textBoxNumTel;
         private TextBox textBoxNombre;
+        private Panel panel4;
+        private CheckedListBox checkedListBoxProductos;
     }
 }

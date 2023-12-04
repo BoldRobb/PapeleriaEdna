@@ -2038,19 +2038,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jaziel\\.nuget\\packages\\": {}
+    "C:\\Users\\jazie\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PapeleriaEdna\\Negocio\\Negocio.csproj",
+      "projectUniqueName": "E:\\PapeleriaEdna\\Negocio\\Negocio.csproj",
       "projectName": "Negocio",
-      "projectPath": "D:\\PapeleriaEdna\\Negocio\\Negocio.csproj",
-      "packagesPath": "C:\\Users\\Jaziel\\.nuget\\packages\\",
-      "outputPath": "D:\\PapeleriaEDNA\\Negocio\\obj\\",
+      "projectPath": "E:\\PapeleriaEdna\\Negocio\\Negocio.csproj",
+      "packagesPath": "C:\\Users\\jazie\\.nuget\\packages\\",
+      "outputPath": "E:\\PapeleriaEdna\\Negocio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Jaziel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jazie\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2064,11 +2064,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\PapeleriaEdna\\Common\\Common.csproj": {
-              "projectPath": "D:\\PapeleriaEdna\\Common\\Common.csproj"
+            "E:\\PapeleriaEdna\\Common\\Common.csproj": {
+              "projectPath": "E:\\PapeleriaEdna\\Common\\Common.csproj"
             },
-            "D:\\PapeleriaEdna\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "D:\\PapeleriaEdna\\DataAccess\\DataAccess.csproj"
+            "E:\\PapeleriaEdna\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "E:\\PapeleriaEdna\\DataAccess\\DataAccess.csproj"
             }
           }
         }
@@ -2098,7 +2098,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

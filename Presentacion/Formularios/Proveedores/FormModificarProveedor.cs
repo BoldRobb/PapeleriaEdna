@@ -16,6 +16,7 @@ namespace Presentacion.Formularios.Proveedores
 
         ConexionBD conexion = new ConexionBD();
         SqlConnection connection = new SqlConnection();
+        int ID_Empleado;
 
         public FormModificarProveedor()
         {
@@ -25,12 +26,15 @@ namespace Presentacion.Formularios.Proveedores
             panel1.BackColor = ThemeColor.SecondaryColor;
             panel2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
             panel3.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
+            panel4.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
             textBoxCorreo.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxDireccion.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxNombre.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             textBoxNumTel.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             button1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
             button2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
+            comboBoxEmpleados.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
+            checkedListBoxProductos.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
         }
 
 
@@ -69,7 +73,33 @@ namespace Presentacion.Formularios.Proveedores
 
         private void FormModificarProveedor_Load(object sender, EventArgs e)
         {
+
             LeerInfoProveedores();
+            connection = conexion.GetConnection();
+            ObtenerNombresProductosDesdeBaseDeDatos(connection);
+
+
+        }
+
+
+        private void ObtenerNombresProductosDesdeBaseDeDatos(SqlConnection connection)
+        {
+
+            List<string> nombresEmpleados = new List<string>();
+            string query = "SELECT Nombre FROM Productos";
+            connection.Open();
+
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string nombreEmpleado = reader["Nombre"].ToString();
+                        checkedListBoxProductos.Items.Add(nombreEmpleado);
+                    }
+                }
+            }
         }
 
 
@@ -110,7 +140,13 @@ namespace Presentacion.Formularios.Proveedores
                 connection.Open();
             }
 
-            int ID_Empleado;
+
+            for (int i = 0; i < checkedListBoxProductos.Items.Count; i++)
+            {
+                checkedListBoxProductos.SetItemChecked(i, false);
+            }
+
+
             var empleadoSeleccionado = (String)comboBoxEmpleados.SelectedItem;
 
             string query = "SELECT ID_Proveedor, Nombre FROM Proveedores where Nombre = @Nombre; SELECT SCOPE_IDENTITY();";
@@ -159,10 +195,54 @@ namespace Presentacion.Formularios.Proveedores
                 }
                 reader.Close();
             }
+
+            query = "SELECT P.Nombre FROM Productos P INNER JOIN Catalago_Proveedor ON P.ID_Producto = Catalago_Proveedor.ID_Producto WHERE Catalago_Proveedor.ID_Proveedor = @ID_Proveedor;";
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+
+                command.Parameters.AddWithValue("@ID_Proveedor", ID_Empleado);
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+
+                        string nombreProducto = reader.GetString(0);
+
+                        for (int i = 0; i < checkedListBoxProductos.Items.Count; i++)
+                        {
+                            if (checkedListBoxProductos.Items[i].ToString() == nombreProducto)
+                            {
+                                checkedListBoxProductos.SetItemChecked(i, true);
+                            }
+                        }
+
+
+
+                    }
+
+                }
+                reader.Close();
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             if (connection.State != System.Data.ConnectionState.Open)
             {
                 connection = conexion.GetConnection();
@@ -178,6 +258,14 @@ namespace Presentacion.Formularios.Proveedores
                 id_cliente = (int)result;
 
             }
+            query = "DELETE from Catalago_Proveedor where ID_Proveedor = @ID;";
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@ID", id_cliente);
+                command.ExecuteNonQuery();
+
+            }
+
             query = "UPDATE Proveedores SET Nombre = @Nombre WHERE ID_Proveedor = @ID";
             using (SqlCommand command = new SqlCommand(query, connection))
             {
@@ -201,6 +289,29 @@ namespace Presentacion.Formularios.Proveedores
 
                 command.ExecuteNonQuery();
             }
+
+            foreach (var item in checkedListBoxProductos.CheckedItems)
+            {
+
+                using (connection = conexion.GetConnection())
+                {
+                    connection.Open();
+                    query = "SELECT ID_Producto FROM Productos where Nombre = @Nombre;";
+                    SqlCommand buscarID = new SqlCommand(query, connection);
+                    buscarID.Parameters.AddWithValue("@Nombre", item.ToString());
+                    int id_producto = (int)buscarID.ExecuteScalar();
+
+                    SqlCommand aggProductos = new SqlCommand("insert into Catalago_Proveedor values (@ID_Proveedor, @ID_Producto);", connection);
+                    aggProductos.Parameters.AddWithValue("@ID_Proveedor", id_cliente);
+                    aggProductos.Parameters.AddWithValue("@ID_Producto", id_producto);
+                    aggProductos.ExecuteNonQuery();
+                }
+
+
+
+            }
+
+
             LeerInfoProveedores();
             MessageBox.Show("Se ha modificado el proveedor correctamente");
         }
@@ -208,6 +319,16 @@ namespace Presentacion.Formularios.Proveedores
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void checkedListBoxProductos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedListBoxProductos_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+
         }
     }
 }

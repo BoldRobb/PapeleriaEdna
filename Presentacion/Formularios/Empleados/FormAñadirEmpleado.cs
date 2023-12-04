@@ -41,7 +41,9 @@ namespace Presentacion.Formularios.Empleados
 
             comboBoxCargo.DropDownStyle = ComboBoxStyle.DropDownList;
 
+            comboBoxCargo.Items.Add("Administrador");
             comboBoxCargo.Items.Add("Gerente");
+            comboBoxCargo.Items.Add("Encargado de Recursos Humanos");
             comboBoxCargo.Items.Add("Almacenista");
             comboBoxCargo.Items.Add("Encargado de ventas");
             comboBoxCargo.Items.Add("Encargado de compras");
@@ -115,6 +117,8 @@ namespace Presentacion.Formularios.Empleados
                 agg_detallesCmd.ExecuteNonQuery();
 
 
+                if (comboBoxCargo.Text != "Personal de limpieza")
+                {
                 //REGISTRAR USUARIO Y CONTRASEÑA PARA ACCEDER CON SU RESPECTIVA CUENTA
                 SqlCommand agg_user = new SqlCommand("insert into Users values (@LoginName, @Password, @FirstName, @LastName, @Position, @Email)", connection);
 
@@ -132,19 +136,22 @@ namespace Presentacion.Formularios.Empleados
                 agg_user.Parameters.AddWithValue("@Email", textBoxCorreo.Text);
 
                 agg_user.ExecuteNonQuery();
+                    MessageBox.Show("Tu Usuario Es: " + nombre + "\nTu Contraseña es: abc123456");
+                }
 
-                MessageBox.Show("Cliente agregado correctamente");
-                textBoxApellido.Text = " Apellidos";
-                textBoxCorreo.Text = " Correo";
-                textBoxCurp.Text = " CURP";
-                textBoxDireccion.Text = " Direccion";
-                textBoxName.Text = " Nombre";
-                textBoxNumTel.Text = " Telefono";
+                MessageBox.Show("Empleado agregado correctamente");
+                textBoxApellido.Text = "Apellidos";
+                textBoxCorreo.Text = "Correo";
+                textBoxCurp.Text = "CURP";
+                textBoxDireccion.Text = "Direccion";
+                textBoxName.Text = "Nombre";
+                textBoxNumTel.Text = "Telefono";
+                textBoxRFC.Text = "RFC";
 
             }
             else
             {
-                MessageBox.Show("Fallo al agregar el cliente");
+                MessageBox.Show("Fallo al agregar al Empleado");
             }
 
         }
