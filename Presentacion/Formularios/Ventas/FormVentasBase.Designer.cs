@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+<<<<<<< Updated upstream
             button1 = new Button();
+=======
+>>>>>>> Stashed changes
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
@@ -44,11 +47,14 @@
             // panel1
             // 
             panel1.BackColor = SystemColors.AppWorkspace;
+<<<<<<< Updated upstream
             panel1.Controls.Add(button9);
             panel1.Controls.Add(button6);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button8);
             panel1.Controls.Add(button5);
+=======
+>>>>>>> Stashed changes
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button7);
             panel1.Controls.Add(button4);
@@ -59,6 +65,7 @@
             panel1.Size = new Size(535, 330);
             panel1.TabIndex = 0;
             // 
+<<<<<<< Updated upstream
             // button1
             // 
             button1.Anchor = AnchorStyles.None;
@@ -76,6 +83,8 @@
             button1.TextAlign = ContentAlignment.BottomCenter;
             button1.UseVisualStyleBackColor = true;
             // 
+=======
+>>>>>>> Stashed changes
             // button2
             // 
             button2.Anchor = AnchorStyles.None;
@@ -89,9 +98,10 @@
             button2.Name = "button2";
             button2.Size = new Size(96, 72);
             button2.TabIndex = 0;
-            button2.Text = "Accion2";
+            button2.Text = "Reporte de ventas";
             button2.TextAlign = ContentAlignment.BottomCenter;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -174,9 +184,10 @@
             button7.Name = "button7";
             button7.Size = new Size(96, 72);
             button7.TabIndex = 0;
-            button7.Text = "Accion4";
+            button7.Text = "Ver ventas";
             button7.TextAlign = ContentAlignment.BottomCenter;
             button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button8
             // 
@@ -228,12 +239,16 @@
         #endregion
 
         private Panel panel1;
+<<<<<<< Updated upstream
         private Button button1;
         private Button button9;
         private Button button6;
         private Button button3;
         private Button button8;
         private Button button5;
+=======
+        private Button buttonAddVent;
+>>>>>>> Stashed changes
         private Button button2;
         private Button button7;
         private Button button4;

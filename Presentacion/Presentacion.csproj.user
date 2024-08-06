@@ -10,7 +10,13 @@
     <Compile Update="Formularios\Clientes\FormClientesBase.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\Clientes\FormCuentaxCobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Formularios\Clientes\FormDeudorNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Clientes\FormDeudorPlanes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\Clientes\FormEliminarCliente.cs">
@@ -22,7 +28,7 @@
     <Compile Update="Formularios\Clientes\FormModificarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Formularios\Clientes\FormModificarDeudor.cs">
+    <Compile Update="Formularios\Clientes\FormPagoDeudor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\Clientes\FormVerClientes.cs">
@@ -31,12 +37,111 @@
     <Compile Update="Formularios\Clientes\FormVerDeudores.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\Egresos\ConsultarRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Egresos\EliminarRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Formularios\Egresos\FormEgresosBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+<<<<<<< Updated upstream
+    <Compile Update="Formularios\Inventario\AgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+=======
+    <Compile Update="Formularios\Egresos\GenerarReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Egresos\PagoEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Egresos\PagoProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Egresos\PagosFijos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Empleados\FormAñadirEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Empleados\FormEliminarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Empleados\FormModificarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Empleados\FormVerEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Inventario\AgregarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Formularios\Inventario\AgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Formularios\Inventario\ConsultarInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Inventario\EliminarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Inventario\EliminarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Inventario\ModificarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Inventario\ModificarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Inventario\ProductosAgotados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Inventario\ProductosExistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Proveedores\FormConsultarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Proveedores\FormEliminarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Proveedores\FormModificarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Proveedores\FormNuevaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Proveedores\FormPrecioProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Proveedores\FormRegistrarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Ventas\FormFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Ventas\FormReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Ventas\FormVentaCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Ventas\FormVentaNueva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Ventas\FormVentaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Ventas\FormVenta_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Ventas\FormVerVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+>>>>>>> Stashed changes
     <Compile Update="inicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>

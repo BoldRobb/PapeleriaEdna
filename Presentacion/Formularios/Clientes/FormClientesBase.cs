@@ -80,7 +80,7 @@ namespace Presentacion.Formularios.Clientes
 
         private void buttonModDeud_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Formularios.Clientes.FormModificarDeudor());
+            OpenChildForm(new Formularios.Clientes.FormCuentaxCobrar());
         }
 
         private void buttonVerDeud_Click(object sender, EventArgs e)

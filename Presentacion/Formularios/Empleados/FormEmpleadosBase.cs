@@ -12,6 +12,7 @@ namespace Presentacion.Formularios.Empleados
 {
     public partial class FormEmpleadosBase : Form
     {
+        private Form activeForm;
         public FormEmpleadosBase()
         {
             InitializeComponent();
@@ -25,6 +26,50 @@ namespace Presentacion.Formularios.Empleados
             panel1.BackColor = ThemeColor.SecondaryColor;
 
 
+        }
+
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(childForm);
+            this.panel1.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+
+        }
+
+        private void btnRegProv_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Empleados.FormAñadirEmpleado());
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Empleados.FormModificarEmpleado());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Empleados.FormVerEmpleado());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Empleados.FormEliminarEmpleado());
         }
     }
 }

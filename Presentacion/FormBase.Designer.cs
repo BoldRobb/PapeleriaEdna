@@ -365,6 +365,7 @@
             Controls.Add(panelTitle);
             Controls.Add(panelMenu);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormBase";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormBase";

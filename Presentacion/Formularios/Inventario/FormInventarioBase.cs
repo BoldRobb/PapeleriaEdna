@@ -32,5 +32,23 @@ namespace Presentacion.Formularios.Inventario
             AgregarProducto agregarProducto = new AgregarProducto();
             agregarProducto.Show();
         }
+
+        //CONSULTAR NVENTARIO
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ConsultarInventario());
+        }
+
+        //ELIMINAR PRODUCTO
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new EliminarProducto());
+        }
+
+        //PRODUCTOS AGOTADOS
+        private void button6_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ProductosAgotados());
+        }
     }
 }

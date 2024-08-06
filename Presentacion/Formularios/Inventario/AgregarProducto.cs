@@ -26,6 +26,20 @@ namespace Presentacion.Formularios.Inventario
         public AgregarProducto()
         {
             InitializeComponent();
+<<<<<<< Updated upstream
+=======
+            this.BackColor = ThemeColor.SecondaryColor;
+            panel1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
+            textBox1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
+            textBox2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
+            textBox3.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
+            buttonIMG.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
+            button1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
+            button2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
+            textBoxPath.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
+            comboBox1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
+
+>>>>>>> Stashed changes
         }
 
         //CATEGORIAS
@@ -111,6 +125,10 @@ namespace Presentacion.Formularios.Inventario
 
                 comboBox1.DataSource = nombresCategorias;
                 comboBox1.DisplayMember = "Nombre";
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
             }
         }
 
@@ -135,10 +153,16 @@ namespace Presentacion.Formularios.Inventario
                     command.Parameters.AddWithValue("@Cantidad", cantidad);
                     
 
+<<<<<<< Updated upstream
                     int rowsAffected = command.ExecuteNonQuery();
+=======
+                    string query = "INSERT INTO productos (Nombre, Precio, ID_Categoria, Descripcion, Estado_Producto, Cantidad, Imagen) VALUES (@Nombre, @Precio,@ID_Categoria, " +
+                        "@Descripcion, @Estado_Producto, @Cantidad, @Imagen)";
+>>>>>>> Stashed changes
 
                     if (rowsAffected > 0)
                     {
+<<<<<<< Updated upstream
                         MessageBox.Show("Producto agregado correctamente.");
                     }
                     else
@@ -147,6 +171,36 @@ namespace Presentacion.Formularios.Inventario
                     }
                 }
             }
+=======
+                        command.Parameters.AddWithValue("@Nombre", productName);
+                        command.Parameters.AddWithValue("@Precio", productPrice);
+                        command.Parameters.AddWithValue("@ID_Categoria", categoryIDCad);
+                        command.Parameters.AddWithValue("@Descripcion", productDescription);
+                        command.Parameters.AddWithValue("@Estado_Producto", productStatus);
+                        command.Parameters.AddWithValue("@Cantidad", cantidad);
+                        command.Parameters.AddWithValue("@Imagen", imgBytes);
+
+
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Producto agregado correctamente.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo agregar el producto.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
+
+            }
+
+>>>>>>> Stashed changes
         }
 
         //SALIR
@@ -185,7 +239,110 @@ namespace Presentacion.Formularios.Inventario
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             
+=======
+            ProveedorID = 0;
+
+
+            using (connection = conexion.GetConnection())
+            {
+                connection.Open();
+
+                string query = "SELECT ID_Proveedor FROM Proveedores WHERE nombre = @Nombre";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Nombre", categoryName);
+
+                    object result = command.ExecuteScalar();
+
+                    if (result != null)
+                    {
+                        // Si se encontró un resultado, asigna el ID de la categoría a la variable categoryID
+                        ProveedorID = Convert.ToInt32(result);
+                    }
+                }
+            }
+
+            return ProveedorID;
+        }
+
+
+        private void buttonIMG_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "Imagenes|*.jpg;*.png;*.gif";
+            openFileDialog1.InitialDirectory = @"C:\";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                // Obtenemos la ruta de la imagen seleccionada
+                string filePath = openFileDialog1.FileName;
+
+                textBoxPath.Text = filePath;
+
+                Image img = Image.FromFile(filePath);
+
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    imgBytes = ms.ToArray();
+                }
+            }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (textBox1.Text == " Nombre")
+            {
+                textBox1.Text = "";
+                textBox1.ForeColor = Color.Black;
+
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = " Nombre";
+                textBox1.ForeColor = Color.WhiteSmoke;
+
+            }
+            else
+            {
+                textBox1.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            if (textBox2.Text == " Precio")
+            {
+                textBox2.Text = "";
+                textBox2.ForeColor = Color.Black;
+
+            }
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "")
+            {
+                textBox2.Text = " Precio";
+                textBox2.ForeColor = Color.WhiteSmoke;
+
+            }
+            else
+            {
+                textBox2.ForeColor = Color.Black;
+            }
+>>>>>>> Stashed changes
         }
     }
 }

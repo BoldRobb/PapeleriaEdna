@@ -26,5 +26,41 @@ namespace Presentacion.Formularios.Ventas
 
 
         }
+<<<<<<< Updated upstream
+=======
+        private void OpenChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(childForm);
+            this.panel1.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+
+        }
+
+        private void buttonAddVent_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Ventas.FormVentaNueva());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Ventas.FormVerVentas());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Formularios.Ventas.FormReporte());
+        }
+>>>>>>> Stashed changes
     }
 }

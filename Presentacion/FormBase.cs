@@ -47,6 +47,34 @@ namespace Presentacion
         private void FormBase_Load(object sender, EventArgs e)
         {
             LoadUserData();
+            if (UserCache.Position == "Encargado de Recursos Humanos")
+            {
+                buttonProveedores.Enabled = false;
+                buttonInventario.Enabled = false;
+                buttonEgresos.Enabled = false;
+                buttonVentas.Enabled = false;
+            }
+            else if (UserCache.Position == "Almacenista")
+            {
+
+                buttonEmpleados.Enabled = false;
+                buttonEgresos.Enabled = false;
+
+            }
+            else if (UserCache.Position == "Encargado de ventas")
+            {
+                buttonProveedores.Enabled = false;
+                buttonEmpleados.Enabled = false;
+                buttonEgresos.Enabled = false;
+                buttonInventario.Enabled = false;
+            }
+            else if (UserCache.Position == "Encargado de compras")
+            {
+
+                buttonEmpleados.Enabled = false;
+                buttonEgresos.Enabled = false;
+
+            }
         }
         private void LoadUserData()
         {

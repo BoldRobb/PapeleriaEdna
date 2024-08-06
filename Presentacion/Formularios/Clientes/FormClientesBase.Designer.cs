@@ -92,7 +92,7 @@
             buttonModDeud.Name = "buttonModDeud";
             buttonModDeud.Size = new Size(1049, 72);
             buttonModDeud.TabIndex = 0;
-            buttonModDeud.Text = "Modificar cliente deudor";
+            buttonModDeud.Text = "Pago clientes deudores";
             buttonModDeud.TextAlign = ContentAlignment.BottomCenter;
             buttonModDeud.UseVisualStyleBackColor = true;
             buttonModDeud.Click += buttonModDeud_Click;

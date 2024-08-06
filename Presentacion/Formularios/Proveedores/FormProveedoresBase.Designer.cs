@@ -29,194 +29,123 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
+            btnModProv = new Button();
+            btnConProv = new Button();
+            buttonCompra = new Button();
+            btnEliProv = new Button();
+            btnRegProv = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.AppWorkspace;
-            panel1.Controls.Add(button9);
-            panel1.Controls.Add(button6);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button8);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button7);
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnModProv);
+            panel1.Controls.Add(btnConProv);
+            panel1.Controls.Add(buttonCompra);
+            panel1.Controls.Add(btnEliProv);
+            panel1.Controls.Add(btnRegProv);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(535, 330);
+            panel1.Size = new Size(1049, 616);
             panel1.TabIndex = 0;
             // 
-            // button1
+            // btnModProv
             // 
-            button1.Anchor = AnchorStyles.None;
-            button1.FlatAppearance.BorderColor = Color.White;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.Window;
-            button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(74, 59);
-            button1.Name = "button1";
-            button1.Size = new Size(96, 72);
-            button1.TabIndex = 0;
-            button1.Text = "Accion1";
-            button1.TextAlign = ContentAlignment.BottomCenter;
-            button1.UseVisualStyleBackColor = true;
+            btnModProv.Anchor = AnchorStyles.None;
+            btnModProv.FlatAppearance.BorderColor = Color.White;
+            btnModProv.FlatAppearance.BorderSize = 0;
+            btnModProv.FlatStyle = FlatStyle.Flat;
+            btnModProv.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnModProv.ForeColor = SystemColors.Window;
+            btnModProv.ImageAlign = ContentAlignment.TopCenter;
+            btnModProv.Location = new Point(3, 256);
+            btnModProv.Name = "btnModProv";
+            btnModProv.Size = new Size(1049, 106);
+            btnModProv.TabIndex = 1;
+            btnModProv.Text = "Modificar proveedor";
+            btnModProv.TextAlign = ContentAlignment.BottomCenter;
+            btnModProv.UseVisualStyleBackColor = true;
+            btnModProv.Click += btnModProv_Click;
             // 
-            // button2
+            // btnConProv
             // 
-            button2.Anchor = AnchorStyles.None;
-            button2.FlatAppearance.BorderColor = Color.White;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.Window;
-            button2.ImageAlign = ContentAlignment.TopCenter;
-            button2.Location = new Point(210, 59);
-            button2.Name = "button2";
-            button2.Size = new Size(96, 72);
-            button2.TabIndex = 0;
-            button2.Text = "Accion2";
-            button2.TextAlign = ContentAlignment.BottomCenter;
-            button2.UseVisualStyleBackColor = true;
+            btnConProv.Anchor = AnchorStyles.None;
+            btnConProv.FlatAppearance.BorderColor = Color.White;
+            btnConProv.FlatAppearance.BorderSize = 0;
+            btnConProv.FlatStyle = FlatStyle.Flat;
+            btnConProv.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnConProv.ForeColor = SystemColors.Window;
+            btnConProv.ImageAlign = ContentAlignment.TopCenter;
+            btnConProv.Location = new Point(0, 136);
+            btnConProv.Name = "btnConProv";
+            btnConProv.Size = new Size(1046, 114);
+            btnConProv.TabIndex = 0;
+            btnConProv.Text = "Consultar proveedores";
+            btnConProv.TextAlign = ContentAlignment.BottomCenter;
+            btnConProv.UseVisualStyleBackColor = true;
+            btnConProv.Click += btnConProv_Click;
             // 
-            // button3
+            // buttonCompra
             // 
-            button3.Anchor = AnchorStyles.None;
-            button3.FlatAppearance.BorderColor = Color.White;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = SystemColors.Window;
-            button3.ImageAlign = ContentAlignment.TopCenter;
-            button3.Location = new Point(342, 59);
-            button3.Name = "button3";
-            button3.Size = new Size(96, 72);
-            button3.TabIndex = 0;
-            button3.Text = "Accion3";
-            button3.TextAlign = ContentAlignment.BottomCenter;
-            button3.UseVisualStyleBackColor = true;
+            buttonCompra.Anchor = AnchorStyles.None;
+            buttonCompra.FlatAppearance.BorderColor = Color.White;
+            buttonCompra.FlatAppearance.BorderSize = 0;
+            buttonCompra.FlatStyle = FlatStyle.Flat;
+            buttonCompra.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonCompra.ForeColor = SystemColors.Window;
+            buttonCompra.ImageAlign = ContentAlignment.TopCenter;
+            buttonCompra.Location = new Point(0, 480);
+            buttonCompra.Name = "buttonCompra";
+            buttonCompra.Size = new Size(1049, 106);
+            buttonCompra.TabIndex = 0;
+            buttonCompra.Text = "Registrar nueva compra";
+            buttonCompra.TextAlign = ContentAlignment.BottomCenter;
+            buttonCompra.UseVisualStyleBackColor = true;
+            buttonCompra.Click += buttonCompra_Click;
             // 
-            // button4
+            // btnEliProv
             // 
-            button4.Anchor = AnchorStyles.None;
-            button4.FlatAppearance.BorderColor = Color.White;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.ForeColor = SystemColors.Window;
-            button4.ImageAlign = ContentAlignment.TopCenter;
-            button4.Location = new Point(74, 163);
-            button4.Name = "button4";
-            button4.Size = new Size(96, 72);
-            button4.TabIndex = 0;
-            button4.Text = "Accion1";
-            button4.TextAlign = ContentAlignment.BottomCenter;
-            button4.UseVisualStyleBackColor = true;
+            btnEliProv.Anchor = AnchorStyles.None;
+            btnEliProv.FlatAppearance.BorderColor = Color.White;
+            btnEliProv.FlatAppearance.BorderSize = 0;
+            btnEliProv.FlatStyle = FlatStyle.Flat;
+            btnEliProv.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEliProv.ForeColor = SystemColors.Window;
+            btnEliProv.ImageAlign = ContentAlignment.TopCenter;
+            btnEliProv.Location = new Point(0, 368);
+            btnEliProv.Name = "btnEliProv";
+            btnEliProv.Size = new Size(1049, 106);
+            btnEliProv.TabIndex = 0;
+            btnEliProv.Text = "Eliminar proveedor";
+            btnEliProv.TextAlign = ContentAlignment.BottomCenter;
+            btnEliProv.UseVisualStyleBackColor = true;
+            btnEliProv.Click += btnEliProv_Click;
             // 
-            // button5
+            // btnRegProv
             // 
-            button5.Anchor = AnchorStyles.None;
-            button5.FlatAppearance.BorderColor = Color.White;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button5.ForeColor = SystemColors.Window;
-            button5.ImageAlign = ContentAlignment.TopCenter;
-            button5.Location = new Point(210, 163);
-            button5.Name = "button5";
-            button5.Size = new Size(96, 72);
-            button5.TabIndex = 0;
-            button5.Text = "Accion1";
-            button5.TextAlign = ContentAlignment.BottomCenter;
-            button5.UseVisualStyleBackColor = true;
+            btnRegProv.Anchor = AnchorStyles.None;
+            btnRegProv.FlatAppearance.BorderColor = Color.White;
+            btnRegProv.FlatAppearance.BorderSize = 0;
+            btnRegProv.FlatStyle = FlatStyle.Flat;
+            btnRegProv.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRegProv.ForeColor = SystemColors.Window;
+            btnRegProv.ImageAlign = ContentAlignment.TopCenter;
+            btnRegProv.Location = new Point(0, 29);
+            btnRegProv.Name = "btnRegProv";
+            btnRegProv.Size = new Size(1049, 101);
+            btnRegProv.TabIndex = 0;
+            btnRegProv.Text = "Registrar proveedor";
+            btnRegProv.TextAlign = ContentAlignment.BottomCenter;
+            btnRegProv.UseVisualStyleBackColor = true;
+            btnRegProv.Click += btnRegProv_Click;
             // 
-            // button6
-            // 
-            button6.Anchor = AnchorStyles.None;
-            button6.FlatAppearance.BorderColor = Color.White;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.ForeColor = SystemColors.Window;
-            button6.ImageAlign = ContentAlignment.TopCenter;
-            button6.Location = new Point(342, 163);
-            button6.Name = "button6";
-            button6.Size = new Size(96, 72);
-            button6.TabIndex = 0;
-            button6.Text = "Accion1";
-            button6.TextAlign = ContentAlignment.BottomCenter;
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            button7.Anchor = AnchorStyles.None;
-            button7.FlatAppearance.BorderColor = Color.White;
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button7.ForeColor = SystemColors.Window;
-            button7.ImageAlign = ContentAlignment.TopCenter;
-            button7.Location = new Point(74, 178);
-            button7.Name = "button7";
-            button7.Size = new Size(96, 72);
-            button7.TabIndex = 0;
-            button7.Text = "Accion4";
-            button7.TextAlign = ContentAlignment.BottomCenter;
-            button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            button8.Anchor = AnchorStyles.None;
-            button8.FlatAppearance.BorderColor = Color.White;
-            button8.FlatAppearance.BorderSize = 0;
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button8.ForeColor = SystemColors.Window;
-            button8.ImageAlign = ContentAlignment.TopCenter;
-            button8.Location = new Point(210, 178);
-            button8.Name = "button8";
-            button8.Size = new Size(96, 72);
-            button8.TabIndex = 0;
-            button8.Text = "Accion5";
-            button8.TextAlign = ContentAlignment.BottomCenter;
-            button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            button9.Anchor = AnchorStyles.None;
-            button9.FlatAppearance.BorderColor = Color.White;
-            button9.FlatAppearance.BorderSize = 0;
-            button9.FlatStyle = FlatStyle.Flat;
-            button9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button9.ForeColor = SystemColors.Window;
-            button9.ImageAlign = ContentAlignment.TopCenter;
-            button9.Location = new Point(342, 178);
-            button9.Name = "button9";
-            button9.Size = new Size(96, 72);
-            button9.TabIndex = 0;
-            button9.Text = "Accion6";
-            button9.TextAlign = ContentAlignment.BottomCenter;
-            button9.UseVisualStyleBackColor = true;
-            // 
-            // FormClientesBase
+            // FormProveedoresBase
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(535, 330);
+            ClientSize = new Size(1049, 616);
             Controls.Add(panel1);
             Name = "FormProveedoresBase";
             Text = "Proveedores";
@@ -228,14 +157,10 @@
         #endregion
 
         private Panel panel1;
-        private Button button1;
-        private Button button9;
-        private Button button6;
-        private Button button3;
-        private Button button8;
-        private Button button5;
-        private Button button2;
-        private Button button7;
-        private Button button4;
+        private Button btnRegProv;
+        private Button btnConProv;
+        private Button btnEliProv;
+        private Button btnModProv;
+        private Button buttonCompra;
     }
 }

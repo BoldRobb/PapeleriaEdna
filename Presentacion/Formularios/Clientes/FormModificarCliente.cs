@@ -15,6 +15,7 @@ namespace Presentacion.Formularios.Clientes
     {
         ConexionBD conexion = new ConexionBD();
         SqlConnection connection = new SqlConnection();
+        
         public FormModificarCliente()
         {
             connection = conexion.GetConnection();

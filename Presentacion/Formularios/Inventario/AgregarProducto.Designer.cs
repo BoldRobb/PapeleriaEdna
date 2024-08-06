@@ -38,7 +38,16 @@
             comboBox1 = new ComboBox();
             button1 = new Button();
             button2 = new Button();
+<<<<<<< Updated upstream
             textBox4 = new TextBox();
+=======
+            label5 = new Label();
+            buttonIMG = new Button();
+            panel1 = new Panel();
+            textBoxPath = new TextBox();
+            label7 = new Label();
+            panel1.SuspendLayout();
+>>>>>>> Stashed changes
             SuspendLayout();
             // 
             // label1
@@ -71,7 +80,13 @@
             // label4
             // 
             label4.AutoSize = true;
+<<<<<<< Updated upstream
             label4.Location = new Point(714, 70);
+=======
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(19, 80);
+>>>>>>> Stashed changes
             label4.Name = "label4";
             label4.Size = new Size(50, 20);
             label4.TabIndex = 3;
@@ -105,7 +120,12 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
+<<<<<<< Updated upstream
             comboBox1.Location = new Point(714, 113);
+=======
+            comboBox1.Location = new Point(19, 103);
+            comboBox1.Margin = new Padding(3, 2, 3, 2);
+>>>>>>> Stashed changes
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(151, 28);
             comboBox1.TabIndex = 7;
@@ -133,11 +153,77 @@
             // 
             // textBox4
             // 
+<<<<<<< Updated upstream
             textBox4.Location = new Point(51, 292);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(125, 27);
             textBox4.TabIndex = 10;
             textBox4.TextChanged += textBox4_TextChanged;
+=======
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.Transparent;
+            label5.Location = new Point(19, 176);
+            label5.Name = "label5";
+            label5.Size = new Size(62, 21);
+            label5.TabIndex = 0;
+            label5.Text = "Imagen";
+            // 
+            // buttonIMG
+            // 
+            buttonIMG.BackColor = SystemColors.Control;
+            buttonIMG.FlatStyle = FlatStyle.Flat;
+            buttonIMG.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonIMG.ForeColor = Color.White;
+            buttonIMG.Location = new Point(110, 168);
+            buttonIMG.Name = "buttonIMG";
+            buttonIMG.Size = new Size(103, 36);
+            buttonIMG.TabIndex = 11;
+            buttonIMG.Text = "Seleccionar";
+            buttonIMG.UseVisualStyleBackColor = false;
+            buttonIMG.Click += buttonIMG_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.Control;
+            panel1.Controls.Add(textBoxPath);
+            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(buttonIMG);
+            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label4);
+            panel1.Location = new Point(39, 52);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(983, 346);
+            panel1.TabIndex = 14;
+            // 
+            // textBoxPath
+            // 
+            textBoxPath.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            textBoxPath.ForeColor = Color.WhiteSmoke;
+            textBoxPath.Location = new Point(19, 235);
+            textBoxPath.Name = "textBoxPath";
+            textBoxPath.ReadOnly = true;
+            textBoxPath.Size = new Size(632, 36);
+            textBoxPath.TabIndex = 14;
+            textBoxPath.Text = "Ruta";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.ForeColor = Color.Transparent;
+            label7.Location = new Point(46, 17);
+            label7.Name = "label7";
+            label7.Size = new Size(286, 32);
+            label7.TabIndex = 15;
+            label7.Text = "Informacion del producto";
+>>>>>>> Stashed changes
             // 
             // AgregarProducto
             // 
@@ -174,6 +260,14 @@
         private ComboBox comboBox1;
         private Button button1;
         private Button button2;
+<<<<<<< Updated upstream
         private TextBox textBox4;
+=======
+        private Label label5;
+        private Button buttonIMG;
+        private Panel panel1;
+        private Label label7;
+        private TextBox textBoxPath;
+>>>>>>> Stashed changes
     }
 }

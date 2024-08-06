@@ -55,8 +55,13 @@
             panel1.Controls.Add(button1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
+<<<<<<< Updated upstream
             panel1.Size = new Size(535, 330);
+=======
+            panel1.Size = new Size(971, 563);
+>>>>>>> Stashed changes
             panel1.TabIndex = 0;
             // 
             // button9
@@ -68,11 +73,16 @@
             button9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button9.ForeColor = SystemColors.Window;
             button9.ImageAlign = ContentAlignment.TopCenter;
+<<<<<<< Updated upstream
             button9.Location = new Point(342, 178);
+=======
+            button9.Location = new Point(363, 453);
+            button9.Margin = new Padding(3, 4, 3, 4);
+>>>>>>> Stashed changes
             button9.Name = "button9";
-            button9.Size = new Size(96, 72);
+            button9.Size = new Size(171, 97);
             button9.TabIndex = 0;
-            button9.Text = "Accion6";
+            button9.Text = "Consultar productos existencia";
             button9.TextAlign = ContentAlignment.BottomCenter;
             button9.UseVisualStyleBackColor = true;
             // 
@@ -85,13 +95,19 @@
             button6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = SystemColors.Window;
             button6.ImageAlign = ContentAlignment.TopCenter;
+<<<<<<< Updated upstream
             button6.Location = new Point(342, 163);
+=======
+            button6.Location = new Point(662, 443);
+            button6.Margin = new Padding(3, 4, 3, 4);
+>>>>>>> Stashed changes
             button6.Name = "button6";
-            button6.Size = new Size(96, 72);
+            button6.Size = new Size(177, 107);
             button6.TabIndex = 0;
-            button6.Text = "Accion1";
+            button6.Text = "Consultar productos agotados";
             button6.TextAlign = ContentAlignment.BottomCenter;
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // button3
             // 
@@ -102,11 +118,16 @@
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.Window;
             button3.ImageAlign = ContentAlignment.TopCenter;
+<<<<<<< Updated upstream
             button3.Location = new Point(342, 59);
+=======
+            button3.Location = new Point(662, 41);
+            button3.Margin = new Padding(3, 4, 3, 4);
+>>>>>>> Stashed changes
             button3.Name = "button3";
-            button3.Size = new Size(96, 72);
+            button3.Size = new Size(171, 96);
             button3.TabIndex = 0;
-            button3.Text = "Accion3";
+            button3.Text = "Eliminar Categoria";
             button3.TextAlign = ContentAlignment.BottomCenter;
             button3.UseVisualStyleBackColor = true;
             // 
@@ -119,11 +140,16 @@
             button8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button8.ForeColor = SystemColors.Window;
             button8.ImageAlign = ContentAlignment.TopCenter;
+<<<<<<< Updated upstream
             button8.Location = new Point(210, 178);
+=======
+            button8.Location = new Point(64, 231);
+            button8.Margin = new Padding(3, 4, 3, 4);
+>>>>>>> Stashed changes
             button8.Name = "button8";
-            button8.Size = new Size(96, 72);
+            button8.Size = new Size(171, 96);
             button8.TabIndex = 0;
-            button8.Text = "Accion5";
+            button8.Text = "Modificar Producto";
             button8.TextAlign = ContentAlignment.BottomCenter;
             button8.UseVisualStyleBackColor = true;
             // 
@@ -136,13 +162,19 @@
             button5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = SystemColors.Window;
             button5.ImageAlign = ContentAlignment.TopCenter;
+<<<<<<< Updated upstream
             button5.Location = new Point(210, 163);
+=======
+            button5.Location = new Point(363, 231);
+            button5.Margin = new Padding(3, 4, 3, 4);
+>>>>>>> Stashed changes
             button5.Name = "button5";
-            button5.Size = new Size(96, 72);
+            button5.Size = new Size(171, 96);
             button5.TabIndex = 0;
-            button5.Text = "Accion1";
+            button5.Text = "Eliminar Producto";
             button5.TextAlign = ContentAlignment.BottomCenter;
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // button2
             // 
@@ -153,11 +185,16 @@
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Window;
             button2.ImageAlign = ContentAlignment.TopCenter;
+<<<<<<< Updated upstream
             button2.Location = new Point(210, 59);
+=======
+            button2.Location = new Point(363, 41);
+            button2.Margin = new Padding(3, 4, 3, 4);
+>>>>>>> Stashed changes
             button2.Name = "button2";
-            button2.Size = new Size(96, 72);
+            button2.Size = new Size(171, 96);
             button2.TabIndex = 0;
-            button2.Text = "Accion2";
+            button2.Text = "Modificar Categoria";
             button2.TextAlign = ContentAlignment.BottomCenter;
             button2.UseVisualStyleBackColor = true;
             // 
@@ -170,11 +207,16 @@
             button7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button7.ForeColor = SystemColors.Window;
             button7.ImageAlign = ContentAlignment.TopCenter;
+<<<<<<< Updated upstream
             button7.Location = new Point(74, 178);
+=======
+            button7.Location = new Point(662, 250);
+            button7.Margin = new Padding(3, 4, 3, 4);
+>>>>>>> Stashed changes
             button7.Name = "button7";
-            button7.Size = new Size(96, 72);
+            button7.Size = new Size(171, 96);
             button7.TabIndex = 0;
-            button7.Text = "Accion4";
+            button7.Text = "Agregar Producto";
             button7.TextAlign = ContentAlignment.BottomCenter;
             button7.UseVisualStyleBackColor = true;
             // 
@@ -187,13 +229,19 @@
             button4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = SystemColors.Window;
             button4.ImageAlign = ContentAlignment.TopCenter;
+<<<<<<< Updated upstream
             button4.Location = new Point(74, 163);
+=======
+            button4.Location = new Point(64, 436);
+            button4.Margin = new Padding(3, 4, 3, 4);
+>>>>>>> Stashed changes
             button4.Name = "button4";
-            button4.Size = new Size(96, 72);
+            button4.Size = new Size(171, 96);
             button4.TabIndex = 0;
-            button4.Text = "Accion1";
+            button4.Text = "Consultar inventario";
             button4.TextAlign = ContentAlignment.BottomCenter;
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button1
             // 
@@ -204,21 +252,31 @@
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Window;
             button1.ImageAlign = ContentAlignment.TopCenter;
+<<<<<<< Updated upstream
             button1.Location = new Point(74, 59);
+=======
+            button1.Location = new Point(64, 41);
+            button1.Margin = new Padding(3, 4, 3, 4);
+>>>>>>> Stashed changes
             button1.Name = "button1";
-            button1.Size = new Size(96, 72);
+            button1.Size = new Size(171, 96);
             button1.TabIndex = 0;
-            button1.Text = "Accion1";
+            button1.Text = "Agregar Categoria";
             button1.TextAlign = ContentAlignment.BottomCenter;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // FormInventarioBase
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+<<<<<<< Updated upstream
             ClientSize = new Size(535, 330);
+=======
+            ClientSize = new Size(971, 563);
+>>>>>>> Stashed changes
             Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormInventarioBase";
             Text = "Inventario";
             Load += FormInventarioBase_Load;
