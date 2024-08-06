@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< Updated upstream
-            SuspendLayout();
-            // 
-=======
             label9 = new Label();
             panel1 = new Panel();
             label3 = new Label();
@@ -53,8 +49,6 @@
             label4 = new Label();
             label2 = new Label();
             label1 = new Label();
-            buttonAtras = new Button();
-            buttonSeguir = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -100,7 +94,6 @@
             comboBoxClientes.Name = "comboBoxClientes";
             comboBoxClientes.Size = new Size(412, 38);
             comboBoxClientes.TabIndex = 0;
-            comboBoxClientes.SelectedIndexChanged += comboBoxClientes_SelectedIndexChanged;
             // 
             // panel2
             // 
@@ -299,62 +292,27 @@
             label1.TabIndex = 7;
             label1.Text = "Informacion del cliente";
             // 
-            // buttonAtras
-            // 
-            buttonAtras.FlatStyle = FlatStyle.Flat;
-            buttonAtras.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonAtras.ForeColor = Color.White;
-            buttonAtras.Location = new Point(12, 546);
-            buttonAtras.Name = "buttonAtras";
-            buttonAtras.Size = new Size(101, 58);
-            buttonAtras.TabIndex = 9;
-            buttonAtras.Text = "Atras";
-            buttonAtras.UseVisualStyleBackColor = true;
-            buttonAtras.Click += buttonAtras_Click;
-            // 
-            // buttonSeguir
-            // 
-            buttonSeguir.FlatStyle = FlatStyle.Flat;
-            buttonSeguir.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            buttonSeguir.ForeColor = Color.White;
-            buttonSeguir.Location = new Point(937, 546);
-            buttonSeguir.Name = "buttonSeguir";
-            buttonSeguir.Size = new Size(100, 58);
-            buttonSeguir.TabIndex = 9;
-            buttonSeguir.Text = "Escoger plan";
-            buttonSeguir.UseVisualStyleBackColor = true;
-            buttonSeguir.Click += buttonSeguir_Click;
-            // 
->>>>>>> Stashed changes
             // FormDeudorNuevo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(1049, 616);
-<<<<<<< Updated upstream
-            Name = "FormDeudorNuevo";
-            Text = "FormDeudorNuevo";
-=======
-            Controls.Add(buttonSeguir);
-            Controls.Add(buttonAtras);
             Controls.Add(panel2);
             Controls.Add(label1);
             Controls.Add(label9);
             Controls.Add(panel1);
             Name = "FormDeudorNuevo";
             Text = "FormDeudorNuevo";
-            Load += FormDeudorNuevo_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
->>>>>>> Stashed changes
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-<<<<<<< Updated upstream
-=======
 
         private Label label9;
         private Panel panel1;
@@ -377,8 +335,5 @@
         private Label label4;
         private Label label2;
         private Label label1;
-        private Button buttonAtras;
-        private Button buttonSeguir;
->>>>>>> Stashed changes
     }
 }

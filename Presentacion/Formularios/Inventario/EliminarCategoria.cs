@@ -14,7 +14,7 @@ namespace Presentacion.Formularios.Inventario
     public partial class EliminarCategoria : Form
     {
         public string selectedCategory;
-
+        
         private Button button1;
         ConexionBD conexion = new ConexionBD();
         SqlConnection connection = new SqlConnection();
@@ -23,20 +23,14 @@ namespace Presentacion.Formularios.Inventario
 
         public EliminarCategoria()
         {
-            
             connection = conexion.GetConnection();
             InitializeComponent();
-            this.BackColor = ThemeColor.SecondaryColor;
-            comboBox1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            panel1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
-            label1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             using (connection)
             {
-                connection = conexion.GetConnection();
                 connection.Open();
 
 
@@ -96,43 +90,28 @@ namespace Presentacion.Formularios.Inventario
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Mensaje de confirmación
-            DialogResult result = MessageBox.Show("¿Está seguro de eliminar la categoría?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            // Verifica la respuesta del usuario
-            if (result == DialogResult.Yes)
+            string query = $"DELETE FROM Categorias WHERE Nombre = @Nombre";
+            using (connection)
             {
-                // El usuario ha confirmado, procede con la eliminación
-                string query = "DELETE FROM Categorias WHERE Nombre = @Nombre";
+                connection.Open();
 
-                using (SqlConnection connection = conexion.GetConnection())
+                using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    connection.Open();
+                    command.Parameters.AddWithValue("@Nombre", selectedCategory); // Establece el valor del parámetro @Nombre
 
-                    using (SqlCommand command = new SqlCommand(query, connection))
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
                     {
-                        command.Parameters.AddWithValue("@Nombre", selectedCategory); // Establece el valor del parámetro @Nombre
-
-                        int rowsAffected = command.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Categoría eliminada correctamente");
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se pudo eliminar la categoría");
-                        }
+                        // El registro se eliminó correctamente.
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo eliminar");
                     }
                 }
             }
-            else
-            {
-                // El usuario ha cancelado, no se realiza ninguna acción
-                MessageBox.Show("Operación cancelada por el usuario");
-            }
         }
-
 
         private void button3_Click(object sender, EventArgs e)
         {

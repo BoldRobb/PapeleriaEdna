@@ -14,20 +14,19 @@ namespace Presentacion.Formularios.Inventario
 {
     public partial class AgregarProducto : Form
     {
-        public int categoryID;
-        public string categoryIDCad;
+        public int categoryID, ProveedorID;
+        public string categoryIDCad, ProveedorIDCad;
         public string productName;
         public string productPrice;
         public string productDescription;
         public string selectedCategory;
-        public SqlCommand command;
-        public SqlConnection connection;
-        string connectionString = "Server=DESKTOP-D6EMB4F\\SQLEXPRESS;DataBase=Papeleria; integrated security= true;Encrypt=False";
+        private byte[] imgBytes;
+        ConexionBD conexion = new ConexionBD();
+        SqlConnection connection = new SqlConnection();
         public AgregarProducto()
         {
+            connection = conexion.GetConnection();
             InitializeComponent();
-<<<<<<< Updated upstream
-=======
             this.BackColor = ThemeColor.SecondaryColor;
             panel1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
             textBox1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
@@ -38,8 +37,7 @@ namespace Presentacion.Formularios.Inventario
             button2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, -0.2);
             textBoxPath.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
             comboBox1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-
->>>>>>> Stashed changes
+            comboBox2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
         }
 
         //CATEGORIAS
@@ -54,7 +52,7 @@ namespace Presentacion.Formularios.Inventario
             {
                 selectedCategory = null; // Si no hay selección válida, puedes establecer la variable como nula
             }
-            textBox4.Text = categoryID.ToString();
+
             categoryIDCad = categoryID.ToString();
         }
 
@@ -96,6 +94,24 @@ namespace Presentacion.Formularios.Inventario
             return nombresCategorias;
         }
 
+        private List<string> ObtenerNombresProveedoresDesdeBaseDeDatos(SqlConnection connection, int numCategorias)
+        {
+            List<string> nombresProveedores = new List<string>();
+            string query = "SELECT Nombre FROM Proveedores";
+
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string nombreProveedor = reader["Nombre"].ToString();
+                        nombresProveedores.Add(nombreProveedor);
+                    }
+                }
+            }
+            return nombresProveedores;
+        }
         private int ObtenerNumeroCategoriasDesdeBaseDeDatos(SqlConnection connection)
         {
             int numCategorias = 0;
@@ -107,28 +123,37 @@ namespace Presentacion.Formularios.Inventario
             }
             return numCategorias;
         }
+        private int ObtenerNumeroProveedoresDesdeBaseDeDatos(SqlConnection connection)
+        {
+            int numCategorias = 0;
+            string query = "SELECT COUNT(*) FROM Proveedores";
 
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                numCategorias = (int)command.ExecuteScalar();
+            }
+            return numCategorias;
+        }
 
 
         private void AgregarProducto_Load(object sender, EventArgs e)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (connection)
             {
                 connection.Open();
 
 
                 int numCategorias = ObtenerNumeroCategoriasDesdeBaseDeDatos(connection);
-
+                int numProveedores = ObtenerNumeroProveedoresDesdeBaseDeDatos(connection);
 
                 List<string> nombresCategorias = ObtenerNombresCategoriasDesdeBaseDeDatos(connection, numCategorias);
-
+                List<string> nombresProveedores = ObtenerNombresProveedoresDesdeBaseDeDatos(connection, numProveedores);
 
                 comboBox1.DataSource = nombresCategorias;
                 comboBox1.DisplayMember = "Nombre";
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
+                comboBox2.DataSource = nombresProveedores;
+                comboBox2.DisplayMember = "Nombre";
             }
         }
 
@@ -137,41 +162,17 @@ namespace Presentacion.Formularios.Inventario
         {
             string cantidad = "0";
             string productStatus = "N";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                connection.Open();
-
-                string query = "INSERT INTO productos (Nombre, Precio, ID_Categoria, Descripcion, Estado_Producto, Cantidad) VALUES (@Nombre, @Precio,@ID_Categoria, @Descripcion, @Estado_Producto, @Cantidad)";
-
-                using (SqlCommand command = new SqlCommand(query, connection))
+                using (connection = conexion.GetConnection())
                 {
-                    command.Parameters.AddWithValue("@Nombre", productName);
-                    command.Parameters.AddWithValue("@Precio", productPrice);
-                    command.Parameters.AddWithValue("@ID_Categoria", categoryIDCad);
-                    command.Parameters.AddWithValue("@Descripcion", productDescription);
-                    command.Parameters.AddWithValue("@Estado_Producto", productStatus);
-                    command.Parameters.AddWithValue("@Cantidad", cantidad);
-                    
+                    connection.Open();
 
-<<<<<<< Updated upstream
-                    int rowsAffected = command.ExecuteNonQuery();
-=======
-                    string query = "INSERT INTO productos (Nombre, Precio, ID_Categoria, Descripcion, Estado_Producto, Cantidad, Imagen) VALUES (@Nombre, @Precio,@ID_Categoria, " +
-                        "@Descripcion, @Estado_Producto, @Cantidad, @Imagen)";
->>>>>>> Stashed changes
+                    string query = "INSERT INTO productos (Nombre, Precio, ID_Categoria, Descripcion, Estado_Producto, Cantidad, Imagen, ID_Proveedor) VALUES (@Nombre, @Precio,@ID_Categoria, " +
+                        "@Descripcion, @Estado_Producto, @Cantidad, @Imagen, @ID_Proveedor)";
 
-                    if (rowsAffected > 0)
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-<<<<<<< Updated upstream
-                        MessageBox.Show("Producto agregado correctamente.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("No se pudo agregar el producto.");
-                    }
-                }
-            }
-=======
                         command.Parameters.AddWithValue("@Nombre", productName);
                         command.Parameters.AddWithValue("@Precio", productPrice);
                         command.Parameters.AddWithValue("@ID_Categoria", categoryIDCad);
@@ -179,6 +180,7 @@ namespace Presentacion.Formularios.Inventario
                         command.Parameters.AddWithValue("@Estado_Producto", productStatus);
                         command.Parameters.AddWithValue("@Cantidad", cantidad);
                         command.Parameters.AddWithValue("@Imagen", imgBytes);
+                        command.Parameters.AddWithValue("@ID_Proveedor", ProveedorIDCad);
 
 
                         int rowsAffected = command.ExecuteNonQuery();
@@ -197,16 +199,15 @@ namespace Presentacion.Formularios.Inventario
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex);
-
+                
             }
-
->>>>>>> Stashed changes
+            
         }
 
         //SALIR
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private int GetCategoryID(string categoryName)
@@ -214,7 +215,7 @@ namespace Presentacion.Formularios.Inventario
             categoryID = 0;
 
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (connection = conexion.GetConnection())
             {
                 connection.Open();
 
@@ -236,12 +237,8 @@ namespace Presentacion.Formularios.Inventario
 
             return categoryID;
         }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private int GetProveedorID(string categoryName)
         {
-<<<<<<< Updated upstream
-            
-=======
             ProveedorID = 0;
 
 
@@ -293,7 +290,17 @@ namespace Presentacion.Formularios.Inventario
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBox2.SelectedItem != null)
+            {
+                selectedCategory = comboBox2.SelectedItem.ToString();
+                ProveedorID = GetProveedorID(selectedCategory);
+            }
+            else
+            {
+                selectedCategory = null; // Si no hay selección válida, puedes establecer la variable como nula
+            }
 
+            ProveedorIDCad = categoryID.ToString();
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
@@ -342,7 +349,6 @@ namespace Presentacion.Formularios.Inventario
             {
                 textBox2.ForeColor = Color.Black;
             }
->>>>>>> Stashed changes
         }
     }
 }

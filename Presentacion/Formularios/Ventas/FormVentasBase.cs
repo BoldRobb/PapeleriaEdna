@@ -12,6 +12,7 @@ namespace Presentacion.Formularios.Ventas
 {
     public partial class FormVentasBase : Form
     {
+        private Form activeForm;
         public FormVentasBase()
         {
             InitializeComponent();
@@ -26,8 +27,6 @@ namespace Presentacion.Formularios.Ventas
 
 
         }
-<<<<<<< Updated upstream
-=======
         private void OpenChildForm(Form childForm)
         {
             if (activeForm != null)
@@ -51,16 +50,5 @@ namespace Presentacion.Formularios.Ventas
         {
             OpenChildForm(new Formularios.Ventas.FormVentaNueva());
         }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Formularios.Ventas.FormVerVentas());
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Formularios.Ventas.FormReporte());
-        }
->>>>>>> Stashed changes
     }
 }

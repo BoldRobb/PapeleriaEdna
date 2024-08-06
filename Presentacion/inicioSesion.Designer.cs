@@ -102,7 +102,7 @@
             buttonMinimizar.Location = new Point(386, 1);
             buttonMinimizar.Name = "buttonMinimizar";
             buttonMinimizar.Size = new Size(21, 21);
-            buttonMinimizar.TabIndex = 8;
+            buttonMinimizar.TabIndex = 7;
             buttonMinimizar.UseVisualStyleBackColor = true;
             buttonMinimizar.Click += buttonMinimizar_Click;
             // 
@@ -113,7 +113,7 @@
             txtpass.Location = new Point(133, 209);
             txtpass.Name = "txtpass";
             txtpass.Size = new Size(164, 23);
-            txtpass.TabIndex = 4;
+            txtpass.TabIndex = 5;
             txtpass.Text = "Contraseña";
             txtpass.Enter += txtPass_Enter;
             txtpass.Leave += txtPass_Leave;
@@ -159,7 +159,7 @@
             buttonIniciar.Location = new Point(110, 298);
             buttonIniciar.Name = "buttonIniciar";
             buttonIniciar.Size = new Size(215, 56);
-            buttonIniciar.TabIndex = 2;
+            buttonIniciar.TabIndex = 6;
             buttonIniciar.Text = "Iniciar sesión";
             buttonIniciar.UseVisualStyleBackColor = true;
             buttonIniciar.Click += buttonIniciar_Click;

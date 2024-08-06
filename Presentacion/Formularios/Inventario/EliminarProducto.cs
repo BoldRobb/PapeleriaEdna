@@ -14,7 +14,6 @@ namespace Presentacion.Formularios.Inventario
 {
     public partial class EliminarProducto : Form
     {
-        public string productName;
         public string cantidad;
         public string selectedCategory;
         public string categoryName;
@@ -28,13 +27,6 @@ namespace Presentacion.Formularios.Inventario
         {
             connection = conexion.GetConnection();
             InitializeComponent();
-            this.BackColor = ThemeColor.SecondaryColor;
-            panel1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
-            comboBox1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            comboBox2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            label1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
-            label2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
-
         }
 
         private void EliminarProducto_Load(object sender, EventArgs e)
@@ -53,7 +45,7 @@ namespace Presentacion.Formularios.Inventario
 
                 comboBox1.DataSource = nombresCategorias;
                 comboBox1.DisplayMember = "Nombre";
-
+                
 
 
             }
@@ -66,66 +58,27 @@ namespace Presentacion.Formularios.Inventario
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Mensaje de confirmación
-            DialogResult result = MessageBox.Show("¿Está seguro de eliminar el producto?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            // Verifica la respuesta del usuario
-            if (result == DialogResult.Yes)
-            {
-                // El usuario ha confirmado, procede con la eliminación
-                string query = "DELETE FROM Productos WHERE Nombre = @Nombre";
-
-                using (SqlConnection connection = conexion.GetConnection())
-                {
-                    connection.Open();
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@Nombre", productName); // Establece el valor del parámetro @Nombre
-
-                        int rowsAffected = command.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Producto eliminado correctamente");
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se pudo eliminar el producto");
-                        }
-                    }
-                }
-
-                // Cierra el formulario actual
-                this.Close();
-            }
-            else
-            {
-                // El usuario ha cancelado, no se realiza ninguna acción
-                MessageBox.Show("Operación cancelada por el usuario");
-            }
         }
-
 
         //categoria
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             using (connection)
             {
-                connection = conexion.GetConnection();
                 connection.Open();
                 if (comboBox1.SelectedItem != null)
                 {
                     selectedCategory = comboBox1.SelectedItem.ToString();
                     categoryID = GetCategoryID(selectedCategory);
-                    List<string> nombresProductos = GetProductNamesByCategoryID(categoryID);
+                    List<string> nombresProductos = ObtenerNombresProductosEstadoEYCategoria(connection, categoryID);
 
                     // Cargar la lista de productos correspondientes a la categoría seleccionada
 
                     // Actualizar el origen de datos del comboBox2
                     comboBox2.DataSource = nombresProductos;
                     comboBox2.DisplayMember = "Nombre"; // Asegúrate de que el nombre de la propiedad sea correcto
-
+                   
                 }
 
                 else
@@ -142,13 +95,77 @@ namespace Presentacion.Formularios.Inventario
         //producto
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedProduct = comboBox2.SelectedItem.ToString();
-            productName = selectedProduct;
+            selectedProduct = comboBox2.SelectedItem.ToString();
+            
+            using (connection)
+            {
+                connection.Open();
+                
 
+            }
+        }
+        private List<string> ObtenerNombresProductosEstadoEYCategoria(SqlConnection connection, int categoryID)
+        {
+            List<string> nombresProductos = new List<string>();
+
+            string query = "SELECT Nombre FROM Productos WHERE Estado_Producto = 'E' AND ID_Categoria = @CategoryID";
+
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@CategoryID", categoryID);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string nombreProducto = reader["Nombre"].ToString();
+                        nombresProductos.Add(nombreProducto);
+                    }
+                }
+            }
+
+            return nombresProductos;
         }
 
+        private string ObtenerPrecioProducto(SqlConnection connection, string selectedProduct)
+        {
+            string precio = "0"; // Valor por defecto en caso de que no se encuentre el producto
 
+            string query = "SELECT Precio FROM Productos WHERE Nombre = @SelectedProduct";
 
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@SelectedProduct", selectedProduct);
+
+                object result = command.ExecuteScalar();
+                if (result != null)
+                {
+                    precio = result.ToString();
+                }
+
+                return precio;
+            }
+        }
+
+        private string ObtenerDescripcionProducto(SqlConnection connection, string selectedProduct)
+        {
+            string descripcion = string.Empty; // Valor por defecto
+
+            string query = "SELECT Descripcion FROM Productos WHERE Nombre = @SelectedProduct";
+
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@SelectedProduct", selectedProduct);
+
+                object result = command.ExecuteScalar();
+                if (result != null)
+                {
+                    descripcion = result.ToString();
+                }
+
+                return descripcion;
+            }
+        }
 
         private List<string> ObtenerNombresCategoriasDesdeBaseDeDatos(SqlConnection connection, int numCategorias)
         {
@@ -188,7 +205,6 @@ namespace Presentacion.Formularios.Inventario
 
             using (connection)
             {
-                connection = conexion.GetConnection();
                 connection.Open();
 
                 string query = "SELECT ID_Categoria FROM categorias WHERE nombre = @Nombre";
@@ -210,43 +226,26 @@ namespace Presentacion.Formularios.Inventario
             return categoryID;
         }
 
-        private List<string> GetProductNamesByCategoryID(int categoryID)
+        private string ObtenerCantidadProducto(SqlConnection connection, string selectedProduct)
         {
-            List<string> productNames = new List<string>();
+            string cantidad = "0"; // Valor por defecto en caso de que no se encuentre el producto
 
-            using (connection)
+            string query = "SELECT Cantidad FROM Productos WHERE Nombre = @SelectedProduct";
+
+            using (SqlCommand command = new SqlCommand(query, connection))
             {
-                connection = conexion.GetConnection();
-                connection.Open();
+                command.Parameters.AddWithValue("@SelectedProduct", selectedProduct);
 
-                string query = "SELECT Nombre FROM productos WHERE ID_Categoria = @CategoryID";
-
-                using (SqlCommand command = new SqlCommand(query, connection))
+                object result = command.ExecuteScalar();
+                if (result != null)
                 {
-                    command.Parameters.AddWithValue("@CategoryID", categoryID);
-
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            // Agrega los nombres de los productos a la lista
-                            string productName = reader["Nombre"].ToString();
-                            productNames.Add(productName);
-                        }
-                    }
+                    cantidad = result.ToString();
                 }
+
+                return cantidad;
             }
-
-            return productNames;
         }
 
-        private void DeleteProductByName(string productName)
-        {
-
-
-
-
-        }
 
     }
 }

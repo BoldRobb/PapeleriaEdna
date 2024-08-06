@@ -25,13 +25,6 @@ namespace Presentacion.Formularios.Inventario
         {
             connection = conexion.GetConnection();
             InitializeComponent();
-            this.BackColor = ThemeColor.SecondaryColor;
-            textBox1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            textBox2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            textBox3.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-
-            comboBox1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            panel1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
         }
 
         private void ProductosAgotados_Load(object sender, EventArgs e)
@@ -56,7 +49,6 @@ namespace Presentacion.Formularios.Inventario
             selectedProduct = comboBox1.SelectedItem.ToString();
             using (connection)
             {
-                connection = conexion.GetConnection();
                 connection.Open();
 
                 precio = ObtenerPrecioProducto(connection, selectedProduct);

@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Presentacion.Formularios.Inventario
 {
@@ -17,8 +16,8 @@ namespace Presentacion.Formularios.Inventario
     {
         ConexionBD conexion = new ConexionBD();
         SqlConnection connection = new SqlConnection();
-        public static string category_name = "";
-        public static string category_description = "";
+        public static string category_name;
+        public static string category_description;
 
         public AgregarCategoria()
         {
@@ -30,11 +29,6 @@ namespace Presentacion.Formularios.Inventario
             titlePanel.Dock = DockStyle.Top;
             titlePanel.BackColor = ThemeColor.SecondaryColor;
             titlePanel.Height = 30;
-            textBoxDescripcion.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            textBoxNombre.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            panel1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
-            name_label.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
-            label2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
 
         }
 
@@ -52,12 +46,12 @@ namespace Presentacion.Formularios.Inventario
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            category_name = textBoxNombre.Text;
+            category_name = textBox2.Text;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            category_description = textBoxDescripcion.Text;
+            category_description = textBox1.Text;
         }
 
         private void add_Click(object sender, EventArgs e)
@@ -82,38 +76,20 @@ namespace Presentacion.Formularios.Inventario
         {
             this.BackColor = ThemeColor.SecondaryColor;
 
-            if (string.IsNullOrWhiteSpace(category_name))
+            connection.Open();
+            try
             {
-                // Si category_name es nulo o una cadena vacía, muestra un mensaje al usuario
-                MessageBox.Show("Por favor, ingrese un nombre para la categoría.");
+
+                SqlCommand command = new SqlCommand("insert into Categorias values (@Nombre, @Descripción)", connection);
+                command.Parameters.AddWithValue("@Nombre", category_name);
+                command.Parameters.AddWithValue("@Descripción", category_description);
+                command.ExecuteNonQuery();
+                MessageBox.Show("Categoria agregada");
             }
-            else
+            catch (Exception ex)
             {
-                using (connection)
-                {
-
-                    connection.Open();
-                    try
-                    {
-
-
-                        // Crea y ejecuta el comando SQL solo si category_name no es nulo ni una cadena vacía
-                        SqlCommand command = new SqlCommand("insert into Categorias values (@Nombre, @Descripción)", connection);
-                        command.Parameters.AddWithValue("@Nombre", category_name);
-                        command.Parameters.AddWithValue("@Descripción", category_description);
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Categoría agregada");
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error: {ex.Message}");
-                    }
-                }
+                MessageBox.Show($"Error: {ex.Message}");
             }
-
-
-
         }
     }
 }

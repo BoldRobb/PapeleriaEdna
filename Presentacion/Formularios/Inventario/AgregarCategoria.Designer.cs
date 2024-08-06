@@ -28,137 +28,102 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarCategoria));
             name_label = new Label();
             label2 = new Label();
-            textBoxDescripcion = new TextBox();
-            textBoxNombre = new TextBox();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
             button2 = new Button();
             button1 = new Button();
-            panel1 = new Panel();
-            label1 = new Label();
-            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // name_label
             // 
             name_label.AutoSize = true;
-            name_label.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            name_label.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             name_label.ForeColor = SystemColors.ControlLightLight;
-            name_label.Location = new Point(31, 32);
+            name_label.Location = new Point(71, 45);
             name_label.Name = "name_label";
-            name_label.Size = new Size(258, 30);
+            name_label.Size = new Size(73, 21);
             name_label.TabIndex = 0;
-            name_label.Text = "Nombre de la categoria";
+            name_label.Text = "Nombre";
             name_label.Click += name_label_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(31, 142);
+            label2.Location = new Point(400, 45);
             label2.Name = "label2";
-            label2.Size = new Size(134, 30);
+            label2.Size = new Size(100, 21);
             label2.TabIndex = 1;
             label2.Text = "Descripcion";
             label2.Click += label2_Click;
             // 
-            // textBoxDescripcion
+            // textBox1
             // 
-            textBoxDescripcion.BackColor = SystemColors.Menu;
-            textBoxDescripcion.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxDescripcion.ForeColor = Color.White;
-            textBoxDescripcion.Location = new Point(71, 260);
-            textBoxDescripcion.Margin = new Padding(3, 2, 3, 2);
-            textBoxDescripcion.Multiline = true;
-            textBoxDescripcion.Name = "textBoxDescripcion";
-            textBoxDescripcion.Size = new Size(763, 227);
-            textBoxDescripcion.TabIndex = 2;
-            textBoxDescripcion.TextChanged += textBox1_TextChanged;
+            textBox1.BackColor = SystemColors.Menu;
+            textBox1.Location = new Point(400, 76);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(230, 166);
+            textBox1.TabIndex = 2;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // textBoxNombre
+            // textBox2
             // 
-            textBoxNombre.BackColor = SystemColors.Menu;
-            textBoxNombre.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxNombre.ForeColor = Color.White;
-            textBoxNombre.Location = new Point(71, 160);
-            textBoxNombre.Margin = new Padding(3, 2, 3, 2);
-            textBoxNombre.Name = "textBoxNombre";
-            textBoxNombre.Size = new Size(763, 27);
-            textBoxNombre.TabIndex = 3;
-            textBoxNombre.TextChanged += textBox2_TextChanged;
+            textBox2.BackColor = SystemColors.Menu;
+            textBox2.Location = new Point(71, 76);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(149, 23);
+            textBox2.TabIndex = 3;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // button2
             // 
-            button2.FlatAppearance.BorderColor = Color.White;
+            button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(23, 557);
+            button2.Location = new Point(71, 268);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(141, 47);
+            button2.Size = new Size(82, 44);
             button2.TabIndex = 5;
-            button2.Text = "Regresar";
             button2.UseVisualStyleBackColor = true;
             button2.Click += return_Click;
             // 
             // button1
             // 
-            button1.FlatAppearance.BorderColor = Color.White;
+            button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(896, 558);
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(547, 268);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(141, 47);
+            button1.Size = new Size(82, 44);
             button1.TabIndex = 6;
-            button1.Text = "Agregar";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
-            // 
-            // panel1
-            // 
-            panel1.Controls.Add(name_label);
-            panel1.Controls.Add(label2);
-            panel1.Location = new Point(40, 86);
-            panel1.Margin = new Padding(3, 2, 3, 2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(982, 434);
-            panel1.TabIndex = 7;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(40, 52);
-            label1.Name = "label1";
-            label1.Size = new Size(270, 30);
-            label1.TabIndex = 8;
-            label1.Text = "Agregar nueva categoria";
             // 
             // AgregarCategoria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveBorder;
             ClientSize = new Size(1049, 616);
-            Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(button2);
-            Controls.Add(textBoxNombre);
-            Controls.Add(textBoxDescripcion);
-            Controls.Add(panel1);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(label2);
+            Controls.Add(name_label);
             Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "AgregarCategoria";
             Text = "Agregar Categoria";
             Load += AgregarCategoria_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -167,11 +132,9 @@
 
         private Label name_label;
         private Label label2;
-        private TextBox textBoxDescripcion;
-        private TextBox textBoxNombre;
+        private TextBox textBox1;
+        private TextBox textBox2;
         private Button button2;
         private Button button1;
-        private Panel panel1;
-        private Label label1;
     }
 }

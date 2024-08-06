@@ -111,26 +111,15 @@ namespace Presentacion.Formularios.Inventario
 
                 comboBox1.DataSource = nombresCategorias;
                 comboBox1.DisplayMember = "Nombre";
-                this.BackColor = ThemeColor.SecondaryColor;
-                comboBox1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-                comboBox2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-                textBox1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-                textBox2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-                textBox3.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-                panel1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
-                label1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
-                label2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
-                label3.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
-                label4.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
-                label5.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
+
 
 
             }
         }
 
+        
 
-
-
+        
 
         //categoria
 
@@ -139,7 +128,7 @@ namespace Presentacion.Formularios.Inventario
             List<string> nombresProductos = new List<string>();
 
             string query = "SELECT Nombre FROM Productos WHERE Estado_Producto = 'E' AND ID_Categoria = @CategoryID";
-            connection = conexion.GetConnection();
+            connection=conexion.GetConnection();
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 command.Parameters.AddWithValue("@CategoryID", categoryID);
@@ -278,12 +267,7 @@ namespace Presentacion.Formularios.Inventario
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
+            this.Close();    
         }
     }
 }

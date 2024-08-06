@@ -23,21 +23,7 @@ namespace Presentacion.Formularios.Inventario
         SqlConnection connection = new SqlConnection();
         public ModificarCategoria()
         {
-
             InitializeComponent();
-            this.BackColor = ThemeColor.SecondaryColor;
-            this.FormBorderStyle = FormBorderStyle.None;
-            comboBoxCategoria.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            textBoxDescripcion.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            textBoxNombre.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.3);
-            button1.BackColor = ThemeColor.SecondaryColor;
-            button2.BackColor = ThemeColor.SecondaryColor;
-            panel1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
-            label1.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
-            label2.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
-            label3.BackColor = ThemeColor.ChangeColorBrightness(ThemeColor.SecondaryColor, 0.1);
-            label4.BackColor = ThemeColor.SecondaryColor;
-
         }
 
         //BOTON MODIFICAR
@@ -46,9 +32,8 @@ namespace Presentacion.Formularios.Inventario
             if (selectedCategory != null)
             {
                 // Realizar una consulta SQL para actualizar la categoría seleccionada
-                using (connection)
+                using (connection= conexion.GetConnection())
                 {
-                    connection = conexion.GetConnection();
                     connection.Open();
 
                     string query = "UPDATE Categorias SET Nombre = @Nombre, Descripción = @Descripción WHERE Nombre = @SelectedCategory";
@@ -86,21 +71,21 @@ namespace Presentacion.Formularios.Inventario
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            categoryName = textBoxNombre.Text;
+            categoryName = textBox1.Text;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            categoryDescription = textBoxDescripcion.Text;
+            categoryDescription = textBox2.Text;
         }
 
 
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxCategoria.SelectedItem != null)
+            if (comboBox1.SelectedItem != null)
             {
-                selectedCategory = comboBoxCategoria.SelectedItem.ToString();
+                selectedCategory = comboBox1.SelectedItem.ToString();
 
                 // Realizar una consulta para obtener la descripción y el nombre de la categoría seleccionada
                 using (connection = conexion.GetConnection())
@@ -121,8 +106,8 @@ namespace Presentacion.Formularios.Inventario
                                 categoryDescription = reader["Descripción"].ToString();
 
                                 // Asignar los valores a los TextBox
-                                textBoxNombre.Text = categoryName;
-                                textBoxDescripcion.Text = categoryDescription;
+                                textBox1.Text = categoryName;
+                                textBox2.Text = categoryDescription;
                             }
                         }
                     }
@@ -133,8 +118,8 @@ namespace Presentacion.Formularios.Inventario
                 selectedCategory = null;
                 categoryName = null;
                 categoryDescription = null;
-                textBoxNombre.Text = string.Empty;
-                textBoxDescripcion.Text = string.Empty;
+                textBox1.Text = string.Empty;
+                textBox2.Text = string.Empty;
             }
         }
 
@@ -151,8 +136,8 @@ namespace Presentacion.Formularios.Inventario
                 List<string> nombresCategorias = ObtenerNombresCategoriasDesdeBaseDeDatos(connection, numCategorias);
 
 
-                comboBoxCategoria.DataSource = nombresCategorias;
-                comboBoxCategoria.DisplayMember = "Nombre";
+                comboBox1.DataSource = nombresCategorias;
+                comboBox1.DisplayMember = "Nombre";
             }
         }
 
